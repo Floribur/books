@@ -21,11 +21,11 @@
 
 ### Data Model
 
-- [ ] **DATA-01**: Books have: title, slug, author(s), cover image path, description, genres, page count, publication year, Goodreads ID, read date, ISBN-13, metadata source
-- [ ] **DATA-02**: Slugs are unique; collision resolved by appending year then author surname
-- [ ] **DATA-03**: Books track read count (for re-reads)
-- [ ] **DATA-04**: Authors and genres are normalized (many-to-many join tables)
-- [ ] **DATA-05**: Schema managed by golang-migrate with numbered SQL files
+- [x] **DATA-01**: Books have: title, slug, author(s), cover image path, description, genres, page count, publication year, Goodreads ID, read date, ISBN-13, metadata source
+- [x] **DATA-02**: Slugs are unique; collision resolved by appending year then author surname
+- [x] **DATA-03**: Books track read count (for re-reads)
+- [x] **DATA-04**: Authors and genres are normalized (many-to-many join tables)
+- [x] **DATA-05**: Schema managed by golang-migrate with numbered SQL files
 
 ### API
 
