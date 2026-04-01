@@ -1,48 +1,49 @@
 {
   "version": "1.0",
-  "timestamp": "2026-04-01T00:00:00.000Z",
-  "phase": "new-project-init",
-  "phase_name": "Project Initialization (new-project workflow)",
-  "phase_dir": ".planning",
-  "plan": null,
-  "task": null,
-  "total_tasks": null,
+  "timestamp": "2026-04-01T21:55:51.538Z",
+  "phase": "01",
+  "phase_name": "data-pipeline",
+  "phase_dir": ".planning/phases/01-data-pipeline",
+  "plan": 2,
+  "task": 0,
+  "total_tasks": 3,
   "status": "paused",
   "completed_tasks": [
-    {"id": 1, "name": "git init", "status": "done", "commit": null},
-    {"id": 2, "name": "Deep questioning with user", "status": "done", "commit": null},
-    {"id": 3, "name": "Write .planning/PROJECT.md", "status": "done", "commit": "ef213d4"},
-    {"id": 4, "name": "Collect workflow preferences (YOLO, standard granularity, parallel, all agents, balanced models)", "status": "done", "commit": null},
-    {"id": 5, "name": "Write .planning/config.json", "status": "done", "commit": "4f5138b"},
-    {"id": 6, "name": "Spawn 4 parallel research agents", "status": "done", "commit": null},
-    {"id": 7, "name": "Research: FEATURES.md", "status": "done", "commit": null},
-    {"id": 8, "name": "Research: ARCHITECTURE.md (Goodreads sync)", "status": "done", "commit": null}
+    {"id": "01-01-T1", "name": "Go module init, project layout, dependencies", "status": "done", "commit": "dd550a2"},
+    {"id": "01-01-T2", "name": "Docker Compose, migrations, sqlc config, Makefile", "status": "done", "commit": "e5e6222"}
   ],
   "remaining_tasks": [
-    {"id": 9, "name": "Research: STACK.md (Go + React TS stack)", "status": "running_background"},
-    {"id": 10, "name": "Research: PITFALLS.md", "status": "running_background"},
-    {"id": 11, "name": "Synthesize 4 research files into SUMMARY.md", "status": "not_started"},
-    {"id": 12, "name": "Write .planning/REQUIREMENTS.md", "status": "not_started"},
-    {"id": 13, "name": "Write .planning/ROADMAP.md", "status": "not_started"},
-    {"id": 14, "name": "Write .planning/STATE.md", "status": "not_started"}
+    {"id": "01-02-T1", "name": "Wave 0 test stubs (rss_test.go, csv_test.go, slug_test.go, scheduler_test.go)", "status": "not_started"},
+    {"id": "01-02-T2", "name": "RSS sync pipeline: fetch, pagination, shelf merge, delta diff, slug, upsert", "status": "not_started"},
+    {"id": "01-02-T3", "name": "CSV import, scheduler, admin endpoints, main.go wiring", "status": "not_started"},
+    {"id": "01-03-T1", "name": "Cover pipeline: ValidateCover, DownloadCover, CoverPath, test fixtures", "status": "not_started"},
+    {"id": "01-03-T2", "name": "Enricher: Google Books client, confidence gate, OpenLibrary fallback, RunEnricher goroutine, main.go wiring", "status": "not_started"}
   ],
-  "blockers": [],
+  "blockers": [
+    {
+      "description": "Plan 01-02 executor agent returned internal error (Tool result missing due to internal error) — likely Claude Code runtime issue, not a code problem",
+      "type": "technical",
+      "workaround": "Re-run /gsd:execute-phase 1 --wave 2 in a fresh session to retry Plan 01-02"
+    }
+  ],
   "human_actions_pending": [
     {
-      "action": "Manually verify Goodreads RSS feed is still accessible",
-      "context": "Open https://www.goodreads.com/review/list_rss/79499864?shelf=read in browser. If it returns XML, RSS sync is viable. If it redirects or 403s, need to fall back to CSV import or scraping.",
+      "action": "Manually verify Goodreads RSS feed at https://www.goodreads.com/review/list_rss/79499864?shelf=read",
+      "context": "Required before RSS sync code runs — if 403/redirect, CSV becomes primary path (documented as pre-task in Plan 01-02)",
+      "blocking": false
+    },
+    {
+      "action": "Create Google Cloud project, enable Books API, obtain API key, set GOOGLE_BOOKS_API_KEY env var",
+      "context": "Required before executing Plan 01-03 (metadata enrichment)",
       "blocking": true
     }
   ],
   "decisions": [
-    {"decision": "Go backend + React TypeScript frontend (separate services)", "rationale": "User preference", "phase": "init"},
-    {"decision": "Start with in-memory DB, target PostgreSQL", "rationale": "User preference", "phase": "init"},
-    {"decision": "Self-host book cover images (download, not hotlink)", "rationale": "Reliability", "phase": "init"},
-    {"decision": "Modernize sidebar animation (keep concept, redesign)", "rationale": "User preference", "phase": "init"},
-    {"decision": "YOLO mode, standard granularity, parallel execution, all agents enabled, balanced models", "rationale": "User config choices", "phase": "init"},
-    {"decision": "Goodreads sync mechanism: RSS feed (primary) + Google Books enrichment + OpenLibrary fallback + CSV import", "rationale": "Research finding from ARCHITECTURE.md", "phase": "init"}
+    {"decision": "Wave 1 (plan 01-01) fully complete — Go module, schema, migrations, sqlc all in place", "rationale": "3 commits merged to master", "phase": "01"},
+    {"decision": "Wave 2 (plan 01-02) not started — needs retry", "rationale": "Executor hit runtime error on spawn", "phase": "01"},
+    {"decision": "Wave 3 (plan 01-03) not started — depends on 01-02", "rationale": "Dependency chain", "phase": "01"}
   ],
-  "uncommitted_files": [".planning/research/ARCHITECTURE.md", ".planning/research/FEATURES.md", ".claude/"],
-  "next_action": "Wait for background agents (STACK.md and PITFALLS.md) to complete, then spawn gsd-research-synthesizer to create SUMMARY.md, then write REQUIREMENTS.md and ROADMAP.md.",
-  "context_notes": "Two background research agents are still running and have NOT been cancelled — their output files will appear in .planning/research/ when done. Do NOT re-spawn them. Resume with /gsd:resume-work which will detect HANDOFF.json and pick up from task 9."
+  "uncommitted_files": [".planning/config.json (modified)"],
+  "next_action": "Run /gsd:execute-phase 1 in a fresh session — it will skip 01-01 (has SUMMARY.md) and retry from 01-02",
+  "context_notes": "Execute-phase was running wave 2 (plan 01-02) when an internal tool error interrupted the session. Wave 1 is fully done. Just retry — the executor will auto-skip completed plans."
 }
