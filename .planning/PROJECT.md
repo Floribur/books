@@ -12,7 +12,9 @@ A beautiful, always-up-to-date view of every book Florian has read — synced fr
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] Automatic sync with Goodreads shelves (currently-reading, read) via RSS — Validated in Phase 1: Data Pipeline
+- [x] Book cover images downloaded and self-hosted (not hotlinked) — Validated in Phase 1: Data Pipeline
+- [x] Book metadata enriched via Google Books API (cover, description, genres, page count, ISBN) — Validated in Phase 1: Data Pipeline
 
 ### Active
 
@@ -91,4 +93,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-31 after initialization*
+*Last updated: 2026-04-02 after Phase 1: Data Pipeline*
