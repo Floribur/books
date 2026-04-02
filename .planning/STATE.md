@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-01-PLAN.md
-last_updated: "2026-04-01T21:50:53.928Z"
+stopped_at: Completed 01-02-PLAN.md
+last_updated: "2026-04-02T12:20:00.000Z"
 progress:
   total_phases: 5
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
-  percent: 33
+  completed_plans: 2
+  percent: 67
 ---
 
 # Project State: Flo's Library
@@ -27,13 +27,13 @@ See: .planning/PROJECT.md (updated 2026-04-01)
 ## Current Position
 
 Phase: 01 (data-pipeline) — EXECUTING
-Plan: 2 of 3 (Plan 01 complete)
+Plan: 3 of 3
 
 - **Phase:** 1 of 5 — Phase 01 in progress
-- **Plan:** 01-01 complete, proceeding to 01-02
+- **Plan:** 01-02 complete, proceeding to 01-03
 - **Status:** Executing Phase 01
 
-**Progress:** [███░░░░░░░] 33%
+**Progress:** [██████░░░░] 67%
 
 ---
 
@@ -50,6 +50,9 @@ Plan: 2 of 3 (Plan 01 complete)
 | golang-migrate for schema migrations | Most adopted, simple mental model |
 | Chi v5 as Go HTTP router | Idiomatic net/http, composable middleware |
 | sqlc + pgx/v5 for DB layer | Type-safe generated code, no ORM overhead |
+| Goodreads RSS fields in item.Custom map, not item.Extensions | Live feed inspection: gofeed routes non-namespaced custom elements to item.Custom |
+| Goodreads RSS exposes 'isbn' field (not 'isbn13') | Stored in isbn13 DB column; Plan 01-03 enrichment can normalize further |
+| fetchShelfFromURL / startWithTicker: injectable dependencies for testability | TDD pattern: unexported testable core, public wrapper with defaults |
 | Goodreads RSS (primary) + Google Books + OpenLibrary (fallbacks) | Only viable post-API-shutdown approach |
 | Self-hosted book cover images | Reliability — hotlinked covers break |
 | TanStack Query v5 + Intersection Observer for infinite scroll | Standard 2025 pattern |
@@ -60,7 +63,7 @@ Plan: 2 of 3 (Plan 01 complete)
 
 ## Pending Human Actions
 
-- [ ] **REQUIRED before Phase 1:** Verify Goodreads RSS feed is live — open `https://www.goodreads.com/review/list_rss/79499864?shelf=read` in browser. If XML = RSS works. If 403 = use CSV import path.
+- [x] **CONFIRMED in 01-02:** Goodreads RSS feed is live — `https://www.goodreads.com/review/list_rss/79499864?shelf=read` returns 127 books as RSS XML. Fields delivered via item.Custom map.
 - [ ] **REQUIRED before Phase 1 Plan 1.3:** Create Google Cloud project + enable Books API, save API key.
 
 ---
@@ -73,8 +76,8 @@ Plan: 2 of 3 (Plan 01 complete)
 
 ## Session Continuity
 
-Last session: 2026-04-01T21:50:53.924Z
-Stopped at: Completed 01-01-PLAN.md
+Last session: 2026-04-02T12:20:00.000Z
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None
 
 ---

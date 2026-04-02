@@ -15,7 +15,7 @@ A fully working personal book showcase website — synced from Goodreads, displa
 
 | Phase | Name | Goal | Plans | Research |
 |-------|------|------|-------|----------|
-| 1 | Data Pipeline | Books in the database, automatically | 3 | YES — verify RSS liveness first |
+| 1 | Data Pipeline | 2/3 | In Progress|  |
 | 2 | Go REST API | Clean API contract for the frontend | 2 | NO |
 | 3 | Frontend Core | Home page with browsable book library | 3 | NO |
 | 4 | Frontend Pages | Detail, author, genre, and challenge pages | 2 | NO |

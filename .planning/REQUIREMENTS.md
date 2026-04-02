@@ -9,15 +9,15 @@
 
 ### Sync Pipeline
 
-- [ ] **SYNC-01**: App automatically polls Goodreads RSS feed every 6 hours and updates the book database
-- [ ] **SYNC-02**: Sync handles RSS pagination (>200 books) using `?page=N` loop
-- [ ] **SYNC-03**: When a book appears on both `currently-reading` and `read` shelves, `read` wins
+- [x] **SYNC-01**: App automatically polls Goodreads RSS feed every 6 hours and updates the book database
+- [x] **SYNC-02**: Sync handles RSS pagination (>200 books) using `?page=N` loop
+- [x] **SYNC-03**: When a book appears on both `currently-reading` and `read` shelves, `read` wins
 - [ ] **SYNC-04**: Books are enriched via Google Books API (ISBN lookup primary, title+author fallback with confidence check)
 - [ ] **SYNC-05**: OpenLibrary API used as fallback when Google Books lacks metadata
 - [ ] **SYNC-06**: Book cover images are downloaded and stored locally (not hotlinked)
 - [ ] **SYNC-07**: Cover images are validated after download (rejects 1×1 pixel placeholders, files < 5KB)
-- [ ] **SYNC-08**: Manual sync can be triggered via `POST /admin/sync`
-- [ ] **SYNC-09**: Goodreads CSV export can be imported via `POST /admin/import-csv` as permanent fallback
+- [x] **SYNC-08**: Manual sync can be triggered via `POST /admin/sync`
+- [x] **SYNC-09**: Goodreads CSV export can be imported via `POST /admin/import-csv` as permanent fallback
 
 ### Data Model
 
