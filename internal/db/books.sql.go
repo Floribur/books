@@ -7,7 +7,39 @@ package db
 
 import (
 	"context"
+
+	"github.com/jackc/pgx/v5/pgtype"
 )
+
+const getAllGoodreadsIDs = `-- name: GetAllGoodreadsIDs :many
+SELECT goodreads_id, slug, shelf FROM books
+`
+
+type GetAllGoodreadsIDsRow struct {
+	GoodreadsID string `json:"goodreads_id"`
+	Slug        string `json:"slug"`
+	Shelf       string `json:"shelf"`
+}
+
+func (q *Queries) GetAllGoodreadsIDs(ctx context.Context) ([]GetAllGoodreadsIDsRow, error) {
+	rows, err := q.db.Query(ctx, getAllGoodreadsIDs)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []GetAllGoodreadsIDsRow
+	for rows.Next() {
+		var i GetAllGoodreadsIDsRow
+		if err := rows.Scan(&i.GoodreadsID, &i.Slug, &i.Shelf); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
 
 const getBookBySlug = `-- name: GetBookBySlug :one
 SELECT id, goodreads_id, slug, title, description, cover_path, page_count, publication_year, isbn13, metadata_source, read_at, date_added, read_count, shelf, search_vector, created_at, updated_at FROM books WHERE slug = $1 LIMIT 1
@@ -36,6 +68,48 @@ func (q *Queries) GetBookBySlug(ctx context.Context, slug string) (Book, error) 
 		&i.UpdatedAt,
 	)
 	return i, err
+}
+
+const getUnenrichedBooks = `-- name: GetUnenrichedBooks :many
+SELECT id, goodreads_id, slug, title, description, cover_path, page_count, publication_year, isbn13, metadata_source, read_at, date_added, read_count, shelf, search_vector, created_at, updated_at FROM books WHERE metadata_source = 'none' ORDER BY created_at ASC
+`
+
+func (q *Queries) GetUnenrichedBooks(ctx context.Context) ([]Book, error) {
+	rows, err := q.db.Query(ctx, getUnenrichedBooks)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Book
+	for rows.Next() {
+		var i Book
+		if err := rows.Scan(
+			&i.ID,
+			&i.GoodreadsID,
+			&i.Slug,
+			&i.Title,
+			&i.Description,
+			&i.CoverPath,
+			&i.PageCount,
+			&i.PublicationYear,
+			&i.Isbn13,
+			&i.MetadataSource,
+			&i.ReadAt,
+			&i.DateAdded,
+			&i.ReadCount,
+			&i.Shelf,
+			&i.SearchVector,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
 }
 
 const listBooks = `-- name: ListBooks :many
@@ -78,4 +152,78 @@ func (q *Queries) ListBooks(ctx context.Context) ([]Book, error) {
 		return nil, err
 	}
 	return items, nil
+}
+
+const upsertBook = `-- name: UpsertBook :one
+INSERT INTO books (
+    goodreads_id, slug, title, description, cover_path, page_count,
+    publication_year, isbn13, metadata_source, read_at, date_added,
+    read_count, shelf, created_at, updated_at
+) VALUES (
+    $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, NOW(), NOW()
+)
+ON CONFLICT (goodreads_id) DO UPDATE SET
+    slug             = EXCLUDED.slug,
+    title            = EXCLUDED.title,
+    read_at          = EXCLUDED.read_at,
+    date_added       = EXCLUDED.date_added,
+    read_count       = EXCLUDED.read_count,
+    shelf            = EXCLUDED.shelf,
+    updated_at       = NOW()
+RETURNING id, goodreads_id, slug, title, description, cover_path, page_count, publication_year, isbn13, metadata_source, read_at, date_added, read_count, shelf, search_vector, created_at, updated_at
+`
+
+type UpsertBookParams struct {
+	GoodreadsID     string             `json:"goodreads_id"`
+	Slug            string             `json:"slug"`
+	Title           string             `json:"title"`
+	Description     *string            `json:"description"`
+	CoverPath       *string            `json:"cover_path"`
+	PageCount       *int32             `json:"page_count"`
+	PublicationYear *int32             `json:"publication_year"`
+	Isbn13          *string            `json:"isbn13"`
+	MetadataSource  string             `json:"metadata_source"`
+	ReadAt          pgtype.Timestamptz `json:"read_at"`
+	DateAdded       pgtype.Timestamptz `json:"date_added"`
+	ReadCount       int32              `json:"read_count"`
+	Shelf           string             `json:"shelf"`
+}
+
+func (q *Queries) UpsertBook(ctx context.Context, arg UpsertBookParams) (Book, error) {
+	row := q.db.QueryRow(ctx, upsertBook,
+		arg.GoodreadsID,
+		arg.Slug,
+		arg.Title,
+		arg.Description,
+		arg.CoverPath,
+		arg.PageCount,
+		arg.PublicationYear,
+		arg.Isbn13,
+		arg.MetadataSource,
+		arg.ReadAt,
+		arg.DateAdded,
+		arg.ReadCount,
+		arg.Shelf,
+	)
+	var i Book
+	err := row.Scan(
+		&i.ID,
+		&i.GoodreadsID,
+		&i.Slug,
+		&i.Title,
+		&i.Description,
+		&i.CoverPath,
+		&i.PageCount,
+		&i.PublicationYear,
+		&i.Isbn13,
+		&i.MetadataSource,
+		&i.ReadAt,
+		&i.DateAdded,
+		&i.ReadCount,
+		&i.Shelf,
+		&i.SearchVector,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+	)
+	return i, err
 }
