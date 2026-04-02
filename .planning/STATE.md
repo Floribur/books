@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-02-PLAN.md
-last_updated: "2026-04-02T12:20:00.000Z"
+stopped_at: Completed 01-03-PLAN.md
+last_updated: "2026-04-02T12:12:00.000Z"
 progress:
   total_phases: 5
   completed_phases: 0
   total_plans: 3
-  completed_plans: 2
-  percent: 67
+  completed_plans: 3
+  percent: 100
 ---
 
 # Project State: Flo's Library
@@ -30,10 +30,10 @@ Phase: 01 (data-pipeline) — EXECUTING
 Plan: 3 of 3
 
 - **Phase:** 1 of 5 — Phase 01 in progress
-- **Plan:** 01-02 complete, proceeding to 01-03
-- **Status:** Executing Phase 01
+- **Plan:** 01-03 complete — Phase 01 data-pipeline complete
+- **Status:** Phase 01 complete, ready for Phase 02
 
-**Progress:** [██████░░░░] 67%
+**Progress:** [██████████] 100% (Phase 01 complete)
 
 ---
 
@@ -54,6 +54,10 @@ Plan: 3 of 3
 | Goodreads RSS exposes 'isbn' field (not 'isbn13') | Stored in isbn13 DB column; Plan 01-03 enrichment can normalize further |
 | fetchShelfFromURL / startWithTicker: injectable dependencies for testability | TDD pattern: unexported testable core, public wrapper with defaults |
 | Goodreads RSS (primary) + Google Books + OpenLibrary (fallbacks) | Only viable post-API-shutdown approach |
+| stdlib sync aliased as stdsync inside package sync | Avoids package name collision; behaviour identical |
+| Confidence gate uses substring match (not exact) | "Dune Messiah" passes for inputTitle="Dune" — acceptable false positive tradeoff |
+| Title-only confidence gate in fallback (no author join) | GetUnenrichedBooks returns books table only; author join would require query change |
+| UpdateBookEnrichmentParams uses *string for nullable TEXT | sqlc with pgx/v5 generates *string not pgtype.Text for nullable columns |
 | Self-hosted book cover images | Reliability — hotlinked covers break |
 | TanStack Query v5 + Intersection Observer for infinite scroll | Standard 2025 pattern |
 | Cursor-based pagination (not offset) | Stable across inserts |
@@ -76,8 +80,8 @@ Plan: 3 of 3
 
 ## Session Continuity
 
-Last session: 2026-04-02T12:20:00.000Z
-Stopped at: Completed 01-02-PLAN.md
+Last session: 2026-04-02T12:12:00.000Z
+Stopped at: Completed 01-03-PLAN.md (Phase 01 data-pipeline complete)
 Resume file: None
 
 ---
