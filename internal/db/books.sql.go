@@ -154,6 +154,38 @@ func (q *Queries) ListBooks(ctx context.Context) ([]Book, error) {
 	return items, nil
 }
 
+const updateBookEnrichment = `-- name: UpdateBookEnrichment :exec
+UPDATE books SET
+    description      = $2,
+    page_count       = $3,
+    publication_year = $4,
+    cover_path       = $5,
+    metadata_source  = $6,
+    updated_at       = NOW()
+WHERE id = $1
+`
+
+type UpdateBookEnrichmentParams struct {
+	ID              int64   `json:"id"`
+	Description     *string `json:"description"`
+	PageCount       *int32  `json:"page_count"`
+	PublicationYear *int32  `json:"publication_year"`
+	CoverPath       *string `json:"cover_path"`
+	MetadataSource  string  `json:"metadata_source"`
+}
+
+func (q *Queries) UpdateBookEnrichment(ctx context.Context, arg UpdateBookEnrichmentParams) error {
+	_, err := q.db.Exec(ctx, updateBookEnrichment,
+		arg.ID,
+		arg.Description,
+		arg.PageCount,
+		arg.PublicationYear,
+		arg.CoverPath,
+		arg.MetadataSource,
+	)
+	return err
+}
+
 const upsertBook = `-- name: UpsertBook :one
 INSERT INTO books (
     goodreads_id, slug, title, description, cover_path, page_count,

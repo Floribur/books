@@ -27,3 +27,13 @@ SELECT goodreads_id, slug, shelf FROM books;
 
 -- name: GetUnenrichedBooks :many
 SELECT * FROM books WHERE metadata_source = 'none' ORDER BY created_at ASC;
+
+-- name: UpdateBookEnrichment :exec
+UPDATE books SET
+    description      = $2,
+    page_count       = $3,
+    publication_year = $4,
+    cover_path       = $5,
+    metadata_source  = $6,
+    updated_at       = NOW()
+WHERE id = $1;
