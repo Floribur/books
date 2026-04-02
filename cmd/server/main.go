@@ -71,8 +71,9 @@ func main() {
 	}
 
 	var wg sync.WaitGroup
-	wg.Add(1)
+	wg.Add(2)
 	go scheduler.Start(ctx, &wg, func(ctx context.Context) { _ = syncFn(ctx) })
+	go syncp.RunEnricher(ctx, &wg, queries, enrichTrig)
 
 	srv := &http.Server{Addr: ":" + port, Handler: r}
 	go func() {
