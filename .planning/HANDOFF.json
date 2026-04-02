@@ -1,49 +1,29 @@
 {
   "version": "1.0",
-  "timestamp": "2026-04-01T21:55:51.538Z",
+  "timestamp": "2026-04-02T12:48:34.974Z",
   "phase": "01",
   "phase_name": "data-pipeline",
   "phase_dir": ".planning/phases/01-data-pipeline",
-  "plan": 2,
-  "task": 0,
-  "total_tasks": 3,
-  "status": "paused",
+  "plan": null,
+  "task": null,
+  "total_tasks": null,
+  "status": "phase_complete",
   "completed_tasks": [
-    {"id": "01-01-T1", "name": "Go module init, project layout, dependencies", "status": "done", "commit": "dd550a2"},
-    {"id": "01-01-T2", "name": "Docker Compose, migrations, sqlc config, Makefile", "status": "done", "commit": "e5e6222"}
+    {"id": "01-01", "name": "Go module bootstrap, Docker Compose, migrations, sqlc, Makefile", "status": "done", "commit": "e5e6222"},
+    {"id": "01-02", "name": "Goodreads RSS sync pipeline, scheduler, admin endpoints", "status": "done", "commit": "a3ae31b"},
+    {"id": "01-03", "name": "Metadata enrichment (Google Books + OpenLibrary), cover downloads", "status": "done", "commit": "ec2f065"}
   ],
-  "remaining_tasks": [
-    {"id": "01-02-T1", "name": "Wave 0 test stubs (rss_test.go, csv_test.go, slug_test.go, scheduler_test.go)", "status": "not_started"},
-    {"id": "01-02-T2", "name": "RSS sync pipeline: fetch, pagination, shelf merge, delta diff, slug, upsert", "status": "not_started"},
-    {"id": "01-02-T3", "name": "CSV import, scheduler, admin endpoints, main.go wiring", "status": "not_started"},
-    {"id": "01-03-T1", "name": "Cover pipeline: ValidateCover, DownloadCover, CoverPath, test fixtures", "status": "not_started"},
-    {"id": "01-03-T2", "name": "Enricher: Google Books client, confidence gate, OpenLibrary fallback, RunEnricher goroutine, main.go wiring", "status": "not_started"}
-  ],
-  "blockers": [
-    {
-      "description": "Plan 01-02 executor agent returned internal error (Tool result missing due to internal error) — likely Claude Code runtime issue, not a code problem",
-      "type": "technical",
-      "workaround": "Re-run /gsd:execute-phase 1 --wave 2 in a fresh session to retry Plan 01-02"
-    }
-  ],
+  "remaining_tasks": [],
+  "blockers": [],
   "human_actions_pending": [
-    {
-      "action": "Manually verify Goodreads RSS feed at https://www.goodreads.com/review/list_rss/79499864?shelf=read",
-      "context": "Required before RSS sync code runs — if 403/redirect, CSV becomes primary path (documented as pre-task in Plan 01-02)",
-      "blocking": false
-    },
-    {
-      "action": "Create Google Cloud project, enable Books API, obtain API key, set GOOGLE_BOOKS_API_KEY env var",
-      "context": "Required before executing Plan 01-03 (metadata enrichment)",
-      "blocking": true
-    }
+    {"action": "01-HUMAN-UAT.md remains status:partial — user verified enrichment works live but formal UAT file not updated", "context": "Phase was approved verbally; non-blocking", "blocking": false}
   ],
   "decisions": [
-    {"decision": "Wave 1 (plan 01-01) fully complete — Go module, schema, migrations, sqlc all in place", "rationale": "3 commits merged to master", "phase": "01"},
-    {"decision": "Wave 2 (plan 01-02) not started — needs retry", "rationale": "Executor hit runtime error on spawn", "phase": "01"},
-    {"decision": "Wave 3 (plan 01-03) not started — depends on 01-02", "rationale": "Dependency chain", "phase": "01"}
+    {"decision": "Goodreads sync via RSS feed (not API)", "rationale": "Goodreads API deprecated 2020; RSS still available at goodreads.com/review/list_rss", "phase": "01"},
+    {"decision": "gofeed item.Custom map for Goodreads fields (not item.Extensions)", "rationale": "Goodreads RSS fields arrive in item.Custom (flat map[string]string), not namespaced Extensions", "phase": "01"},
+    {"decision": "Google Books ISBN-13 primary lookup, title fallback, OpenLibrary cover fallback", "rationale": "ISBN-13 most reliable; title fallback for books without ISBN; OpenLibrary for covers when Google Books lacks them", "phase": "01"}
   ],
-  "uncommitted_files": [".planning/config.json (modified)"],
-  "next_action": "Run /gsd:execute-phase 1 in a fresh session — it will skip 01-01 (has SUMMARY.md) and retry from 01-02",
-  "context_notes": "Execute-phase was running wave 2 (plan 01-02) when an internal tool error interrupted the session. Wave 1 is fully done. Just retry — the executor will auto-skip completed plans."
+  "uncommitted_files": [".planning/config.json"],
+  "next_action": "Run /gsd:discuss-phase 2 or /gsd:plan-phase 2 to start the Go REST API phase",
+  "context_notes": "Phase 01 fully complete and verified. 130 books synced from Goodreads RSS, enriched via Google Books API, covers saved to data/covers/. Server runs on :8081 with POST /admin/sync and POST /admin/import-csv. PostgreSQL on Docker. make and migrate CLI installed on Windows. Ready to build the REST API layer next."
 }
