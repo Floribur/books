@@ -31,13 +31,13 @@ export async function fetchAuthorBySlug(slug: string): Promise<AuthorDetail> {
 }
 
 // GET /api/authors/:slug?cursor=... — paginated books for author (AUTH-02)
-// Extracts PaginatedBooks envelope from AuthorDetail response
+// Extracts PaginatedBooks envelope from AuthorDetail response (nested under .books)
 export async function fetchBooksByAuthor(slug: string, cursor: string | undefined): Promise<PaginatedBooks> {
   const url = cursor
     ? `/api/authors/${encodeURIComponent(slug)}?cursor=${encodeURIComponent(cursor)}`
     : `/api/authors/${encodeURIComponent(slug)}`;
   const data = await apiFetch<AuthorDetail>(url);
-  return { items: data.items, next_cursor: data.next_cursor, has_more: data.has_more };
+  return data.books;
 }
 
 // GET /api/genres — all genres with book counts, sorted by book_count desc (GENR-01)
@@ -56,7 +56,7 @@ export async function fetchBooksByGenre(slug: string, cursor: string | undefined
     ? `/api/genres/${encodeURIComponent(slug)}?cursor=${encodeURIComponent(cursor)}`
     : `/api/genres/${encodeURIComponent(slug)}`;
   const data = await apiFetch<GenreDetail>(url);
-  return { items: data.items, next_cursor: data.next_cursor, has_more: data.has_more };
+  return data.books;
 }
 
 // GET /api/years — distinct years with book counts (CHAL-02)

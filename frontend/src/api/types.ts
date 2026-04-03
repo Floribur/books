@@ -44,11 +44,9 @@ export interface AuthorWithCount extends Author {
 }
 
 // AuthorDetail — author detail from GET /api/authors/:slug (Phase 2 D-07)
-// Extends AuthorWithCount; books are in the paginated envelope
-export interface AuthorDetail extends AuthorWithCount {
-  items: Book[];
-  next_cursor: string | null;
-  has_more: boolean;
+// API returns { name, slug, books: { items, next_cursor, has_more } }
+export interface AuthorDetail extends Author {
+  books: PaginatedBooks;
 }
 
 // GenreWithCount — genre list item from GET /api/genres (Phase 2 D-06)
@@ -57,10 +55,9 @@ export interface GenreWithCount extends Genre {
 }
 
 // GenreDetail — genre detail from GET /api/genres/:slug (Phase 2 D-07)
-export interface GenreDetail extends GenreWithCount {
-  items: Book[];
-  next_cursor: string | null;
-  has_more: boolean;
+// API returns { name, slug, books: { items, next_cursor, has_more } }
+export interface GenreDetail extends Genre {
+  books: PaginatedBooks;
 }
 
 // YearEntry — years list item from GET /api/years

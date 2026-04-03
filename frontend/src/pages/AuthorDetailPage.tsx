@@ -37,9 +37,6 @@ export function AuthorDetailPage() {
       ) : author ? (
         <div className="author-detail-heading">
           <h1 className="author-detail-name">{author.name}</h1>
-          <p className="author-detail-count">
-            {author.book_count === 1 ? '1 book' : `${author.book_count} books`}
-          </p>
         </div>
       ) : null}
 

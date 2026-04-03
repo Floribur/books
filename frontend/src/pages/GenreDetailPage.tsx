@@ -36,9 +36,6 @@ export function GenreDetailPage() {
       ) : genre ? (
         <div className="genre-detail-heading">
           <h1 className="genre-detail-name">{genre.name}</h1>
-          <p className="genre-detail-count">
-            {genre.book_count === 1 ? '1 book' : `${genre.book_count} books`}
-          </p>
         </div>
       ) : null}
 
