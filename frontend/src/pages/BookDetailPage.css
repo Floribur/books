@@ -1,0 +1,121 @@
+.book-detail-page {
+  padding: var(--space-xl) var(--space-md);
+}
+
+/* Desktop: two-column CSS grid (D-01) */
+.book-detail-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+/* Cover column */
+.book-detail-cover-col {
+  width: 200px;
+}
+
+/* Skeleton cover placeholder */
+.book-detail-cover--skeleton {
+  aspect-ratio: 2 / 3;
+  background: var(--color-skeleton);
+  border-radius: 4px;
+}
+
+/* Metadata column — flex column for ordered sections */
+.book-detail-meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Title — h1 at --text-heading / Playfair Display / --color-primary (D-03) */
+.book-detail-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-heading);
+  font-weight: 700;
+  line-height: var(--leading-heading);
+  color: var(--color-primary);
+  margin: 0;
+}
+
+/* Author links */
+.book-detail-authors {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+}
+
+.book-detail-author-link {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.book-detail-author-link:hover {
+  text-decoration: underline;
+}
+
+.book-detail-author-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Genre tags row */
+.book-detail-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+/* Pill tag — shared class; also used in GenresPage if needed */
+.genre-tag {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: var(--text-label);
+  line-height: var(--leading-label);
+  color: var(--color-text);
+  text-decoration: none;
+  min-height: 28px;
+  transition: background 0.15s ease;
+}
+
+.genre-tag:hover {
+  background: var(--color-border);
+}
+
+.genre-tag:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Metadata line — muted label size */
+.book-detail-meta {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  line-height: var(--leading-label);
+  color: var(--color-text-muted);
+}
+
+/* Skeleton text lines */
+.book-detail-skeleton-line {
+  border-radius: 4px;
+  background: var(--color-skeleton);
+}
+
+/* Mobile: cover floats left 96px, text wraps around (D-02) */
+@media (max-width: 767px) {
+  .book-detail-layout {
+    display: block; /* Remove grid — float-based layout */
+  }
+
+  .book-detail-cover-col {
+    float: left;
+    width: 96px;
+    margin: 0 var(--space-md) var(--space-sm) 0;
+  }
+}
