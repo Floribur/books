@@ -68,31 +68,33 @@ func normalizeForCompare(s string) string {
 	return strings.TrimSpace(s)
 }
 
-// seriesTitle extracts the series name from a Goodreads title parenthetical.
-// "The 11:59 Bomber (NYPD Red, #8)" → "NYPD Red"
-// "Mockingjay (The Hunger Games, #3)" → "The Hunger Games"
-func seriesTitle(s string) string {
+// seriesTitleAndNumber extracts series name and number from a Goodreads parenthetical.
+// "The 11:59 Bomber (NYPD Red, #8)" → ("NYPD Red", "8")
+// "Mockingjay (The Hunger Games, #3)" → ("The Hunger Games", "3")
+// Returns empty strings if no parenthetical or no number.
+func seriesTitleAndNumber(s string) (name, num string) {
 	start := strings.Index(s, " (")
 	if start < 0 {
-		return ""
+		return
 	}
 	inner := s[start+2:]
-	end := strings.Index(inner, ")")
-	if end >= 0 {
+	if end := strings.Index(inner, ")"); end >= 0 {
 		inner = inner[:end]
 	}
-	// Strip number: "NYPD Red, #8" → "NYPD Red"
 	if i := strings.Index(inner, ", #"); i >= 0 {
-		inner = inner[:i]
+		name = strings.TrimSpace(inner[:i])
+		num = strings.TrimSpace(inner[i+3:])
 	}
-	return strings.TrimSpace(inner)
+	return
 }
 
 // confidenceGate checks whether a Google Books result is a confident match.
 // Uses bidirectional normalized title containment so that either title being
 // a prefix/substring of the other is considered a match.
-// Also checks the series name from Goodreads parenthetical against the returned title
-// (handles cases like "The 11:59 Bomber (NYPD Red, #8)" vs Google's "NYPD Red 8").
+// Also checks the series name AND number from Goodreads parenthetical against the returned
+// title — "NYPD Red 8" passes for "The 11:59 Bomber (NYPD Red, #8)" because Google Books
+// catalogues it by series+number. Requires both series name and number to avoid false-positive
+// matches (e.g. "The Hunger Games" alone would match "Mockingjay (#3)" which is wrong).
 // inputAuthor must be a case-insensitive substring of at least one returnedAuthor.
 func confidenceGate(inputTitle, inputAuthor, returnedTitle string, returnedAuthors []string) bool {
 	n1 := normalizeForCompare(inputTitle)
@@ -101,11 +103,14 @@ func confidenceGate(inputTitle, inputAuthor, returnedTitle string, returnedAutho
 		return false
 	}
 	titleOK := strings.Contains(n1, n2) || strings.Contains(n2, n1)
-	// Also try matching the series name (e.g. "NYPD Red") against returned title
+	// Also try matching the series name+number (e.g. "NYPD Red" + "8") against returned title.
+	// Both must be present to avoid false positives like "The Hunger Games" matching "Mockingjay (#3)".
 	if !titleOK {
-		if series := seriesTitle(inputTitle); series != "" {
+		if series, num := seriesTitleAndNumber(inputTitle); series != "" && num != "" {
 			ns := normalizeForCompare(series)
-			titleOK = strings.Contains(n2, ns) || strings.Contains(ns, n2)
+			if strings.Contains(n2, ns) && strings.Contains(n2, num) {
+				titleOK = true
+			}
 		}
 	}
 	if !titleOK {
