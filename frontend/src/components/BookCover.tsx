@@ -13,7 +13,8 @@ function placeholderUrl(title: string): string {
 }
 
 export function BookCover({ src, title, loading = 'lazy' }: BookCoverProps) {
-  const [imgSrc, setImgSrc] = useState(src);
+  // Use placehold.co immediately if src is empty/missing
+  const [imgSrc, setImgSrc] = useState(() => src || placeholderUrl(title));
 
   return (
     <div className="book-cover-wrapper">

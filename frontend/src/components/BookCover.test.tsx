@@ -19,6 +19,12 @@ describe('BookCover', () => {
     expect(screen.getByRole('img')).toHaveAttribute('loading', 'eager');
   });
 
+  it('uses placehold.co immediately when src is empty', () => {
+    render(<BookCover src="" title="Dune" />);
+    const img = screen.getByRole('img', { name: 'Dune cover' });
+    expect(img.getAttribute('src')).toContain('placehold.co');
+  });
+
   it('switches to placehold.co URL when image errors', () => {
     render(<BookCover src="/covers/broken.jpg" title="Dune" />);
     const img = screen.getByRole('img');

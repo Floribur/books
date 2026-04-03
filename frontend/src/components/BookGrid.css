@@ -1,20 +1,25 @@
-/* Books Read grid breakpoints:
-   ≥1024px → 5 cols | 768–1023px → 4 cols | <768px → 2 cols */
+/* Books Read grid breakpoints: more cols = smaller covers */
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
 }
 
 @media (min-width: 768px) {
   .book-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
   .book-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (min-width: 1400px) {
+  .book-grid {
+    grid-template-columns: repeat(7, 1fr);
   }
 }
 
