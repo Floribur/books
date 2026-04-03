@@ -37,3 +37,65 @@ UPDATE books SET
     metadata_source  = $6,
     updated_at       = NOW()
 WHERE id = $1;
+
+-- name: ListBooksPaginated :many
+SELECT
+    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', a.name, 'slug', a.slug))
+        FILTER (WHERE a.id IS NOT NULL), '[]'
+    ) AS authors,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', g.name, 'slug', g.slug))
+        FILTER (WHERE g.id IS NOT NULL), '[]'
+    ) AS genres
+FROM books b
+LEFT JOIN book_authors ba ON ba.book_id = b.id
+LEFT JOIN authors a ON a.id = ba.author_id
+LEFT JOIN book_genres bg ON bg.book_id = b.id
+LEFT JOIN genres g ON g.id = bg.genre_id
+WHERE b.shelf = 'read'
+  AND ($1::timestamptz IS NULL OR (b.read_at, b.id) < ($1::timestamptz, $2::bigint))
+GROUP BY b.id
+ORDER BY b.read_at DESC NULLS LAST, b.id DESC
+LIMIT $3;
+
+-- name: GetCurrentlyReading :many
+SELECT
+    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', a.name, 'slug', a.slug))
+        FILTER (WHERE a.id IS NOT NULL), '[]'
+    ) AS authors,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', g.name, 'slug', g.slug))
+        FILTER (WHERE g.id IS NOT NULL), '[]'
+    ) AS genres
+FROM books b
+LEFT JOIN book_authors ba ON ba.book_id = b.id
+LEFT JOIN authors a ON a.id = ba.author_id
+LEFT JOIN book_genres bg ON bg.book_id = b.id
+LEFT JOIN genres g ON g.id = bg.genre_id
+WHERE b.shelf = 'currently-reading'
+GROUP BY b.id
+ORDER BY b.date_added DESC NULLS LAST;
+
+-- name: GetBookDetailBySlug :one
+SELECT
+    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year,
+    b.description, b.page_count, b.isbn13, b.read_count, b.shelf, b.metadata_source,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', a.name, 'slug', a.slug))
+        FILTER (WHERE a.id IS NOT NULL), '[]'
+    ) AS authors,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', g.name, 'slug', g.slug))
+        FILTER (WHERE g.id IS NOT NULL), '[]'
+    ) AS genres
+FROM books b
+LEFT JOIN book_authors ba ON ba.book_id = b.id
+LEFT JOIN authors a ON a.id = ba.author_id
+LEFT JOIN book_genres bg ON bg.book_id = b.id
+LEFT JOIN genres g ON g.id = bg.genre_id
+WHERE b.slug = $1
+GROUP BY b.id;

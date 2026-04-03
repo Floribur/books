@@ -7,7 +7,28 @@ package db
 
 import (
 	"context"
+
+	"github.com/jackc/pgx/v5/pgtype"
 )
+
+const getAuthorBySlug = `-- name: GetAuthorBySlug :one
+SELECT a.id, a.name, a.slug
+FROM authors a
+WHERE a.slug = $1
+`
+
+type GetAuthorBySlugRow struct {
+	ID   int64  `json:"id"`
+	Name string `json:"name"`
+	Slug string `json:"slug"`
+}
+
+func (q *Queries) GetAuthorBySlug(ctx context.Context, slug string) (GetAuthorBySlugRow, error) {
+	row := q.db.QueryRow(ctx, getAuthorBySlug, slug)
+	var i GetAuthorBySlugRow
+	err := row.Scan(&i.ID, &i.Name, &i.Slug)
+	return i, err
+}
 
 const linkBookAuthor = `-- name: LinkBookAuthor :exec
 INSERT INTO book_authors (book_id, author_id)
@@ -23,6 +44,123 @@ type LinkBookAuthorParams struct {
 func (q *Queries) LinkBookAuthor(ctx context.Context, arg LinkBookAuthorParams) error {
 	_, err := q.db.Exec(ctx, linkBookAuthor, arg.BookID, arg.AuthorID)
 	return err
+}
+
+const listAuthors = `-- name: ListAuthors :many
+SELECT a.id, a.name, a.slug, COUNT(ba.book_id)::bigint AS book_count
+FROM authors a
+LEFT JOIN book_authors ba ON ba.author_id = a.id
+GROUP BY a.id
+ORDER BY a.name ASC
+`
+
+type ListAuthorsRow struct {
+	ID        int64  `json:"id"`
+	Name      string `json:"name"`
+	Slug      string `json:"slug"`
+	BookCount int64  `json:"book_count"`
+}
+
+func (q *Queries) ListAuthors(ctx context.Context) ([]ListAuthorsRow, error) {
+	rows, err := q.db.Query(ctx, listAuthors)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []ListAuthorsRow
+	for rows.Next() {
+		var i ListAuthorsRow
+		if err := rows.Scan(
+			&i.ID,
+			&i.Name,
+			&i.Slug,
+			&i.BookCount,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
+const listBooksByAuthor = `-- name: ListBooksByAuthor :many
+SELECT
+    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', a2.name, 'slug', a2.slug))
+        FILTER (WHERE a2.id IS NOT NULL), '[]'
+    ) AS authors,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', g.name, 'slug', g.slug))
+        FILTER (WHERE g.id IS NOT NULL), '[]'
+    ) AS genres
+FROM books b
+JOIN book_authors ba ON ba.book_id = b.id
+JOIN authors a ON a.id = ba.author_id
+LEFT JOIN book_authors ba2 ON ba2.book_id = b.id
+LEFT JOIN authors a2 ON a2.id = ba2.author_id
+LEFT JOIN book_genres bg ON bg.book_id = b.id
+LEFT JOIN genres g ON g.id = bg.genre_id
+WHERE a.slug = $1
+  AND ($2::timestamptz IS NULL OR (b.read_at, b.id) < ($2::timestamptz, $3::bigint))
+GROUP BY b.id
+ORDER BY b.read_at DESC NULLS LAST, b.id DESC
+LIMIT $4
+`
+
+type ListBooksByAuthorParams struct {
+	Slug    string             `json:"slug"`
+	Column2 pgtype.Timestamptz `json:"column_2"`
+	Column3 int64              `json:"column_3"`
+	Limit   int32              `json:"limit"`
+}
+
+type ListBooksByAuthorRow struct {
+	ID              int64              `json:"id"`
+	Slug            string             `json:"slug"`
+	Title           string             `json:"title"`
+	CoverPath       *string            `json:"cover_path"`
+	ReadAt          pgtype.Timestamptz `json:"read_at"`
+	PublicationYear *int32             `json:"publication_year"`
+	Authors         interface{}        `json:"authors"`
+	Genres          interface{}        `json:"genres"`
+}
+
+func (q *Queries) ListBooksByAuthor(ctx context.Context, arg ListBooksByAuthorParams) ([]ListBooksByAuthorRow, error) {
+	rows, err := q.db.Query(ctx, listBooksByAuthor,
+		arg.Slug,
+		arg.Column2,
+		arg.Column3,
+		arg.Limit,
+	)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []ListBooksByAuthorRow
+	for rows.Next() {
+		var i ListBooksByAuthorRow
+		if err := rows.Scan(
+			&i.ID,
+			&i.Slug,
+			&i.Title,
+			&i.CoverPath,
+			&i.ReadAt,
+			&i.PublicationYear,
+			&i.Authors,
+			&i.Genres,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
 }
 
 const upsertAuthor = `-- name: UpsertAuthor :one

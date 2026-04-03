@@ -70,6 +70,127 @@ func (q *Queries) GetBookBySlug(ctx context.Context, slug string) (Book, error) 
 	return i, err
 }
 
+const getBookDetailBySlug = `-- name: GetBookDetailBySlug :one
+SELECT
+    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year,
+    b.description, b.page_count, b.isbn13, b.read_count, b.shelf, b.metadata_source,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', a.name, 'slug', a.slug))
+        FILTER (WHERE a.id IS NOT NULL), '[]'
+    ) AS authors,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', g.name, 'slug', g.slug))
+        FILTER (WHERE g.id IS NOT NULL), '[]'
+    ) AS genres
+FROM books b
+LEFT JOIN book_authors ba ON ba.book_id = b.id
+LEFT JOIN authors a ON a.id = ba.author_id
+LEFT JOIN book_genres bg ON bg.book_id = b.id
+LEFT JOIN genres g ON g.id = bg.genre_id
+WHERE b.slug = $1
+GROUP BY b.id
+`
+
+type GetBookDetailBySlugRow struct {
+	ID              int64              `json:"id"`
+	Slug            string             `json:"slug"`
+	Title           string             `json:"title"`
+	CoverPath       *string            `json:"cover_path"`
+	ReadAt          pgtype.Timestamptz `json:"read_at"`
+	PublicationYear *int32             `json:"publication_year"`
+	Description     *string            `json:"description"`
+	PageCount       *int32             `json:"page_count"`
+	Isbn13          *string            `json:"isbn13"`
+	ReadCount       int32              `json:"read_count"`
+	Shelf           string             `json:"shelf"`
+	MetadataSource  string             `json:"metadata_source"`
+	Authors         interface{}        `json:"authors"`
+	Genres          interface{}        `json:"genres"`
+}
+
+func (q *Queries) GetBookDetailBySlug(ctx context.Context, slug string) (GetBookDetailBySlugRow, error) {
+	row := q.db.QueryRow(ctx, getBookDetailBySlug, slug)
+	var i GetBookDetailBySlugRow
+	err := row.Scan(
+		&i.ID,
+		&i.Slug,
+		&i.Title,
+		&i.CoverPath,
+		&i.ReadAt,
+		&i.PublicationYear,
+		&i.Description,
+		&i.PageCount,
+		&i.Isbn13,
+		&i.ReadCount,
+		&i.Shelf,
+		&i.MetadataSource,
+		&i.Authors,
+		&i.Genres,
+	)
+	return i, err
+}
+
+const getCurrentlyReading = `-- name: GetCurrentlyReading :many
+SELECT
+    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', a.name, 'slug', a.slug))
+        FILTER (WHERE a.id IS NOT NULL), '[]'
+    ) AS authors,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', g.name, 'slug', g.slug))
+        FILTER (WHERE g.id IS NOT NULL), '[]'
+    ) AS genres
+FROM books b
+LEFT JOIN book_authors ba ON ba.book_id = b.id
+LEFT JOIN authors a ON a.id = ba.author_id
+LEFT JOIN book_genres bg ON bg.book_id = b.id
+LEFT JOIN genres g ON g.id = bg.genre_id
+WHERE b.shelf = 'currently-reading'
+GROUP BY b.id
+ORDER BY b.date_added DESC NULLS LAST
+`
+
+type GetCurrentlyReadingRow struct {
+	ID              int64              `json:"id"`
+	Slug            string             `json:"slug"`
+	Title           string             `json:"title"`
+	CoverPath       *string            `json:"cover_path"`
+	ReadAt          pgtype.Timestamptz `json:"read_at"`
+	PublicationYear *int32             `json:"publication_year"`
+	Authors         interface{}        `json:"authors"`
+	Genres          interface{}        `json:"genres"`
+}
+
+func (q *Queries) GetCurrentlyReading(ctx context.Context) ([]GetCurrentlyReadingRow, error) {
+	rows, err := q.db.Query(ctx, getCurrentlyReading)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []GetCurrentlyReadingRow
+	for rows.Next() {
+		var i GetCurrentlyReadingRow
+		if err := rows.Scan(
+			&i.ID,
+			&i.Slug,
+			&i.Title,
+			&i.CoverPath,
+			&i.ReadAt,
+			&i.PublicationYear,
+			&i.Authors,
+			&i.Genres,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
 const getUnenrichedBooks = `-- name: GetUnenrichedBooks :many
 SELECT id, goodreads_id, slug, title, description, cover_path, page_count, publication_year, isbn13, metadata_source, read_at, date_added, read_count, shelf, search_vector, created_at, updated_at FROM books WHERE metadata_source = 'none' ORDER BY created_at ASC
 `
@@ -143,6 +264,75 @@ func (q *Queries) ListBooks(ctx context.Context) ([]Book, error) {
 			&i.SearchVector,
 			&i.CreatedAt,
 			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
+const listBooksPaginated = `-- name: ListBooksPaginated :many
+SELECT
+    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', a.name, 'slug', a.slug))
+        FILTER (WHERE a.id IS NOT NULL), '[]'
+    ) AS authors,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', g.name, 'slug', g.slug))
+        FILTER (WHERE g.id IS NOT NULL), '[]'
+    ) AS genres
+FROM books b
+LEFT JOIN book_authors ba ON ba.book_id = b.id
+LEFT JOIN authors a ON a.id = ba.author_id
+LEFT JOIN book_genres bg ON bg.book_id = b.id
+LEFT JOIN genres g ON g.id = bg.genre_id
+WHERE b.shelf = 'read'
+  AND ($1::timestamptz IS NULL OR (b.read_at, b.id) < ($1::timestamptz, $2::bigint))
+GROUP BY b.id
+ORDER BY b.read_at DESC NULLS LAST, b.id DESC
+LIMIT $3
+`
+
+type ListBooksPaginatedParams struct {
+	Column1 pgtype.Timestamptz `json:"column_1"`
+	Column2 int64              `json:"column_2"`
+	Limit   int32              `json:"limit"`
+}
+
+type ListBooksPaginatedRow struct {
+	ID              int64              `json:"id"`
+	Slug            string             `json:"slug"`
+	Title           string             `json:"title"`
+	CoverPath       *string            `json:"cover_path"`
+	ReadAt          pgtype.Timestamptz `json:"read_at"`
+	PublicationYear *int32             `json:"publication_year"`
+	Authors         interface{}        `json:"authors"`
+	Genres          interface{}        `json:"genres"`
+}
+
+func (q *Queries) ListBooksPaginated(ctx context.Context, arg ListBooksPaginatedParams) ([]ListBooksPaginatedRow, error) {
+	rows, err := q.db.Query(ctx, listBooksPaginated, arg.Column1, arg.Column2, arg.Limit)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []ListBooksPaginatedRow
+	for rows.Next() {
+		var i ListBooksPaginatedRow
+		if err := rows.Scan(
+			&i.ID,
+			&i.Slug,
+			&i.Title,
+			&i.CoverPath,
+			&i.ReadAt,
+			&i.PublicationYear,
+			&i.Authors,
+			&i.Genres,
 		); err != nil {
 			return nil, err
 		}
