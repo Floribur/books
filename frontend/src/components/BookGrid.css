@@ -1,4 +1,4 @@
-/* Books Read grid breakpoints: more cols = smaller covers */
+/* Books Read grid breakpoints: max 6 cols */
 .book-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -14,12 +14,6 @@
 @media (min-width: 1024px) {
   .book-grid {
     grid-template-columns: repeat(6, 1fr);
-  }
-}
-
-@media (min-width: 1400px) {
-  .book-grid {
-    grid-template-columns: repeat(7, 1fr);
   }
 }
 

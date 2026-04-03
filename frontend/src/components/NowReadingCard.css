@@ -23,13 +23,16 @@
   gap: var(--space-xs);
 }
 
-/* D-07: Now Reading title uses body size (16px), NOT label (13px) — more prominent */
 .now-reading-card-title {
-  font-size: var(--text-body);   /* 16px — distinguished from BookCard's 13px */
+  font-size: var(--text-label);  /* 13px — matches BookCard */
   font-family: var(--font-body);
   font-weight: 400;
-  line-height: var(--leading-body);
+  line-height: var(--leading-label);
   color: var(--color-primary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .now-reading-card-author {
