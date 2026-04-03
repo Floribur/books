@@ -211,27 +211,28 @@ Plans:
 
 **Requirements covered:** UI-04, UI-05, DEPL-01–04
 
+**Plans:** 2 plans
+
+Plans:
+- [ ] 05-01-PLAN.md — Lottie sidebar animation (lottie-react), usePageTitle hook, favicon, index.html favicon links
+- [ ] 05-02-PLAN.md — Makefile build/build-pi targets, make build smoke test, env var audit, docs/deployment.md runbook
+
 ### Plan 5.1 — Sidebar Animation & UI Polish
 
-**Objective:** Animated book SVG in sidebar. Final palette and typography pass.
+**Objective:** Lottie animated reader figure in sidebar. Page titles via usePageTitle hook. Brand-red favicon.
 
 **Tasks:**
-1. SVG book graphic: open book with pages; CSS keyframe animation (page-turn or breathing/glow effect)
-2. `@media (prefers-reduced-motion: reduce)` — disable animation, show static SVG
-3. Final color/typography pass: verify all brand colors applied consistently, check contrast ratios
-4. Favicon and page title configuration
+1. Human action: download free Lottie reading animation JSON from LottieFiles
+2. Post-process JSON to brand color (#e8c4cf on dark sidebar), install lottie-react, create LottieAnimation component + tests, create usePageTitle hook + tests
+3. Wire LottieAnimation into Sidebar.tsx (replaces text title), add Sidebar.css wrapper, wire usePageTitle into all 7 pages, add favicon.svg, update index.html
 
 ### Plan 5.2 — Production Build & Deployment
 
-**Objective:** Single Go binary serving everything, deployed on VPS via systemd.
+**Objective:** Single Go binary with embedded React (make build). Raspberry Pi runbook documented.
 
 **Tasks:**
-1. `npm run build` produces `frontend/dist/`; verify `//go:embed frontend/dist` compiles correctly
-2. systemd unit file (`flos-library.service`): restart on failure, environment file for secrets
-3. Makefile `make build` target: builds React, compiles Go binary with embed
-4. SSL: certbot with systemd timer (or Caddy for zero-config)
-5. Environment variable audit: inspect built JS bundle to confirm no `GOOGLE_BOOKS_API_KEY` leakage
-6. Deployment runbook: `make build` → `scp binary server:~/ && systemctl restart flos-library`
+1. Update Makefile: `make build` (npm → go), `make build-pi` (arm64 cross-compile), run build, env var audit
+2. Write docs/deployment.md: systemd unit example, Caddy config, scp deploy sequence, env var security note
 
 ---
 
