@@ -7,9 +7,11 @@ import (
 	"strings"
 	"time"
 
-	"flos-library/internal/db"
+	"github.com/gosimple/slug"
 	"github.com/jackc/pgx/v5/pgtype"
 	"github.com/mmcdole/gofeed"
+
+	"flos-library/internal/db"
 )
 
 const (
@@ -201,8 +203,25 @@ func SyncRSS(ctx context.Context, queries *db.Queries) error {
 		if item.ISBN != "" {
 			params.Isbn13 = &item.ISBN
 		}
-		if _, err := queries.UpsertBook(ctx, params); err != nil {
+		book, err := queries.UpsertBook(ctx, params)
+		if err != nil {
 			log.Printf("sync: upsert book %s: %v", item.GoodreadsID, err)
+			continue
+		}
+
+		// Link author from RSS feed (ON CONFLICT DO NOTHING — idempotent)
+		if item.AuthorName != "" {
+			authorRow, err := queries.UpsertAuthor(ctx, db.UpsertAuthorParams{
+				Name: item.AuthorName,
+				Slug: slug.Make(item.AuthorName),
+			})
+			if err != nil {
+				log.Printf("sync: upsert author %q for %s: %v", item.AuthorName, item.GoodreadsID, err)
+			} else if err := queries.LinkBookAuthor(ctx, db.LinkBookAuthorParams{
+				BookID: book.ID, AuthorID: authorRow.ID,
+			}); err != nil {
+				log.Printf("sync: link author %q to %s: %v", item.AuthorName, item.GoodreadsID, err)
+			}
 		}
 	}
 
