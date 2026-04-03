@@ -82,6 +82,11 @@
   overflow-y: auto;
 }
 
+/* Mobile drawer: hidden on desktop by default */
+.sidebar--drawer {
+  display: none;
+}
+
 /* ─── Mobile: hide desktop sidebar, show topbar + drawer ─── */
 .mobile-topbar {
   display: none;
@@ -131,8 +136,8 @@
     z-index: 200;
   }
 
-  /* Drawer panel */
   .sidebar--drawer {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;

@@ -10,9 +10,26 @@
   margin-bottom: var(--space-md);
 }
 
-/* Now Reading grid: fixed ~128px column width, auto-fill, max 5 per row */
+/* Now Reading grid: matches Books Read grid breakpoints (fluid 1fr, max 5 cols) */
 .now-reading-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 128px));
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .now-reading-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .now-reading-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Prevent grid cells from overflowing */
+.now-reading-grid > * {
+  min-width: 0;
 }

@@ -19,10 +19,10 @@ describe('BookCover', () => {
     expect(screen.getByRole('img')).toHaveAttribute('loading', 'eager');
   });
 
-  it('hides the img when image errors (shows gradient placeholder only)', () => {
+  it('switches to placehold.co URL when image errors', () => {
     render(<BookCover src="/covers/broken.jpg" title="Dune" />);
     const img = screen.getByRole('img');
     fireEvent.error(img);
-    expect(screen.queryByRole('img')).toBeNull();
+    expect(img).toHaveAttribute('src', expect.stringContaining('placehold.co'));
   });
 });

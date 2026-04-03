@@ -7,24 +7,23 @@ interface BookCoverProps {
   loading?: 'lazy' | 'eager';
 }
 
+function placeholderUrl(title: string): string {
+  const text = encodeURIComponent(title.slice(0, 25));
+  return `https://placehold.co/128x192/1a0f12/9e8085?text=${text}`;
+}
+
 export function BookCover({ src, title, loading = 'lazy' }: BookCoverProps) {
-  const [hasError, setHasError] = useState(false);
+  const [imgSrc, setImgSrc] = useState(src);
 
   return (
     <div className="book-cover-wrapper">
-      {hasError ? (
-        <div className="book-cover-placeholder" aria-label={`${title} cover`}>
-          <span className="book-cover-placeholder-title">{title}</span>
-        </div>
-      ) : (
-        <img
-          src={src}
-          alt={`${title} cover`}
-          loading={loading}
-          onError={() => setHasError(true)}
-          className="book-cover-img"
-        />
-      )}
+      <img
+        src={imgSrc}
+        alt={`${title} cover`}
+        loading={loading}
+        onError={() => setImgSrc(placeholderUrl(title))}
+        className="book-cover-img"
+      />
     </div>
   );
 }
