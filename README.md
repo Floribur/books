@@ -44,7 +44,7 @@ migrate -path ./migrations -database "postgres://postgres:postgres@localhost:543
 make dev
 ```
 
-This starts Docker (if not already running), loads `.env`, and runs the server on **http://localhost:8081**.
+This starts Docker (if not already running), runs any pending migrations, loads `.env`, and starts the server on **http://localhost:8081**.
 
 ## Everyday usage (Docker already running)
 
@@ -53,7 +53,7 @@ Just run:
 make dev
 ```
 
-This picks up all variables from your `.env` file automatically and starts the server on **http://localhost:8081**.
+This picks up all variables from your `.env` file automatically, runs any pending migrations, and starts the server on **http://localhost:8081**.
 
 > **Without Make:** `set -a; source .env; set +a; go run ./cmd/server` (bash) or set env vars manually on Windows.
 

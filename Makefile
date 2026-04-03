@@ -10,6 +10,7 @@ endif
 
 dev:
 	docker compose up -d
+	migrate -path ./migrations -database "$(DB_URL)" up
 	go run ./cmd/server
 
 migrate:
