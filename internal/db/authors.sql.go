@@ -30,6 +30,20 @@ func (q *Queries) GetAuthorBySlug(ctx context.Context, slug string) (GetAuthorBy
 	return i, err
 }
 
+const getFirstAuthorForBook = `-- name: GetFirstAuthorForBook :one
+SELECT a.name FROM authors a
+JOIN book_authors ba ON ba.author_id = a.id
+WHERE ba.book_id = $1
+LIMIT 1
+`
+
+func (q *Queries) GetFirstAuthorForBook(ctx context.Context, bookID int64) (string, error) {
+	row := q.db.QueryRow(ctx, getFirstAuthorForBook, bookID)
+	var name string
+	err := row.Scan(&name)
+	return name, err
+}
+
 const linkBookAuthor = `-- name: LinkBookAuthor :exec
 INSERT INTO book_authors (book_id, author_id)
 VALUES ($1, $2)

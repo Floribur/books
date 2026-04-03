@@ -1,3 +1,9 @@
+-- name: GetFirstAuthorForBook :one
+SELECT a.name FROM authors a
+JOIN book_authors ba ON ba.author_id = a.id
+WHERE ba.book_id = $1
+LIMIT 1;
+
 -- name: UpsertAuthor :one
 INSERT INTO authors (name, slug, created_at, updated_at)
 VALUES ($1, $2, NOW(), NOW())
