@@ -1,0 +1,124 @@
+/* Derived token: genre bar fill color — local only, NOT in global tokens (D-06) */
+:root {
+  --color-genre-bar: rgba(109, 35, 62, 0.3);
+  --color-genre-bar-hover: rgba(109, 35, 62, 0.45);
+}
+
+.genres-page {
+  padding: var(--space-xl) var(--space-md);
+}
+
+.genres-page-heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-heading);
+  font-weight: 700;
+  line-height: var(--leading-heading);
+  color: var(--color-primary);
+  margin: 0 0 var(--space-lg) 0;
+}
+
+.genres-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Each row is a full-width link — D-07 */
+.genres-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+  min-height: 44px;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.genres-list > .genres-row:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.genres-row:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Genre name — fixed 160px left column, ellipsis overflow */
+.genres-row-name {
+  width: 160px;
+  flex-shrink: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Bar track */
+.genres-row-bar-container {
+  flex: 1;
+  height: 16px;
+  background: var(--color-surface);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Bar fill — width set via inline style (computed per-row) — D-05, D-06 */
+.genres-row-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+  background: var(--color-genre-bar);
+  transition: background 0.15s ease;
+}
+
+/* Hover: bar fill darkens — D-05 interaction contract */
+.genres-row:hover .genres-row-bar-fill {
+  background: var(--color-genre-bar-hover);
+}
+
+/* Count — right column */
+.genres-row-count {
+  min-width: 48px;
+  text-align: right;
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  line-height: var(--leading-label);
+  color: var(--color-text-muted);
+}
+
+/* Skeleton rows */
+.genres-row--skeleton {
+  pointer-events: none;
+}
+
+.genres-skeleton-label {
+  width: 160px;
+  height: 16px;
+  background: var(--color-skeleton);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.genres-skeleton-bar {
+  flex: 1;
+  height: 16px;
+  background: var(--color-skeleton);
+  border-radius: 4px;
+}
+
+.genres-skeleton-count {
+  width: 48px;
+  height: 16px;
+  background: var(--color-skeleton);
+  border-radius: 4px;
+}
+
+.genres-empty {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+  margin: var(--space-xl) 0;
+}

@@ -1,14 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
 import { Sidebar } from './components/Sidebar';
 import { HomePage } from './pages/HomePage';
+import { BookDetailPage } from './pages/BookDetailPage';
+import { AuthorsPage } from './pages/AuthorsPage';
+import { AuthorDetailPage } from './pages/AuthorDetailPage';
+import { GenresPage } from './pages/GenresPage';
+import { GenreDetailPage } from './pages/GenreDetailPage';
 import './App.css';
 
-// Phase 4 pages — stubs remain
-function BookDetailPage() { return <main style={{ padding: '2rem' }}><p>Book detail — Phase 4</p></main>; }
-function AuthorsPage() { return <main style={{ padding: '2rem' }}><p>Authors — Phase 4</p></main>; }
-function AuthorDetailPage() { return <main style={{ padding: '2rem' }}><p>Author detail — Phase 4</p></main>; }
-function GenresPage() { return <main style={{ padding: '2rem' }}><p>Genres — Phase 4</p></main>; }
-function GenreDetailPage() { return <main style={{ padding: '2rem' }}><p>Genre detail — Phase 4</p></main>; }
+// ReadingChallengePage stub — will be replaced in Plan 4.2
 function ReadingChallengePage() { return <main style={{ padding: '2rem' }}><p>Reading Challenge — Phase 4</p></main>; }
 
 export default function App() {

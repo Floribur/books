@@ -1,0 +1,36 @@
+.author-detail-page {
+  padding: var(--space-xl) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.author-detail-heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.author-detail-name {
+  font-family: var(--font-heading);
+  font-size: var(--text-heading);
+  font-weight: 700;
+  line-height: var(--leading-heading);
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.author-detail-count {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  line-height: var(--leading-label);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.author-detail-heading-skeleton {
+  height: 28px;
+  width: 60%;
+  background: var(--color-skeleton);
+  border-radius: 4px;
+}
