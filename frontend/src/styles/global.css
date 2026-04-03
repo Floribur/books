@@ -1,0 +1,14 @@
+@import './reset.css';
+@import './tokens.css';
+@import './themes.css';
+@import './typography.css';
+
+html,
+body {
+  background-color: var(--color-background);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}

@@ -1,0 +1,39 @@
+/* ─── Spacing Scale (multiples of 4) ─── */
+:root {
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+}
+
+/* ─── Typography ─── */
+:root {
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --text-body:    16px;
+  --text-label:   13px;
+  --text-heading: 24px;
+  --text-display: 36px;
+  --leading-body:    1.6;
+  --leading-label:   1.4;
+  --leading-heading: 1.2;
+  --leading-display: 1.1;
+}
+
+/* ─── Light Theme (default) ─── */
+:root,
+[data-theme="light"] {
+  --color-background:       #faf8f5;
+  --color-surface:          #f0ebe3;
+  --color-primary:          #6d233e;
+  --color-accent:           #c4843a;
+  --color-accent-contrast:  #ffffff;
+  --color-text:             #2c1a1f;
+  --color-text-muted:       #7a6065;
+  --color-border:           #e2d9d0;
+  --color-destructive:      #b91c1c;
+  --color-skeleton:         linear-gradient(135deg, #6d233e22, #c4843a22);
+}

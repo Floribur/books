@@ -1,0 +1,12 @@
+[data-theme="dark"] {
+  --color-background:       #15100f;
+  --color-surface:          #221618;
+  --color-primary:          #e8c4cf;
+  --color-accent:           #d4943a;
+  --color-accent-contrast:  #ffffff;
+  --color-text:             #f0e6e9;
+  --color-text-muted:       #9e8085;
+  --color-border:           #3a2428;
+  --color-destructive:      #ef4444;
+  --color-skeleton:         linear-gradient(135deg, #6d233e44, #c4843a33);
+}

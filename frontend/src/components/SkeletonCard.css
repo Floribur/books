@@ -1,0 +1,21 @@
+.skeleton-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.skeleton-cover {
+  aspect-ratio: 2 / 3;
+  background: var(--color-skeleton);
+  border-radius: 4px;
+  width: 100%;
+}
+
+.skeleton-text {
+  height: 12px;
+  border-radius: 4px;
+  background: var(--color-skeleton);
+}
+
+.skeleton-title  { width: 80%; }
+.skeleton-author { width: 60%; }
