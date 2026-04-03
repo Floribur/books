@@ -8,21 +8,28 @@ interface BookCoverProps {
 }
 
 function placeholderUrl(title: string): string {
-  // Wrap title into lines of ~14 chars at word boundaries (max 3 lines)
+  // Wrap title into word-boundary lines, show up to 3, add … if truncated
+  const maxChars = 16;
+  const maxLines = 3;
   const words = title.split(' ');
   const lines: string[] = [];
   let current = '';
+
   for (const word of words) {
-    if (current && (current + ' ' + word).length > 14) {
+    const candidate = current ? `${current} ${word}` : word;
+    if (current && candidate.length > maxChars) {
       lines.push(current);
       current = word;
-      if (lines.length === 3) break;
     } else {
-      current = current ? `${current} ${word}` : word;
+      current = candidate;
     }
   }
-  if (current && lines.length < 3) lines.push(current);
-  const text = encodeURIComponent(lines.join('\n'));
+  if (current) lines.push(current);
+
+  const display = lines.slice(0, maxLines);
+  if (lines.length > maxLines) display[maxLines - 1] += '…';
+
+  const text = encodeURIComponent(display.join('\n'));
   return `https://placehold.co/128x192/1a0f12/9e8085?text=${text}`;
 }
 
