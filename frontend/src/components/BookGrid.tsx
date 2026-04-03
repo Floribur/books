@@ -5,11 +5,16 @@ import { SkeletonCard } from './SkeletonCard';
 import { Toast } from './Toast';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useScrollRestoration } from '../hooks/useScrollRestoration';
-import { fetchBooks } from '../api/books';
 import type { PaginatedBooks } from '../api/types';
 import './BookGrid.css';
 
-export function BookGrid() {
+interface BookGridProps {
+  queryKey: string[];
+  fetchFn: (cursor: string | undefined) => Promise<PaginatedBooks>;
+  ariaLabel?: string;
+}
+
+export function BookGrid({ queryKey, fetchFn, ariaLabel = 'Books' }: BookGridProps) {
   const [showError, setShowError] = useState(false);
   const { restoreScroll } = useScrollRestoration();
 
@@ -21,8 +26,8 @@ export function BookGrid() {
     isPending,   // v5: "no data yet" — use for skeleton display (NOT isLoading)
     isError,
   } = useInfiniteQuery<PaginatedBooks, Error, { pages: PaginatedBooks[] }, string[], string | undefined>({
-    queryKey: ['books'],
-    queryFn: ({ pageParam }) => fetchBooks(pageParam),
+    queryKey,
+    queryFn: ({ pageParam }) => fetchFn(pageParam),
     initialPageParam: undefined,  // REQUIRED in TanStack Query v5
     getNextPageParam: (lastPage) =>
       lastPage.has_more ? lastPage.next_cursor ?? undefined : undefined,
@@ -44,7 +49,7 @@ export function BookGrid() {
   const sentinelRef = useIntersectionObserver(handleIntersect, !!hasNextPage);
 
   return (
-    <section className="book-grid-section" aria-label="Books Read">
+    <section className="book-grid-section" aria-label={ariaLabel}>
       {showError && (
         <Toast
           message="Couldn't load books. Try refreshing the page."

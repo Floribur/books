@@ -5,6 +5,7 @@ import { describe, expect, it } from 'vitest';
 import { http, HttpResponse } from 'msw';
 import { server } from '../test/msw-server';
 import { BookGrid } from './BookGrid';
+import { fetchBooks } from '../api/books';
 
 function renderGrid() {
   const queryClient = new QueryClient({
@@ -13,7 +14,7 @@ function renderGrid() {
   return render(
     <QueryClientProvider client={queryClient}>
       <MemoryRouter>
-        <BookGrid />
+        <BookGrid queryKey={['books']} fetchFn={fetchBooks} ariaLabel="Books Read" />
       </MemoryRouter>
     </QueryClientProvider>
   );
