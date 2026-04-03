@@ -31,13 +31,6 @@
   color: var(--color-primary);
 }
 
-/* Longest book title uses same heading style but smaller to fit 24-char truncation */
-.stats-strip-value--title {
-  font-size: var(--text-body);
-  font-family: var(--font-heading);
-  font-weight: 700;
-  color: var(--color-primary);
-}
 
 .stats-strip-label {
   font-family: var(--font-body);

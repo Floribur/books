@@ -17,15 +17,12 @@ interface StatsStripProps {
   isLoading?: boolean;
 }
 
-// Truncate title at 24 chars with ellipsis — per UI-SPEC
-function truncateTitle(title: string): string {
-  return title.length > 24 ? `${title.slice(0, 24)}\u2026` : title;
-}
 
 export function StatsStrip({ stats, year, isLoading = false }: StatsStripProps) {
   const showPageStats = stats.totalPages !== null && stats.totalPages > 0;
   const showLongest = stats.longestBook !== null;
   const showFootnote = showPageStats || showLongest;
+
 
   if (isLoading) {
     return (
@@ -59,10 +56,8 @@ export function StatsStrip({ stats, year, isLoading = false }: StatsStripProps) 
         {/* Stat 3: Longest Book — hidden when null (D-10) */}
         {showLongest && (
           <div className="stats-strip-stat">
-            <span className="stats-strip-value stats-strip-value--title">
-              {truncateTitle(stats.longestBook!.title)}
-            </span>
-            <span className="stats-strip-label">{stats.longestBook!.pageCount} pages</span>
+            <span className="stats-strip-value">{stats.longestBook!.pageCount.toLocaleString()}</span>
+            <span className="stats-strip-label">pages, longest book*</span>
           </div>
         )}
       </div>
@@ -70,7 +65,7 @@ export function StatsStrip({ stats, year, isLoading = false }: StatsStripProps) 
       {/* Footnote — only when page stats are visible (D-10) */}
       {showFootnote && (
         <p className="stats-strip-footnote">
-          * Based on available page data (not all books have page counts).
+          * Based on available page data — not all books have page counts.
         </p>
       )}
     </div>
