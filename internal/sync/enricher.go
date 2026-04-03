@@ -96,6 +96,12 @@ func seriesTitleAndNumber(s string) (name, num string) {
 // catalogues it by series+number. Requires both series name and number to avoid false-positive
 // matches (e.g. "The Hunger Games" alone would match "Mockingjay (#3)" which is wrong).
 // inputAuthor must be a case-insensitive substring of at least one returnedAuthor.
+// normalizeAuthor lowercases and collapses whitespace for author comparison.
+// Handles cases like "James  Patterson" (double space in Goodreads RSS) vs "James Patterson".
+func normalizeAuthor(s string) string {
+	return strings.Join(strings.Fields(strings.ToLower(s)), " ")
+}
+
 func confidenceGate(inputTitle, inputAuthor, returnedTitle string, returnedAuthors []string) bool {
 	n1 := normalizeForCompare(inputTitle)
 	n2 := normalizeForCompare(returnedTitle)
@@ -119,8 +125,9 @@ func confidenceGate(inputTitle, inputAuthor, returnedTitle string, returnedAutho
 	if inputAuthor == "" {
 		return true
 	}
+	na := normalizeAuthor(inputAuthor)
 	for _, a := range returnedAuthors {
-		if strings.Contains(strings.ToLower(a), strings.ToLower(inputAuthor)) {
+		if strings.Contains(normalizeAuthor(a), na) {
 			return true
 		}
 	}

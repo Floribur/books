@@ -77,7 +77,7 @@ func parseItem(item *gofeed.Item) GoodreadsItem {
 	gi := GoodreadsItem{
 		GoodreadsID: extractCustom(item, "book_id"),
 		Title:       item.Title,
-		AuthorName:  extractCustom(item, "author_name"),
+		AuthorName:  strings.Join(strings.Fields(extractCustom(item, "author_name")), " "), // normalize whitespace
 		ISBN:        extractCustom(item, "isbn"),
 		ImageURL:    extractCustom(item, "book_large_image_url"),
 	}

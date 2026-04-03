@@ -133,11 +133,19 @@ func TestEnrichmentConfidenceGate(t *testing.T) {
 			want:            false,
 		},
 		{
-			name:            "no author provided skips author check",
-			inputTitle:      "Sapiens",
-			inputAuthor:     "",
-			returnedTitle:   "Sapiens",
-			returnedAuthors: []string{"Yuval Noah Harari"},
+			name:            "double space in author name normalizes correctly",
+			inputTitle:      "NYPD Red 2 (NYPD Red, #2)",
+			inputAuthor:     "James  Patterson", // Goodreads RSS often has double spaces
+			returnedTitle:   "NYPD Red 2",
+			returnedAuthors: []string{"James Patterson", "Marshall Karp"},
+			want:            true,
+		},
+		{
+			name:            "single goodreads author matches when google has co-author",
+			inputTitle:      "NYPD Red 2",
+			inputAuthor:     "James Patterson",
+			returnedTitle:   "NYPD Red 2",
+			returnedAuthors: []string{"James Patterson", "Marshall Karp"},
 			want:            true,
 		},
 	}
