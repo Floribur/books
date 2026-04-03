@@ -1,0 +1,21 @@
+/* Two-column layout: fixed 240px sidebar + scrollable main content */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Content area — offset by sidebar width on desktop */
+.app-content {
+  flex: 1;
+  margin-left: 240px;        /* Offset for fixed sidebar */
+  background: var(--color-background);
+  min-height: 100vh;
+}
+
+/* Mobile: no sidebar offset — sidebar is a drawer */
+@media (max-width: 767px) {
+  .app-content {
+    margin-left: 0;
+    padding-top: 48px;       /* Height of mobile topbar */
+  }
+}
