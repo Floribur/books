@@ -238,7 +238,7 @@ func EnrichBook(ctx context.Context, queries *db.Queries, book db.Book) {
 				n1 := normalizeForCompare(book.Title)
 				n2 := normalizeForCompare(first.Title)
 				if strings.Contains(n1, n2) || strings.Contains(n2, n1) {
-					reason = fmt.Sprintf("author mismatch (got %v)", first.Authors)
+					reason = fmt.Sprintf("author mismatch (searched %q, got %v)", primaryAuthor, first.Authors)
 				}
 				log.Printf("enricher: confidence gate failed for book %s (%s: %q vs %q)",
 					book.GoodreadsID, reason, book.Title, first.Title)
