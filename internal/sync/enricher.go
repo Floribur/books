@@ -37,27 +37,46 @@ type googleBooksVolume struct {
 	} `json:"items"`
 }
 
+// normalizeTitle strips parenthetical series info and subtitles for fuzzy matching.
+//
+//	"Sapiens: A Brief History of Humankind" → "sapiens"
+//	"Mockingjay (The Hunger Games, #3)"     → "mockingjay"
+//	"Halt die Klappe, Kopf! Ein Selfcare…"  → "halt die klappe, kopf! ein selfcare…"
+func normalizeTitle(s string) string {
+	// Strip parenthetical series info: " (Series, #3)"
+	if idx := strings.Index(s, " ("); idx >= 0 {
+		s = s[:idx]
+	}
+	// Strip subtitle after ": "
+	if idx := strings.Index(s, ": "); idx >= 0 {
+		s = s[:idx]
+	}
+	return strings.TrimSpace(strings.ToLower(s))
+}
+
 // confidenceGate checks whether a Google Books result is a confident match.
-// inputTitle must be a case-insensitive substring of returnedTitle.
+// Uses bidirectional normalized title containment so that either title being
+// a prefix/substring of the other is considered a match.
 // inputAuthor must be a case-insensitive substring of at least one returnedAuthor.
-// Note: substring check means "Dune Messiah" passes for inputTitle="Dune" — this is
-// the accepted behaviour per plan decision: contain check is acceptable.
 func confidenceGate(inputTitle, inputAuthor, returnedTitle string, returnedAuthors []string) bool {
-	titleOK := strings.Contains(
-		strings.ToLower(returnedTitle),
-		strings.ToLower(inputTitle),
-	)
+	n1 := normalizeTitle(inputTitle)
+	n2 := normalizeTitle(returnedTitle)
+	if n1 == "" || n2 == "" {
+		return false
+	}
+	titleOK := strings.Contains(n1, n2) || strings.Contains(n2, n1)
 	if !titleOK {
 		return false
 	}
-	authorOK := false
+	if inputAuthor == "" {
+		return true
+	}
 	for _, a := range returnedAuthors {
 		if strings.Contains(strings.ToLower(a), strings.ToLower(inputAuthor)) {
-			authorOK = true
-			break
+			return true
 		}
 	}
-	return authorOK
+	return false
 }
 
 // fetchGoogleBooks calls the Google Books API with a query and returns the first volume result.
@@ -116,15 +135,19 @@ func EnrichBook(ctx context.Context, queries *db.Queries, book db.Book) {
 
 	// Fallback: title query with confidence gate
 	if vol == nil || len(vol.Items) == 0 {
-		// Author not available without join; use title-only confidence gate
-		query := fmt.Sprintf("intitle:%s", url.QueryEscape(book.Title))
+		// Strip series/subtitle from query for better Google Books results.
+		// e.g. "Mockingjay (The Hunger Games, #3)" → "Mockingjay"
+		queryTitle := normalizeTitle(book.Title)
+		if queryTitle == "" {
+			queryTitle = book.Title
+		}
+		query := fmt.Sprintf("intitle:%s", url.QueryEscape(queryTitle))
 		v, err := fetchGoogleBooks(query)
 		if err != nil {
 			log.Printf("enricher: google books title lookup for %s: %v", book.GoodreadsID, err)
 		} else if len(v.Items) > 0 {
 			vi := v.Items[0].VolumeInfo
-			// Confidence gate: title must match (author unavailable without join)
-			if strings.Contains(strings.ToLower(vi.Title), strings.ToLower(book.Title)) {
+			if confidenceGate(book.Title, "", vi.Title, vi.Authors) {
 				vol = v
 			} else {
 				log.Printf("enricher: confidence gate failed for book %s (title mismatch: %q vs %q)",
