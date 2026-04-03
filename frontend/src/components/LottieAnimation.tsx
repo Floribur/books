@@ -1,6 +1,9 @@
 import { useEffect, useRef } from 'react';
-import Lottie, { type LottieRefCurrentProps } from 'lottie-react';
+import LottieImport, { type LottieRefCurrentProps } from 'lottie-react';
 import animationData from '../assets/reading-animation.json';
+
+// lottie-react ships as CJS; Vite's ESM interop may not unwrap .default automatically
+const Lottie = (LottieImport as unknown as { default: typeof LottieImport }).default ?? LottieImport;
 
 /**
  * Animated reader figure for the sidebar header.
