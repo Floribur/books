@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node \"$HOME/.claude/get-shit-done/bin/gsd-tools.cjs\" commit \"docs: initialize project\" --files .planning/PROJECT.md)",
+      "Bash(node \"$HOME/.claude/get-shit-done/bin/gsd-tools.cjs\" config-new-project '{\"\"mode\"\":\"\"yolo\"\",\"\"granularity\"\":\"\"standard\"\",\"\"parallelization\"\":true,\"\"commit_docs\"\":true,\"\"model_profile\"\":\"\"balanced\"\",\"\"workflow\"\":{\"\"research\"\":true,\"\"plan_check\"\":true,\"\"verifier\"\":true,\"\"nyquist_validation\"\":true}}')",
+      "Bash(node \"$HOME/.claude/get-shit-done/bin/gsd-tools.cjs\" commit \"chore: add project config\" --files .planning/config.json)",
+      "Bash(node $HOME/.claude/get-shit-done/bin/gsd-tools.cjs agent-skills gsd-project-researcher)",
+      "Bash(node $HOME/.claude/get-shit-done/bin/gsd-tools.cjs agent-skills gsd-synthesizer)",
+      "Read(//c/Users/flori/claude/books/$HOME/.claude/get-shit-done/**)",
+      "Bash(node:*)",
+      "Skill(gsd:plan-phase)",
+      "WebSearch"
+    ]
+  }
+}

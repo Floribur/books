@@ -1,18 +1,16 @@
 .home-page {
   padding: var(--space-xl) var(--space-xl);
   max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Section heading style (shared — matches NowReadingSection.css .section-heading) */
+/* Section heading style (shared) */
 .home-page .section-heading {
   font-family: var(--font-heading);
   font-size: var(--text-heading);
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: var(--space-md);
-  padding-bottom: var(--space-xs);
-  border-bottom: 2px solid var(--color-accent);
-  display: inline-block;
 }
 
 @media (max-width: 767px) {

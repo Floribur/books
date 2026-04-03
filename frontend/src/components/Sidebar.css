@@ -1,8 +1,8 @@
-/* ─── Shared sidebar styles ─── */
+/* ─── Shared sidebar styles — always dark regardless of page theme ─── */
 .sidebar {
   width: 240px;
-  background: var(--color-surface);
-  border-right: 1px solid var(--color-border);
+  background: #15100f;
+  border-right: 1px solid #2a1a20;
   display: flex;
   flex-direction: column;
   padding: var(--space-2xl) 0 var(--space-lg) 0;
@@ -16,7 +16,7 @@
   font-family: var(--font-heading);
   font-size: var(--text-heading);
   font-weight: 700;
-  color: var(--color-primary);
+  color: #f0e6e9;
 }
 
 /* ─── Nav links ─── */
@@ -30,32 +30,47 @@
   margin: 0;
 }
 
+.sidebar-nav-icon {
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
 .sidebar-nav-link {
-  display: block;
-  padding: var(--space-md) var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  margin: 2px var(--space-sm);
+  border-radius: 6px;
   font-family: var(--font-body);
   font-size: var(--text-label);
   font-weight: 400;
-  color: var(--color-text);
+  color: #9e8085;
   text-decoration: none;
   border-left: 3px solid transparent;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  transition: color 0.15s ease, background 0.15s ease;
 }
 
 .sidebar-nav-link:hover {
-  color: var(--color-primary);
+  color: #f0e6e9;
+  background: rgba(240, 230, 233, 0.06);
 }
 
 .sidebar-nav-link--active {
-  color: var(--color-primary);
-  border-left-color: var(--color-accent);
-  font-weight: 400;
+  color: #ffffff;
+  border-left-color: #6d233e;
+  background: rgba(109, 35, 62, 0.18);
+  font-weight: 500;
+}
+
+.sidebar-nav-link--active .sidebar-nav-icon {
+  opacity: 1;
 }
 
 /* ─── Theme toggle ─── */
 .sidebar-toggle-wrapper {
   padding: var(--space-md);
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid #2a1a20;
 }
 
 /* ─── Desktop: fixed left sidebar ─── */
@@ -83,11 +98,17 @@
     justify-content: space-between;
     padding: 0 var(--space-md);
     height: 48px;
-    background: var(--color-surface);
-    border-bottom: 1px solid var(--color-border);
-    position: sticky;
+    background: #15100f;
+    border-bottom: 1px solid #2a1a20;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
+  }
+
+  .mobile-topbar .sidebar-title {
+    color: #f0e6e9;
   }
 
   .hamburger-button {
@@ -99,7 +120,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--color-primary);
+    color: #f0e6e9;
   }
 
   /* Drawer overlay */
@@ -119,7 +140,7 @@
     z-index: 300;
     transform: translateX(-100%);
     transition: transform 0.25s ease;
-    border-right: 1px solid var(--color-border);
+    border-right: 1px solid #2a1a20;
   }
 
   /* Open state */
@@ -139,7 +160,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--color-text);
+    color: #f0e6e9;
   }
 
   /* prefers-reduced-motion: disable drawer transition */

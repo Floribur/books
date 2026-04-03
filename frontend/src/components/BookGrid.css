@@ -1,5 +1,5 @@
-/* Books Read grid breakpoints (per UI-SPEC D-10):
-   ≥1400px → 6 cols | 1024–1399px → 5 cols | 768–1023px → 4 cols | <768px → 2 cols */
+/* Books Read grid breakpoints:
+   ≥1024px → 5 cols | 768–1023px → 4 cols | <768px → 2 cols */
 .book-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -18,10 +18,9 @@
   }
 }
 
-@media (min-width: 1400px) {
-  .book-grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
+/* Prevent grid cells from overflowing */
+.book-grid > * {
+  min-width: 0;
 }
 
 .book-grid-section {

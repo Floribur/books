@@ -12,7 +12,11 @@ export function BookCover({ src, title, loading = 'lazy' }: BookCoverProps) {
 
   return (
     <div className="book-cover-wrapper">
-      {!hasError && (
+      {hasError ? (
+        <div className="book-cover-placeholder" aria-label={`${title} cover`}>
+          <span className="book-cover-placeholder-title">{title}</span>
+        </div>
+      ) : (
         <img
           src={src}
           alt={`${title} cover`}

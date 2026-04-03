@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Library, Users, Tag, Trophy } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import './Sidebar.css';
 
 const navLinks = [
-  { to: '/', label: 'Home' },
-  { to: '/authors', label: 'Authors' },
-  { to: '/genres', label: 'Genres' },
-  { to: '/reading-challenge', label: 'Reading Challenge' },
+  { to: '/', label: 'Home', icon: Library },
+  { to: '/authors', label: 'Authors', icon: Users },
+  { to: '/genres', label: 'Genres', icon: Tag },
+  { to: '/reading-challenge', label: 'Reading Challenge', icon: Trophy },
 ];
 
 export function Sidebar() {
@@ -72,7 +72,7 @@ export function Sidebar() {
       </div>
       <nav className="sidebar-nav" aria-label="Main navigation">
         <ul className="sidebar-nav-list">
-          {navLinks.map(({ to, label }) => (
+          {navLinks.map(({ to, label, icon: Icon }) => (
             <li key={to}>
               <NavLink
                 to={to}
@@ -82,6 +82,7 @@ export function Sidebar() {
                 }
                 onClick={handleNavClick}
               >
+                <Icon size={16} className="sidebar-nav-icon" aria-hidden="true" />
                 {label}
               </NavLink>
             </li>
