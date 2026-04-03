@@ -11,6 +11,7 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	"github.com/go-chi/cors"
 	"github.com/jackc/pgx/v5/pgxpool"
 
 	"flos-library/internal/api"
@@ -59,11 +60,47 @@ func main() {
 		EnrichTrig: enrichTrig,
 	}
 
+	siteURL := os.Getenv("SITE_URL")
+	if siteURL == "" {
+		siteURL = "http://localhost:8081"
+	}
+
+	pub := &api.PublicHandlers{
+		Store:   queries,
+		SiteURL: siteURL,
+	}
+
 	r := chi.NewRouter()
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
+
+	if os.Getenv("APP_ENV") == "development" {
+		r.Use(cors.Handler(cors.Options{
+			AllowedOrigins: []string{"http://localhost:5173"},
+			AllowedMethods: []string{"GET", "OPTIONS"},
+			AllowedHeaders: []string{"Accept", "Content-Type"},
+			MaxAge:         300,
+		}))
+	}
+
 	r.Post("/admin/sync", admin.PostSync)
 	r.Post("/admin/import-csv", admin.PostImportCSV)
+
+	// Book endpoints — order matters: specific before parameterized
+	r.Get("/api/books/currently-reading", pub.GetCurrentlyReading)
+	r.Get("/api/books", pub.GetBooks)
+	r.Get("/api/books/{slug}", pub.GetBookBySlug)
+
+	// Author endpoints
+	r.Get("/api/authors", pub.GetAuthors)
+	r.Get("/api/authors/{slug}", pub.GetAuthorBySlug)
+
+	// Genre endpoints
+	r.Get("/api/genres", pub.GetGenres)
+	r.Get("/api/genres/{slug}", pub.GetGenreBySlug)
+
+	// Years endpoint
+	r.Get("/api/years", pub.GetYears)
 
 	port := os.Getenv("PORT")
 	if port == "" {
