@@ -141,7 +141,7 @@ func EnrichBook(ctx context.Context, queries *db.Queries, book db.Book) {
 		if queryTitle == "" {
 			queryTitle = book.Title
 		}
-		query := fmt.Sprintf("intitle:%s", url.QueryEscape(queryTitle))
+		query := fmt.Sprintf("intitle:%s", queryTitle)
 		v, err := fetchGoogleBooks(query)
 		if err != nil {
 			log.Printf("enricher: google books title lookup for %s: %v", book.GoodreadsID, err)
