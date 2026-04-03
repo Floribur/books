@@ -12,6 +12,8 @@ import (
 	stdsync "sync"
 	"time"
 
+	"github.com/gosimple/slug"
+
 	"flos-library/internal/db"
 )
 
@@ -191,6 +193,43 @@ func EnrichBook(ctx context.Context, queries *db.Queries, book db.Book) {
 
 	if err := queries.UpdateBookEnrichment(ctx, params); err != nil {
 		log.Printf("enricher: update book %s: %v", book.GoodreadsID, err)
+	}
+
+	// Link authors and genres from Google Books
+	if vol != nil && len(vol.Items) > 0 {
+		vi := vol.Items[0].VolumeInfo
+		for _, authorName := range vi.Authors {
+			if authorName == "" {
+				continue
+			}
+			authorRow, err := queries.UpsertAuthor(ctx, db.UpsertAuthorParams{
+				Name: authorName,
+				Slug: slug.Make(authorName),
+			})
+			if err != nil {
+				log.Printf("enricher: upsert author %q for %s: %v", authorName, book.GoodreadsID, err)
+				continue
+			}
+			if err := queries.LinkBookAuthor(ctx, db.LinkBookAuthorParams{BookID: book.ID, AuthorID: authorRow.ID}); err != nil {
+				log.Printf("enricher: link author %q for %s: %v", authorName, book.GoodreadsID, err)
+			}
+		}
+		for _, genreName := range vi.Categories {
+			if genreName == "" {
+				continue
+			}
+			genreRow, err := queries.UpsertGenre(ctx, db.UpsertGenreParams{
+				Name: genreName,
+				Slug: slug.Make(genreName),
+			})
+			if err != nil {
+				log.Printf("enricher: upsert genre %q for %s: %v", genreName, book.GoodreadsID, err)
+				continue
+			}
+			if err := queries.LinkBookGenre(ctx, db.LinkBookGenreParams{BookID: book.ID, GenreID: genreRow.ID}); err != nil {
+				log.Printf("enricher: link genre %q for %s: %v", genreName, book.GoodreadsID, err)
+			}
+		}
 	}
 
 	time.Sleep(1 * time.Second) // Google Books rate limiting: ~1 req/sec

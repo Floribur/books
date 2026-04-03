@@ -10,8 +10,10 @@ import (
 	"strings"
 	"time"
 
-	"flos-library/internal/db"
+	"github.com/gosimple/slug"
 	"github.com/jackc/pgx/v5/pgtype"
+
+	"flos-library/internal/db"
 )
 
 // unquoteISBN strips Excel-style formula quoting from Goodreads CSV ISBNs.
@@ -127,11 +129,23 @@ func ImportCSV(ctx context.Context, queries *db.Queries, r io.Reader) (int, erro
 		if isbn13 != "" {
 			params.Isbn13 = &isbn13
 		}
-		if _, err := queries.UpsertBook(ctx, params); err != nil {
+		book, err := queries.UpsertBook(ctx, params)
+		if err != nil {
 			log.Printf("csv: upsert %s: %v", goodreadsID, err)
 			continue
 		}
 		count++
+
+		// Link primary author from CSV
+		if author != "" {
+			authorSlug := slug.Make(author)
+			authorRow, err := queries.UpsertAuthor(ctx, db.UpsertAuthorParams{Name: author, Slug: authorSlug})
+			if err != nil {
+				log.Printf("csv: upsert author %q for %s: %v", author, goodreadsID, err)
+			} else if err := queries.LinkBookAuthor(ctx, db.LinkBookAuthorParams{BookID: book.ID, AuthorID: authorRow.ID}); err != nil {
+				log.Printf("csv: link author %q to %s: %v", author, goodreadsID, err)
+			}
+		}
 	}
 	log.Printf("csv: imported %d books", count)
 	return count, nil
