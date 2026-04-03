@@ -1,6 +1,6 @@
 /* ─── Shared sidebar styles — always dark regardless of page theme ─── */
 .sidebar {
-  width: 240px;
+  width: 275px;
   background: #15100f;
   border-right: 1px solid #2a1a20;
   display: flex;
@@ -194,7 +194,7 @@
 /* ─── Lottie animation wrapper ─── */
 .lottie-animation-wrapper {
   width: 100%;
-  max-width: 240px;   /* matches sidebar width; acceptable fixed value per UI-SPEC exception */
+  max-width: 275px;   /* matches sidebar width; acceptable fixed value per UI-SPEC exception */
   display: block;
   margin: 0 auto;
 }

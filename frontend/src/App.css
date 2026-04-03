@@ -1,11 +1,11 @@
-/* Two-column layout: fixed 240px sidebar + scrollable main content */
+/* Two-column layout: fixed 275px sidebar + scrollable main content */
 .app-layout {
   min-height: 100vh;
 }
 
 /* Content area — offset by sidebar width on desktop */
 .app-content {
-  margin-left: 240px;
+  margin-left: 275px;
   background: var(--color-background);
   min-height: 100vh;
   overflow-x: hidden;
