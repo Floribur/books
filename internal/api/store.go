@@ -10,6 +10,7 @@ import (
 // A mock implementation is injected during tests.
 type BookStore interface {
 	ListBooksPaginated(ctx context.Context, arg db.ListBooksPaginatedParams) ([]db.ListBooksPaginatedRow, error)
+	ListBooksByYear(ctx context.Context, arg db.ListBooksByYearParams) ([]db.ListBooksPaginatedRow, error)
 	GetCurrentlyReading(ctx context.Context) ([]db.GetCurrentlyReadingRow, error)
 	GetBookDetailBySlug(ctx context.Context, slug string) (db.GetBookDetailBySlugRow, error)
 	ListAuthors(ctx context.Context) ([]db.ListAuthorsRow, error)

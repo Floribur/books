@@ -107,7 +107,7 @@ func toTimePtr(ts pgtype.Timestamptz) *time.Time {
 // --- Handler Methods ---
 
 // GetBooks handles GET /api/books
-// Query params: ?cursor=<token>&limit=<n>
+// Query params: ?cursor=<token>&limit=<n>&year=<YYYY>
 // Returns: PaginatedResponse with BookListItem slice. Per API-01, D-01, D-02, D-04.
 func (h *PublicHandlers) GetBooks(w http.ResponseWriter, r *http.Request) {
 	cursorTS, cursorID, err := parseCursorParam(r)
@@ -116,15 +116,36 @@ func (h *PublicHandlers) GetBooks(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	limit := parseLimit(r)
-	rows, err := h.Store.ListBooksPaginated(r.Context(), db.ListBooksPaginatedParams{
-		Column1: cursorTS,
-		Column2: cursorID,
-		Limit:   limit + 1, // fetch one extra to detect has_more
-	})
-	if err != nil {
-		writeError(w, http.StatusInternalServerError, "failed to list books")
-		return
+
+	var rows []db.ListBooksPaginatedRow
+	if yearStr := r.URL.Query().Get("year"); yearStr != "" {
+		year, err := strconv.Atoi(yearStr)
+		if err != nil {
+			writeError(w, http.StatusBadRequest, "invalid year")
+			return
+		}
+		rows, err = h.Store.ListBooksByYear(r.Context(), db.ListBooksByYearParams{
+			Year:    int32(year),
+			Column2: cursorTS,
+			Column3: cursorID,
+			Limit:   limit + 1,
+		})
+		if err != nil {
+			writeError(w, http.StatusInternalServerError, "failed to list books")
+			return
+		}
+	} else {
+		rows, err = h.Store.ListBooksPaginated(r.Context(), db.ListBooksPaginatedParams{
+			Column1: cursorTS,
+			Column2: cursorID,
+			Limit:   limit + 1,
+		})
+		if err != nil {
+			writeError(w, http.StatusInternalServerError, "failed to list books")
+			return
+		}
 	}
+
 	hasMore := len(rows) > int(limit)
 	if hasMore {
 		rows = rows[:limit]
@@ -134,7 +155,7 @@ func (h *PublicHandlers) GetBooks(w http.ResponseWriter, r *http.Request) {
 		items[i] = BookListItem{
 			Slug:            row.Slug,
 			Title:           row.Title,
-			CoverPath: coverURL(row.CoverPath),
+			CoverPath:       coverURL(row.CoverPath),
 			ReadAt:          toTimePtr(row.ReadAt),
 			PublicationYear: row.PublicationYear,
 			Authors:         unmarshalRefs[AuthorRef](row.Authors),

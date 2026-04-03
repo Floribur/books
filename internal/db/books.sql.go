@@ -344,6 +344,66 @@ func (q *Queries) ListBooksPaginated(ctx context.Context, arg ListBooksPaginated
 	return items, nil
 }
 
+const listBooksByYear = `-- name: ListBooksByYear :many
+SELECT
+    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', a.name, 'slug', a.slug))
+        FILTER (WHERE a.id IS NOT NULL), '[]'
+    ) AS authors,
+    COALESCE(
+        json_agg(DISTINCT jsonb_build_object('name', g.name, 'slug', g.slug))
+        FILTER (WHERE g.id IS NOT NULL), '[]'
+    ) AS genres
+FROM books b
+LEFT JOIN book_authors ba ON ba.book_id = b.id
+LEFT JOIN authors a ON a.id = ba.author_id
+LEFT JOIN book_genres bg ON bg.book_id = b.id
+LEFT JOIN genres g ON g.id = bg.genre_id
+WHERE b.shelf = 'read'
+  AND EXTRACT(YEAR FROM b.read_at) = $1::int
+  AND ($2::timestamptz IS NULL OR (b.read_at, b.id) < ($2::timestamptz, $3::bigint))
+GROUP BY b.id
+ORDER BY b.read_at DESC NULLS LAST, b.id DESC
+LIMIT $4
+`
+
+type ListBooksByYearParams struct {
+	Year    int32              `json:"year"`
+	Column2 pgtype.Timestamptz `json:"column_2"`
+	Column3 int64              `json:"column_3"`
+	Limit   int32              `json:"limit"`
+}
+
+func (q *Queries) ListBooksByYear(ctx context.Context, arg ListBooksByYearParams) ([]ListBooksPaginatedRow, error) {
+	rows, err := q.db.Query(ctx, listBooksByYear, arg.Year, arg.Column2, arg.Column3, arg.Limit)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []ListBooksPaginatedRow
+	for rows.Next() {
+		var i ListBooksPaginatedRow
+		if err := rows.Scan(
+			&i.ID,
+			&i.Slug,
+			&i.Title,
+			&i.CoverPath,
+			&i.ReadAt,
+			&i.PublicationYear,
+			&i.Authors,
+			&i.Genres,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
 const updateBookEnrichment = `-- name: UpdateBookEnrichment :exec
 UPDATE books SET
     description      = $2,
