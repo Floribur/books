@@ -18,7 +18,7 @@ A fully working personal book showcase website — synced from Goodreads, displa
 | 1 | Data Pipeline | 3/3 | Complete   | 2026-04-02 |
 | 2 | Go REST API | Clean API contract for the frontend | 2 | NO |
 | 3 | Frontend Core | Home page with browsable book library | 3 | NO |
-| 4 | Frontend Pages | 1/2 | In Progress|  |
+| 4 | Frontend Pages | 2/2 | Complete   | 2026-04-03 |
 | 5 | Polish & Deploy | Production-ready, deployed on VPS | 2 | NO |
 
 ---
@@ -175,11 +175,11 @@ Plans:
 
 **Requirements covered:** BOOK-01–04, AUTH-01–02, GENR-01–02, CHAL-01–04
 
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
 
 Plans:
 - [x] 04-01-PLAN.md — API layer extension + BookGrid refactor + BookDetail/Author/Genre pages (Wave 1)
-- [ ] 04-02-PLAN.md — YearSelector + StatsStrip + ReadingChallengePage + visual verification (Wave 2)
+- [x] 04-02-PLAN.md — YearSelector + StatsStrip + ReadingChallengePage + visual verification (Wave 2)
 
 ### Plan 4.1 — Book Detail & Author/Genre Pages
 

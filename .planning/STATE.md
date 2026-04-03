@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 04-01-PLAN.md
-last_updated: "2026-04-03T19:03:09.561Z"
+stopped_at: "Awaiting human-verify checkpoint: Task 3 (04-02-PLAN.md visual verification)"
+last_updated: "2026-04-03T19:14:48.955Z"
 progress:
   total_phases: 5
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 10
-  completed_plans: 10
+  completed_plans: 11
   percent: 100
 ---
 
@@ -68,6 +68,8 @@ Plan: 2 of 2
 | BookGrid accepts queryKey+fetchFn props | All filtered grids (author, genre) reuse the same component |
 | fetchBooksByAuthor/fetchBooksByGenre extract PaginatedBooks from detail envelope | Caller doesn't need to know the AuthorDetail/GenreDetail shape |
 | DescriptionBlock clamps at 640 chars / 8 lines (CHAR_THRESHOLD constant) | Matches D-04 UI spec |
+| StatsStrip accepts totalPages: null for page-based stats | Page_count not on list endpoint; null hides stats; Phase 5 can add without interface change |
+| fetchFn for BookGrid wrapped in useMemo per selectedYear | Creates stable closure per year; prevents unnecessary re-fetches when other state changes |
 
 ---
 
@@ -86,6 +88,6 @@ Plan: 2 of 2
 
 ## Session Continuity
 
-Last session: 2026-04-03T19:03:09.557Z
-Stopped at: Completed 04-01-PLAN.md
+Last session: 2026-04-03T19:14:48.951Z
+Stopped at: Awaiting human-verify checkpoint: Task 3 (04-02-PLAN.md visual verification)
 Resume file: None

@@ -66,10 +66,10 @@
 
 ### Reading Challenge
 
-- [ ] **CHAL-01**: Reading Challenge page shows all books read in the selected year
-- [ ] **CHAL-02**: Year selector allows browsing past years
-- [ ] **CHAL-03**: Stats strip shows book count (and optionally page total) for the selected year
-- [ ] **CHAL-04**: Current year is selected by default
+- [x] **CHAL-01**: Reading Challenge page shows all books read in the selected year
+- [x] **CHAL-02**: Year selector allows browsing past years
+- [x] **CHAL-03**: Stats strip shows book count (and optionally page total) for the selected year
+- [x] **CHAL-04**: Current year is selected by default
 
 ### UI / UX
 
