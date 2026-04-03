@@ -9,15 +9,16 @@ describe('Bio', () => {
     expect(img).toHaveAttribute('src', '/florian.jpg');
   });
 
-  it('renders parsed markdown content (heading or paragraph)', () => {
+  it('renders parsed markdown content (paragraph)', () => {
     render(<Bio />);
-    // bio.md has a heading "# Florian" — marked parses it to <h1>
-    expect(screen.getByRole('heading', { name: 'Florian' })).toBeInTheDocument();
+    expect(screen.getByText(/Hoi zäme/i)).toBeInTheDocument();
   });
 
-  it('includes Goodreads profile link in rendered content', () => {
+  it('includes Goodreads profile link in rendered content opening in new tab', () => {
     render(<Bio />);
     const link = screen.getByRole('link', { name: /Goodreads/i });
     expect(link).toHaveAttribute('href', 'https://www.goodreads.com/user/show/79499864-florian');
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   });
 });
