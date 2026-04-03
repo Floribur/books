@@ -64,14 +64,15 @@ describe('BookGrid', () => {
     expect(await screen.findByText('Load More Books')).toBeInTheDocument();
   });
 
-  it("shows end message and no Load More button when hasNextPage is false", async () => {
+  it("does not show end message when all books fit on one page", async () => {
     server.use(
       http.get('/api/books', () =>
         HttpResponse.json({ items: [testBook], next_cursor: null, has_more: false })
       )
     );
     renderGrid();
-    expect(await screen.findByText("You've reached the end.")).toBeInTheDocument();
+    await screen.findByText('Test Book');
+    expect(screen.queryByText("You've reached the end.")).toBeNull();
     expect(screen.queryByText('Load More Books')).toBeNull();
   });
 

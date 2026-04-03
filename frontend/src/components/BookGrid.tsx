@@ -84,7 +84,7 @@ export function BookGrid({ queryKey, fetchFn, ariaLabel = 'Books' }: BookGridPro
         </button>
       )}
 
-      {!isPending && !hasNextPage && books.length > 0 && (
+      {!isPending && !hasNextPage && (data?.pages.length ?? 0) > 1 && (
         <p className="books-end-message">You&apos;ve reached the end.</p>
       )}
     </section>
