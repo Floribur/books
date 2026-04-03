@@ -332,6 +332,7 @@ func (q *Queries) ListBooksPaginated(ctx context.Context, arg ListBooksPaginated
 			&i.CoverPath,
 			&i.ReadAt,
 			&i.PublicationYear,
+			&i.PageCount,
 			&i.Authors,
 			&i.Genres,
 		); err != nil {
