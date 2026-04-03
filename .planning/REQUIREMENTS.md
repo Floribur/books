@@ -49,20 +49,20 @@
 
 ### Book Detail Page
 
-- [ ] **BOOK-01**: Displays book cover, title, author(s), publication year, genres, page count, description
-- [ ] **BOOK-02**: Author name(s) are links to author pages
-- [ ] **BOOK-03**: Genre tags are links to genre pages
-- [ ] **BOOK-04**: "Read on [date]" shown when available
+- [x] **BOOK-01**: Displays book cover, title, author(s), publication year, genres, page count, description
+- [x] **BOOK-02**: Author name(s) are links to author pages
+- [x] **BOOK-03**: Genre tags are links to genre pages
+- [x] **BOOK-04**: "Read on [date]" shown when available
 
 ### Author Pages
 
-- [ ] **AUTH-01**: Author index lists all authors whose books Florian has read, with book count
-- [ ] **AUTH-02**: Author detail page lists all books by that author in descending read-date order
+- [x] **AUTH-01**: Author index lists all authors whose books Florian has read, with book count
+- [x] **AUTH-02**: Author detail page lists all books by that author in descending read-date order
 
 ### Genre Pages
 
-- [ ] **GENR-01**: Genre index lists all genres with book count
-- [ ] **GENR-02**: Genre detail page lists all books in that genre in descending read-date order
+- [x] **GENR-01**: Genre index lists all genres with book count
+- [x] **GENR-02**: Genre detail page lists all books in that genre in descending read-date order
 
 ### Reading Challenge
 

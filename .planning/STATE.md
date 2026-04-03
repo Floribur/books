@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: planning
-stopped_at: Phase 4 context gathered
-last_updated: "2026-04-03T18:08:58.619Z"
+status: executing
+stopped_at: Completed 04-01-PLAN.md
+last_updated: "2026-04-03T19:03:09.561Z"
 progress:
   total_phases: 5
   completed_phases: 3
-  total_plans: 8
-  completed_plans: 9
+  total_plans: 10
+  completed_plans: 10
   percent: 100
 ---
 
@@ -20,23 +20,23 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-01)
 
 **Core value:** A beautiful, always-up-to-date view of every book Florian has read — synced from Goodreads without manual effort.
-**Current focus:** Phase 03 — frontend-core
+**Current focus:** Phase 04 — frontend-pages
 
 ---
 
 ## Current Position
 
-Phase: 03 (frontend-core) — EXECUTING
-Plan: 1 of 3
+Phase: 04 (frontend-pages) — EXECUTING
+Plan: 2 of 2
 
 - **Phase:** 4 of 5 (frontend pages)
-- **Status:** Ready to plan
+- **Status:** Executing Phase 04
 
 - **Phase:** 2 of 5 (go rest api)
 - **Plan:** Not started
 - **Status:** Executing Phase 02
 
-**Progress:** [██████████] 100% (Phase 01 complete)
+**Progress:** [██████████] 100%
 
 ---
 
@@ -65,6 +65,9 @@ Plan: 1 of 3
 | TanStack Query v5 + Intersection Observer for infinite scroll | Standard 2025 pattern |
 | Cursor-based pagination (not offset) | Stable across inserts |
 | Modernized sidebar animation (CSS keyframes, no Lottie) | 60KB bundle cost not justified |
+| BookGrid accepts queryKey+fetchFn props | All filtered grids (author, genre) reuse the same component |
+| fetchBooksByAuthor/fetchBooksByGenre extract PaginatedBooks from detail envelope | Caller doesn't need to know the AuthorDetail/GenreDetail shape |
+| DescriptionBlock clamps at 640 chars / 8 lines (CHAR_THRESHOLD constant) | Matches D-04 UI spec |
 
 ---
 
@@ -83,6 +86,6 @@ Plan: 1 of 3
 
 ## Session Continuity
 
-Last session: 2026-04-03T18:08:58.616Z
-Stopped at: Phase 4 context gathered
-Resume file: .planning/phases/04-frontend-pages/04-CONTEXT.md
+Last session: 2026-04-03T19:03:09.557Z
+Stopped at: Completed 04-01-PLAN.md
+Resume file: None
