@@ -22,7 +22,7 @@ SELECT a.id, a.name, a.slug, COUNT(ba.book_id)::bigint AS book_count
 FROM authors a
 LEFT JOIN book_authors ba ON ba.author_id = a.id
 GROUP BY a.id
-ORDER BY a.name ASC;
+ORDER BY a.name COLLATE "und-x-icu" ASC;
 
 -- name: GetAuthorBySlug :one
 SELECT a.id, a.name, a.slug

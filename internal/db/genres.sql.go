@@ -128,7 +128,7 @@ SELECT g.id, g.name, g.slug, COUNT(bg.book_id)::bigint AS book_count
 FROM genres g
 LEFT JOIN book_genres bg ON bg.genre_id = g.id
 GROUP BY g.id
-ORDER BY COUNT(bg.book_id) DESC, g.name ASC
+ORDER BY COUNT(bg.book_id) DESC, g.name COLLATE "und-x-icu" ASC
 `
 
 type ListGenresRow struct {
