@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"path/filepath"
 	"strings"
 	"sync"
 	"syscall"
@@ -210,9 +211,9 @@ func buildOGTags(book db.GetBookDetailBySlugRow, siteURL string) string {
 
 	ogImage := ""
 	if book.CoverPath != nil && *book.CoverPath != "" {
-		// cover_path stored as relative path like "data/covers/9781234567890.jpg"
-		// Strip "data/covers/" prefix — covers are served at /covers/<filename>
-		coverFile := strings.TrimPrefix(*book.CoverPath, "data/covers/")
+		// Use filepath.Base to extract filename regardless of path separator (OS-agnostic).
+		// cover_path may be "data/covers/file.jpg" or "data\covers\file.jpg".
+		coverFile := filepath.Base(*book.CoverPath)
 		ogImage = fmt.Sprintf("%s/covers/%s", siteURL, coverFile)
 	}
 
