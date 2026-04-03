@@ -107,15 +107,15 @@
   background: var(--color-skeleton);
 }
 
-/* Mobile: cover floats left 96px, text wraps around (D-02) */
+/* Mobile: stack vertically — cover centered on top, metadata below */
 @media (max-width: 767px) {
   .book-detail-layout {
-    display: block; /* Remove grid — float-based layout */
+    grid-template-columns: 1fr;
   }
 
   .book-detail-cover-col {
-    float: left;
-    width: 96px;
-    margin: 0 var(--space-md) var(--space-sm) 0;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
   }
 }
