@@ -175,6 +175,12 @@ Plans:
 
 **Requirements covered:** BOOK-01–04, AUTH-01–02, GENR-01–02, CHAL-01–04
 
+**Plans:** 2 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — API layer extension + BookGrid refactor + BookDetail/Author/Genre pages (Wave 1)
+- [ ] 04-02-PLAN.md — YearSelector + StatsStrip + ReadingChallengePage + visual verification (Wave 2)
+
 ### Plan 4.1 — Book Detail & Author/Genre Pages
 
 **Objective:** Book detail page and all index/detail pages for authors and genres.
