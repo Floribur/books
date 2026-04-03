@@ -4,9 +4,8 @@ const source = JSON.parse(
   readFileSync('frontend/src/assets/reading-animation-source.json', 'utf8')
 );
 
-// #e8c4cf (dark-theme primary, readable on #15100f dark sidebar)
-// Normalized RGB: r=232/255=0.9098, g=196/255=0.7686, b=207/255=0.8118
-const FILL = [0.9098, 0.7686, 0.8118, 1];
+// #ffffff white — readable on #6d233e brand-red sidebar header
+const FILL = [1, 1, 1, 1];
 
 function recolor(obj) {
   if (Array.isArray(obj)) return obj.map(recolor);

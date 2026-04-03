@@ -10,6 +10,8 @@
 
 .sidebar-header {
   padding: 0 var(--space-md) var(--space-xl) var(--space-md);
+  background: #6d233e;
+  margin-bottom: var(--space-md);
 }
 
 .sidebar-header a {
