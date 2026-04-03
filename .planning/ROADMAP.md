@@ -124,6 +124,13 @@ Plans:
 
 **Requirements covered:** HOME-01–04, UI-01–03, UI-06–10
 
+**Plans:** 3 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Vite scaffold, CSS design system, BookCover/SkeletonCard/Toast/ThemeToggle/useTheme atoms
+- [ ] 03-02-PLAN.md — API layer, useIntersectionObserver, useScrollRestoration, BookCard, BookGrid with infinite scroll
+- [ ] 03-03-PLAN.md — Bio section, NowReadingSection, Sidebar with mobile drawer, HomePage assembly
+
 ### Plan 3.1 — Foundation & Design System
 
 **Objective:** Vite + React + TypeScript scaffolded. CSS custom properties system with full brand palette, typography, and dark/light mode.
