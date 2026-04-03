@@ -176,3 +176,19 @@
     }
   }
 }
+
+/* ─── Lottie animation wrapper ─── */
+.lottie-animation-wrapper {
+  width: 100%;
+  max-width: 240px;   /* matches sidebar width; acceptable fixed value per UI-SPEC exception */
+  display: block;
+  margin: 0 auto;
+}
+
+/* prefers-reduced-motion: lottie-react stops via JS; CSS rule is belt-and-suspenders */
+@media (prefers-reduced-motion: reduce) {
+  .lottie-animation-wrapper {
+    /* Animation already stopped by JS in LottieAnimation.tsx */
+    /* No additional CSS needed -- Lottie shows first frame statically */
+  }
+}

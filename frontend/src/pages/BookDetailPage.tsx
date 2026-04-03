@@ -5,6 +5,7 @@ import { BookCover } from '../components/BookCover';
 import { DescriptionBlock } from '../components/DescriptionBlock';
 import { Toast } from '../components/Toast';
 import { useState, useEffect } from 'react';
+import { usePageTitle } from '../hooks/usePageTitle';
 import './BookDetailPage.css';
 
 // Format read_at ISO string as "Read Month D, YYYY" — D-03 metadata order
@@ -23,6 +24,8 @@ export function BookDetailPage() {
     queryFn: () => fetchBookBySlug(slug!),
     enabled: !!slug,
   });
+
+  usePageTitle(book?.title); // "Flo's Library — Dune" once loaded; "Flo's Library" while loading
 
   useEffect(() => {
     if (isError) setShowError(true);

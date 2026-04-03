@@ -3,9 +3,11 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchGenres } from '../api/books';
 import { Toast } from '../components/Toast';
 import { useState, useEffect } from 'react';
+import { usePageTitle } from '../hooks/usePageTitle';
 import './GenresPage.css';
 
 export function GenresPage() {
+  usePageTitle('Genres'); // "Flo's Library — Genres"
   const [showError, setShowError] = useState(false);
 
   const { data: genres, isPending, isError } = useQuery({

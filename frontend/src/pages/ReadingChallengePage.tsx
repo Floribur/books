@@ -6,9 +6,11 @@ import { YearSelector } from '../components/YearSelector';
 import { StatsStrip } from '../components/StatsStrip';
 import { Toast } from '../components/Toast';
 import { useState, useEffect, useMemo } from 'react';
+import { usePageTitle } from '../hooks/usePageTitle';
 import './ReadingChallengePage.css';
 
 export function ReadingChallengePage() {
+  usePageTitle('Reading Challenge'); // "Flo's Library — Reading Challenge"
   const [searchParams, setSearchParams] = useSearchParams();
   const [showError, setShowError] = useState(false);
 

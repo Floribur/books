@@ -4,6 +4,7 @@ import { fetchGenreBySlug, fetchBooksByGenre } from '../api/books';
 import { BookGrid } from '../components/BookGrid';
 import { Toast } from '../components/Toast';
 import { useState, useEffect } from 'react';
+import { usePageTitle } from '../hooks/usePageTitle';
 import './GenreDetailPage.css';
 
 export function GenreDetailPage() {
@@ -15,6 +16,8 @@ export function GenreDetailPage() {
     queryFn: () => fetchGenreBySlug(slug!),
     enabled: !!slug,
   });
+
+  usePageTitle(genre?.name); // "Flo's Library — Science Fiction" once loaded
 
   useEffect(() => {
     if (isError) setShowError(true);

@@ -3,9 +3,11 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchAuthors } from '../api/books';
 import { Toast } from '../components/Toast';
 import { useState, useEffect } from 'react';
+import { usePageTitle } from '../hooks/usePageTitle';
 import './AuthorsPage.css';
 
 export function AuthorsPage() {
+  usePageTitle('Authors'); // "Flo's Library — Authors"
   const [showError, setShowError] = useState(false);
 
   const { data: authors, isPending, isError } = useQuery({

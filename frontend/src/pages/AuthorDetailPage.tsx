@@ -4,6 +4,7 @@ import { fetchAuthorBySlug, fetchBooksByAuthor } from '../api/books';
 import { BookGrid } from '../components/BookGrid';
 import { Toast } from '../components/Toast';
 import { useState, useEffect } from 'react';
+import { usePageTitle } from '../hooks/usePageTitle';
 import './AuthorDetailPage.css';
 
 export function AuthorDetailPage() {
@@ -15,6 +16,8 @@ export function AuthorDetailPage() {
     queryFn: () => fetchAuthorBySlug(slug!),
     enabled: !!slug,
   });
+
+  usePageTitle(author?.name); // "Flo's Library — Frank Herbert" once loaded
 
   useEffect(() => {
     if (isError) setShowError(true);

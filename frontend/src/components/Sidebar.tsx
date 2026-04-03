@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, Library, Users, Tag, Trophy } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
+import { LottieAnimation } from './LottieAnimation';
 import './Sidebar.css';
 
 const navLinks = [
@@ -68,7 +69,7 @@ export function Sidebar() {
   const navContent = (
     <>
       <div className="sidebar-header">
-        <span className="sidebar-title">Flo's Library</span>
+        <LottieAnimation />
       </div>
       <nav className="sidebar-nav" aria-label="Main navigation">
         <ul className="sidebar-nav-list">
