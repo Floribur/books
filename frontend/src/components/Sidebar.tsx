@@ -69,7 +69,9 @@ export function Sidebar() {
   const navContent = (
     <>
       <div className="sidebar-header">
-        <LottieAnimation />
+        <Link to="/" aria-label="Go to home" onClick={handleNavClick}>
+          <LottieAnimation />
+        </Link>
       </div>
       <nav className="sidebar-nav" aria-label="Main navigation">
         <ul className="sidebar-nav-list">

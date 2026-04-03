@@ -12,6 +12,18 @@
   padding: 0 var(--space-md) var(--space-xl) var(--space-md);
 }
 
+.sidebar-header a {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sidebar-header a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
 .sidebar-title {
   font-family: var(--font-heading);
   font-size: var(--text-heading);
