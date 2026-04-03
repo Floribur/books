@@ -68,9 +68,31 @@ func normalizeForCompare(s string) string {
 	return strings.TrimSpace(s)
 }
 
+// seriesTitle extracts the series name from a Goodreads title parenthetical.
+// "The 11:59 Bomber (NYPD Red, #8)" → "NYPD Red"
+// "Mockingjay (The Hunger Games, #3)" → "The Hunger Games"
+func seriesTitle(s string) string {
+	start := strings.Index(s, " (")
+	if start < 0 {
+		return ""
+	}
+	inner := s[start+2:]
+	end := strings.Index(inner, ")")
+	if end >= 0 {
+		inner = inner[:end]
+	}
+	// Strip number: "NYPD Red, #8" → "NYPD Red"
+	if i := strings.Index(inner, ", #"); i >= 0 {
+		inner = inner[:i]
+	}
+	return strings.TrimSpace(inner)
+}
+
 // confidenceGate checks whether a Google Books result is a confident match.
 // Uses bidirectional normalized title containment so that either title being
 // a prefix/substring of the other is considered a match.
+// Also checks the series name from Goodreads parenthetical against the returned title
+// (handles cases like "The 11:59 Bomber (NYPD Red, #8)" vs Google's "NYPD Red 8").
 // inputAuthor must be a case-insensitive substring of at least one returnedAuthor.
 func confidenceGate(inputTitle, inputAuthor, returnedTitle string, returnedAuthors []string) bool {
 	n1 := normalizeForCompare(inputTitle)
@@ -79,6 +101,13 @@ func confidenceGate(inputTitle, inputAuthor, returnedTitle string, returnedAutho
 		return false
 	}
 	titleOK := strings.Contains(n1, n2) || strings.Contains(n2, n1)
+	// Also try matching the series name (e.g. "NYPD Red") against returned title
+	if !titleOK {
+		if series := seriesTitle(inputTitle); series != "" {
+			ns := normalizeForCompare(series)
+			titleOK = strings.Contains(n2, ns) || strings.Contains(ns, n2)
+		}
+	}
 	if !titleOK {
 		return false
 	}

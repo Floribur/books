@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"net/http"
+	"path/filepath"
 	"strconv"
 	"time"
 
@@ -16,6 +17,16 @@ import (
 
 const defaultPageSize = 24
 const maxPageSize = 100
+
+// coverURL converts a DB cover path like "data/covers/abc.jpg" (or Windows "data\covers\abc.jpg")
+// to a relative URL "/covers/abc.jpg". Returns nil if path is nil or empty.
+func coverURL(p *string) *string {
+	if p == nil || *p == "" {
+		return nil
+	}
+	u := "/covers/" + filepath.Base(*p)
+	return &u
+}
 
 // PublicHandlers holds dependencies for all public read-only API endpoints.
 type PublicHandlers struct {
@@ -123,7 +134,7 @@ func (h *PublicHandlers) GetBooks(w http.ResponseWriter, r *http.Request) {
 		items[i] = BookListItem{
 			Slug:            row.Slug,
 			Title:           row.Title,
-			CoverPath:       row.CoverPath,
+			CoverPath: coverURL(row.CoverPath),
 			ReadAt:          toTimePtr(row.ReadAt),
 			PublicationYear: row.PublicationYear,
 			Authors:         unmarshalRefs[AuthorRef](row.Authors),
@@ -152,7 +163,7 @@ func (h *PublicHandlers) GetCurrentlyReading(w http.ResponseWriter, r *http.Requ
 		items[i] = BookListItem{
 			Slug:            row.Slug,
 			Title:           row.Title,
-			CoverPath:       row.CoverPath,
+			CoverPath: coverURL(row.CoverPath),
 			ReadAt:          toTimePtr(row.ReadAt),
 			PublicationYear: row.PublicationYear,
 			Authors:         unmarshalRefs[AuthorRef](row.Authors),
@@ -177,7 +188,7 @@ func (h *PublicHandlers) GetBookBySlug(w http.ResponseWriter, r *http.Request) {
 	detail := BookDetail{
 		Slug:            row.Slug,
 		Title:           row.Title,
-		CoverPath:       row.CoverPath,
+		CoverPath: coverURL(row.CoverPath),
 		ReadAt:          toTimePtr(row.ReadAt),
 		PublicationYear: row.PublicationYear,
 		Description:     row.Description,
@@ -241,7 +252,7 @@ func (h *PublicHandlers) GetAuthorBySlug(w http.ResponseWriter, r *http.Request)
 	books := make([]BookListItem, len(bookRows))
 	for i, row := range bookRows {
 		books[i] = BookListItem{
-			Slug: row.Slug, Title: row.Title, CoverPath: row.CoverPath,
+			Slug: row.Slug, Title: row.Title, CoverPath: coverURL(row.CoverPath),
 			ReadAt: toTimePtr(row.ReadAt), PublicationYear: row.PublicationYear,
 			Authors: unmarshalRefs[AuthorRef](row.Authors),
 			Genres:  unmarshalRefs[GenreRef](row.Genres),
@@ -308,7 +319,7 @@ func (h *PublicHandlers) GetGenreBySlug(w http.ResponseWriter, r *http.Request) 
 	books := make([]BookListItem, len(bookRows))
 	for i, row := range bookRows {
 		books[i] = BookListItem{
-			Slug: row.Slug, Title: row.Title, CoverPath: row.CoverPath,
+			Slug: row.Slug, Title: row.Title, CoverPath: coverURL(row.CoverPath),
 			ReadAt: toTimePtr(row.ReadAt), PublicationYear: row.PublicationYear,
 			Authors: unmarshalRefs[AuthorRef](row.Authors),
 			Genres:  unmarshalRefs[GenreRef](row.Genres),
