@@ -76,7 +76,7 @@
 - [ ] **UI-01**: Infinite scroll on "Books Read" — first ~24 books load immediately, more load on scroll
 - [ ] **UI-02**: Explicit "Load More" button as accessible fallback alongside Intersection Observer
 - [ ] **UI-03**: Back-button restores scroll position after navigating to a book and returning
-- [ ] **UI-04**: Sidebar navigation with animated book-reading SVG (CSS keyframes, no Lottie)
+- [ ] **UI-04**: Sidebar navigation with animated reading figure (Lottie via lottie-react) — D-01 overrides original "CSS keyframes, no Lottie" spec
 - [ ] **UI-05**: `prefers-reduced-motion` respected — animation disabled when set
 - [ ] **UI-06**: Dark/light mode toggle with OS preference detection and localStorage persistence
 - [ ] **UI-07**: Brand color `#6d233e` (wine red) as primary, `#c4843a` (antique gold) as accent, `#faf8f5` warm off-white background
@@ -119,7 +119,6 @@
 | Mobile app | Web-first; mobile later if ever |
 | Goodreads API (official) | Deprecated 2020; use RSS + Google Books instead |
 | Hotlinked book covers | Reliability — external URLs break; self-hosting is required |
-| Lottie for sidebar animation | 60KB bundle cost for a single decorative element; CSS keyframes instead |
 | Multi-user support | This is Florian's library, not a platform |
 
 ---
