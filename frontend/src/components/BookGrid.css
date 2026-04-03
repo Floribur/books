@@ -1,0 +1,62 @@
+/* Books Read grid breakpoints (per UI-SPEC D-10):
+   ≥1400px → 6 cols | 1024–1399px → 5 cols | 768–1023px → 4 cols | <768px → 2 cols */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .book-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .book-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 1400px) {
+  .book-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.book-grid-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.load-more-button {
+  align-self: center;
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  padding: var(--space-sm) var(--space-xl);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  min-height: 44px;
+  transition: opacity 0.15s ease;
+}
+
+.load-more-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.load-more-button:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.books-end-message {
+  text-align: center;
+  font-size: var(--text-label);
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+}

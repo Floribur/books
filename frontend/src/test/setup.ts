@@ -5,11 +5,13 @@ import { cleanup } from '@testing-library/react';
 import { server } from './msw-server';
 
 // IntersectionObserver not implemented in jsdom — mock it
-global.IntersectionObserver = vi.fn(() => ({
-  observe: vi.fn(),
-  disconnect: vi.fn(),
-  unobserve: vi.fn(),
-})) as unknown as typeof IntersectionObserver;
+global.IntersectionObserver = vi.fn(function() {
+  return {
+    observe: vi.fn(),
+    disconnect: vi.fn(),
+    unobserve: vi.fn(),
+  };
+}) as unknown as typeof IntersectionObserver;
 
 // matchMedia not implemented in jsdom — mock it
 Object.defineProperty(window, 'matchMedia', {
