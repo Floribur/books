@@ -40,7 +40,7 @@ WHERE id = $1;
 
 -- name: ListBooksPaginated :many
 SELECT
-    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year,
+    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year, b.page_count,
     COALESCE(
         json_agg(DISTINCT jsonb_build_object('name', a.name, 'slug', a.slug))
         FILTER (WHERE a.id IS NOT NULL), '[]'
@@ -62,7 +62,7 @@ LIMIT $3;
 
 -- name: ListBooksByYear :many
 SELECT
-    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year,
+    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year, b.page_count,
     COALESCE(
         json_agg(DISTINCT jsonb_build_object('name', a.name, 'slug', a.slug))
         FILTER (WHERE a.id IS NOT NULL), '[]'

@@ -18,6 +18,7 @@ export interface Book {
   cover_path: string;       // e.g. "/covers/9780385490818.jpg" — proxied in dev via Vite
   read_at: string | null;   // ISO 8601 string or null
   publication_year: number | null;
+  page_count: number | null;
   authors: Author[];
   genres: Genre[];
 }

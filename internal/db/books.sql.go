@@ -277,7 +277,7 @@ func (q *Queries) ListBooks(ctx context.Context) ([]Book, error) {
 
 const listBooksPaginated = `-- name: ListBooksPaginated :many
 SELECT
-    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year,
+    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year, b.page_count,
     COALESCE(
         json_agg(DISTINCT jsonb_build_object('name', a.name, 'slug', a.slug))
         FILTER (WHERE a.id IS NOT NULL), '[]'
@@ -311,6 +311,7 @@ type ListBooksPaginatedRow struct {
 	CoverPath       *string            `json:"cover_path"`
 	ReadAt          pgtype.Timestamptz `json:"read_at"`
 	PublicationYear *int32             `json:"publication_year"`
+	PageCount       *int32             `json:"page_count"`
 	Authors         interface{}        `json:"authors"`
 	Genres          interface{}        `json:"genres"`
 }
@@ -346,7 +347,7 @@ func (q *Queries) ListBooksPaginated(ctx context.Context, arg ListBooksPaginated
 
 const listBooksByYear = `-- name: ListBooksByYear :many
 SELECT
-    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year,
+    b.id, b.slug, b.title, b.cover_path, b.read_at, b.publication_year, b.page_count,
     COALESCE(
         json_agg(DISTINCT jsonb_build_object('name', a.name, 'slug', a.slug))
         FILTER (WHERE a.id IS NOT NULL), '[]'
@@ -391,6 +392,7 @@ func (q *Queries) ListBooksByYear(ctx context.Context, arg ListBooksByYearParams
 			&i.CoverPath,
 			&i.ReadAt,
 			&i.PublicationYear,
+			&i.PageCount,
 			&i.Authors,
 			&i.Genres,
 		); err != nil {

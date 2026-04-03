@@ -158,6 +158,7 @@ func (h *PublicHandlers) GetBooks(w http.ResponseWriter, r *http.Request) {
 			CoverPath:       coverURL(row.CoverPath),
 			ReadAt:          toTimePtr(row.ReadAt),
 			PublicationYear: row.PublicationYear,
+			PageCount:       row.PageCount,
 			Authors:         unmarshalRefs[AuthorRef](row.Authors),
 			Genres:          unmarshalRefs[GenreRef](row.Genres),
 		}

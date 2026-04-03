@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { fetchYears, fetchBooksByYear } from '../api/books';
+import { fetchYears, fetchBooksByYear, fetchAllBooksByYear } from '../api/books';
 import { BookGrid } from '../components/BookGrid';
 import { YearSelector } from '../components/YearSelector';
 import { StatsStrip } from '../components/StatsStrip';
@@ -46,6 +46,25 @@ export function ReadingChallengePage() {
   const yearEntry = yearEntries?.find((e) => e.year === selectedYear);
   const bookCount = yearEntry?.book_count ?? 0;
 
+  // Fetch all books for the year (limit=200) to compute page stats
+  const { data: allYearBooks } = useQuery({
+    queryKey: ['books', 'year', String(selectedYear), 'all'],
+    queryFn: () => fetchAllBooksByYear(selectedYear),
+    enabled: !yearsLoading && years.length > 0,
+  });
+
+  const pageStats = useMemo(() => {
+    if (!allYearBooks) return { totalPages: null, longestBook: null };
+    const withPages = allYearBooks.filter((b) => b.page_count != null);
+    if (withPages.length === 0) return { totalPages: null, longestBook: null };
+    const totalPages = withPages.reduce((sum, b) => sum + b.page_count!, 0);
+    const longest = withPages.reduce((a, b) => (b.page_count! > a.page_count! ? b : a));
+    return {
+      totalPages,
+      longestBook: { title: longest.title, pageCount: longest.page_count! },
+    };
+  }, [allYearBooks]);
+
   // fetchFn for BookGrid — closure over selectedYear (CHAL-01)
   // Must recreate when selectedYear changes — useMemo ensures stable reference per year
   const fetchFn = useMemo(
@@ -78,8 +97,8 @@ export function ReadingChallengePage() {
       <StatsStrip
         stats={{
           bookCount,
-          totalPages: null,     // TODO: extend when GET /api/books?year= returns page_count
-          longestBook: null,    // TODO: extend when page_count available on list endpoint
+          totalPages: pageStats.totalPages,
+          longestBook: pageStats.longestBook,
         }}
         year={selectedYear}
         isLoading={yearsLoading}

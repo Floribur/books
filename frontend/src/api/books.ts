@@ -70,3 +70,10 @@ export async function fetchBooksByYear(year: number, cursor: string | undefined)
   const url = cursor ? `${base}&cursor=${encodeURIComponent(cursor)}` : base;
   return apiFetch<PaginatedBooks>(url);
 }
+
+// GET /api/books?year=YYYY&limit=200 — all books for a year for stats computation
+// Returns flat Book[] (not paginated) — used only for page count stats in ReadingChallengePage
+export async function fetchAllBooksByYear(year: number): Promise<Book[]> {
+  const data = await apiFetch<PaginatedBooks>(`/api/books?year=${year}&limit=200`);
+  return data.items;
+}

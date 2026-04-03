@@ -23,6 +23,7 @@ type BookListItem struct {
 	CoverPath       *string     `json:"cover_path"`
 	ReadAt          *time.Time  `json:"read_at"`
 	PublicationYear *int32      `json:"publication_year"`
+	PageCount       *int32      `json:"page_count"`
 	Authors         []AuthorRef `json:"authors"`
 	Genres          []GenreRef  `json:"genres"`
 }
