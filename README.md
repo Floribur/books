@@ -70,13 +70,13 @@ This returns `{"imported": N}` with the number of books upserted.
 
 ## Trigger metadata enrichment
 
-After import, enrich books with descriptions, covers, and authors from Google Books:
+After import, enrich books with descriptions, covers, authors, and genres from Google Books:
 
 ```bash
 curl -X POST http://localhost:8081/admin/sync
 ```
 
-Requires `GOOGLE_BOOKS_API_KEY` in your `.env`. Runs in the background — check server logs for progress.
+Requires `GOOGLE_BOOKS_API_KEY` in your `.env` and the server to be running (`make dev`). Runs in the background — check server logs for progress.
 
 ## API endpoints
 
@@ -105,7 +105,7 @@ make build         # Compile to ./flos-library binary
 
 ## Database browser
 
-Adminer runs at **http://localhost:8080** when Docker is up.
+Adminer runs at **http://localhost:8080** when Docker is up (note: **different port** from the API server at 8081).
 
 - System: PostgreSQL
 - Server: db
