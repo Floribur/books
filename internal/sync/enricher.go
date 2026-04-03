@@ -225,8 +225,16 @@ func EnrichBook(ctx context.Context, queries *db.Queries, book db.Book) {
 				}
 			}
 			if vol == nil && len(v.Items) > 0 {
-				log.Printf("enricher: confidence gate failed for book %s (title mismatch: %q vs %q)",
-					book.GoodreadsID, book.Title, v.Items[0].VolumeInfo.Title)
+				first := v.Items[0].VolumeInfo
+				// Describe the actual failure reason for easier debugging
+				reason := "title mismatch"
+				n1 := normalizeForCompare(book.Title)
+				n2 := normalizeForCompare(first.Title)
+				if strings.Contains(n1, n2) || strings.Contains(n2, n1) {
+					reason = fmt.Sprintf("author mismatch (got %v)", first.Authors)
+				}
+				log.Printf("enricher: confidence gate failed for book %s (%s: %q vs %q)",
+					book.GoodreadsID, reason, book.Title, first.Title)
 			}
 		}
 	}
