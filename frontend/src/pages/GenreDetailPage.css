@@ -1,5 +1,4 @@
 .genre-detail-page {
-  padding: var(--space-xl) var(--space-2xl);
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);

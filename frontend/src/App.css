@@ -11,6 +11,13 @@
   overflow-x: hidden;
 }
 
+/* Central page layout — all <main> elements are constrained and centered */
+.app-content > main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
 /* Mobile: no sidebar offset — sidebar is a drawer */
 @media (max-width: 767px) {
   .app-content {
