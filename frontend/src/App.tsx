@@ -6,10 +6,8 @@ import { AuthorsPage } from './pages/AuthorsPage';
 import { AuthorDetailPage } from './pages/AuthorDetailPage';
 import { GenresPage } from './pages/GenresPage';
 import { GenreDetailPage } from './pages/GenreDetailPage';
+import { ReadingChallengePage } from './pages/ReadingChallengePage';
 import './App.css';
-
-// ReadingChallengePage stub — will be replaced in Plan 4.2
-function ReadingChallengePage() { return <main style={{ padding: '2rem' }}><p>Reading Challenge — Phase 4</p></main>; }
 
 export default function App() {
   return (
