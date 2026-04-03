@@ -1,5 +1,5 @@
 .book-detail-page {
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-xl) var(--space-2xl);
 }
 
 /* Desktop: two-column CSS grid (D-01) */

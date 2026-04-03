@@ -1,10 +1,9 @@
 .author-detail-page {
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-xl) var(--space-2xl);
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
 }
-
 .author-detail-heading {
   display: flex;
   flex-direction: column;
