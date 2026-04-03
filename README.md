@@ -44,24 +44,18 @@ migrate -path ./migrations -database "postgres://postgres:postgres@localhost:543
 make dev
 ```
 
-Or manually (picks up env vars from your shell):
-```bash
-APP_ENV=development go run ./cmd/server
-```
-
-The server starts on **http://localhost:8081**.
+This starts Docker (if not already running), loads `.env`, and runs the server on **http://localhost:8081**.
 
 ## Everyday usage (Docker already running)
 
 Just run:
 ```bash
-APP_ENV=development go run ./cmd/server
+make dev
 ```
 
-Or if you have a `.env` file and a tool like [godotenv](https://github.com/joho/godotenv):
-```bash
-godotenv -f .env go run ./cmd/server
-```
+This picks up all variables from your `.env` file automatically and starts the server on **http://localhost:8081**.
+
+> **Without Make:** `set -a; source .env; set +a; go run ./cmd/server` (bash) or set env vars manually on Windows.
 
 ## Import your Goodreads books
 

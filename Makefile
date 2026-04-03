@@ -1,5 +1,11 @@
 DB_URL ?= postgres://postgres:postgres@localhost:5432/floslib?sslmode=disable
 
+# Load .env if it exists
+ifneq (,$(wildcard .env))
+  include .env
+  export
+endif
+
 .PHONY: dev migrate migrate-down sqlc build
 
 dev:
