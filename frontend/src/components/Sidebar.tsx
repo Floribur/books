@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, Library, Users, Tag, Trophy } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import './Sidebar.css';
@@ -104,7 +104,7 @@ export function Sidebar() {
 
       {/* Mobile top bar — visible at <768px */}
       <div className="mobile-topbar">
-        <span className="sidebar-title">Flo's Library</span>
+        <Link to="/" className="sidebar-title">Flo's Library</Link>
         <button
           className="hamburger-button"
           onClick={() => setIsOpen(true)}
