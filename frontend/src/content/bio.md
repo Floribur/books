@@ -1,7 +1,5 @@
-# Florian
+Hoi zäme! I'm Flo — a Software Engineer who spends his free time climbing walls at the bouldering gym and escaping from tricky escape rooms.
 
-I'm a developer who reads a lot. This is my personal book library — every book I've read, synced automatically from Goodreads.
+When I'm not doing either of those, you'll probably find me with a book — collecting them is just as much a hobby as reading them. This website is synced automatically with my Goodreads shelves, so everything you see here is something I've actually picked up.
 
-I read mostly science fiction, philosophy, and history, with occasional detours into whatever looks interesting. This site is my way of keeping track of what I've read and making it easy to find books again.
-
-Find me on [Goodreads](https://www.goodreads.com/user/show/79499864-florian) if you'd like to see what I'm reading in real time.
+Take a look around! And if you want to see what I'm reading right now, you can find me on [Goodreads](https://www.goodreads.com/user/show/79499864-florian).
