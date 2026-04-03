@@ -85,6 +85,12 @@ A fully working personal book showcase website — synced from Goodreads, displa
 
 **Requirements covered:** API-01–10
 
+**Plans:** 2 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — SQL queries, PublicHandlers (books/authors/genres/years), cursor pagination
+- [ ] 02-02-PLAN.md — Cover file server, go:embed, SPA catch-all, Open Graph injection
+
 ### Plan 2.1 — Core API Endpoints
 
 **Objective:** All read endpoints implemented with Chi, sqlc queries, and cursor-based pagination.
