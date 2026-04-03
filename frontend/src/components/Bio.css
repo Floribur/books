@@ -1,0 +1,73 @@
+.bio-section {
+  margin-bottom: var(--space-xl);
+}
+
+/* Desktop: photo left (240px), text right — gap var(--space-lg) */
+.bio-layout {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+.bio-photo-wrapper {
+  flex-shrink: 0;
+  width: 240px;
+}
+
+.bio-photo {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.bio-text {
+  flex: 1;
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--color-text);
+}
+
+/* Links in bio text — Goodreads link uses accent underline per UI-SPEC */
+.bio-text a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 2px;
+}
+
+.bio-text a:hover {
+  color: var(--color-primary);
+}
+
+/* Bio headings (person name) */
+.bio-text h1,
+.bio-text h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-heading);
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.bio-text p {
+  margin-bottom: var(--space-sm);
+}
+
+/* Mobile: photo first (full-width, max 280px centered), text below */
+@media (max-width: 767px) {
+  .bio-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bio-photo-wrapper {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .bio-text {
+    width: 100%;
+  }
+}

@@ -1,0 +1,34 @@
+.now-reading-section {
+  margin-bottom: var(--space-xl);
+}
+
+.section-heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-heading);  /* 24px */
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+  /* Accent rule line under heading per UI-SPEC */
+  padding-bottom: var(--space-xs);
+  border-bottom: 2px solid var(--color-accent);
+  display: inline-block;
+}
+
+/* Now Reading grid: 4 cols ≥1024px, 3 cols 768-1023px, 2 cols <768px (UI-SPEC) */
+.now-reading-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* mobile default */
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .now-reading-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .now-reading-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

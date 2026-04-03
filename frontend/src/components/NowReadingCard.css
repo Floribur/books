@@ -1,0 +1,43 @@
+.now-reading-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.now-reading-card-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  transition: transform 0.15s ease;
+}
+
+.now-reading-card-link:hover {
+  transform: translateY(-2px);
+}
+
+.now-reading-card-info {
+  padding: var(--space-sm) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+/* D-07: Now Reading title uses body size (16px), NOT label (13px) — more prominent */
+.now-reading-card-title {
+  font-size: var(--text-body);   /* 16px — distinguished from BookCard's 13px */
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: var(--leading-body);
+  color: var(--color-primary);
+}
+
+.now-reading-card-author {
+  font-size: var(--text-label);  /* 13px */
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
