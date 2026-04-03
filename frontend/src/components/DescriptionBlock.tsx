@@ -1,27 +1,38 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './DescriptionBlock.css';
 
 interface DescriptionBlockProps {
   description: string | null;
 }
 
-const CHAR_THRESHOLD = 640; // D-04: expand trigger threshold
-
 export function DescriptionBlock({ description }: DescriptionBlockProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isClamped, setIsClamped] = useState(false);
+  const textRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = textRef.current;
+    if (!el) return;
+
+    const check = () => setIsClamped(el.scrollHeight > el.clientHeight);
+    check();
+
+    const observer = new ResizeObserver(check);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [description]);
 
   if (!description) return null;
-
-  const isLong = description.length > CHAR_THRESHOLD;
 
   return (
     <div className="description-block">
       <div
-        className={`description-block-text${isLong && !isExpanded ? ' description-block-text--clamped' : ''}`}
+        ref={textRef}
+        className={`description-block-text${!isExpanded ? ' description-block-text--clamped' : ''}`}
       >
         {description}
       </div>
-      {isLong && (
+      {(isClamped || isExpanded) && (
         <button
           className="description-block-toggle"
           onClick={() => setIsExpanded((prev) => !prev)}
