@@ -1,0 +1,25 @@
+{
+  "slug": "der-fuchs-thriller-german-edition",
+  "title": "Der Fuchs: Thriller (German Edition)",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3641246962.jpg",
+  "read_at": "2020-01-05T00:00:00Z",
+  "publication_year": 2019,
+  "page_count": 232,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Frederick Forsyth",
+      "slug": "frederick-forsyth"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Fiction",
+      "slug": "fiction"
+    }
+  ],
+  "description": "»Einer der besten Thrillerautoren der Welt!« Wall Street Journal Was, wenn die gefährlichste Waffe der Welt keine Rakete, kein Tarnkappen-U-Boot und kein Computerprogramm ist? In einer Nacht- und Nebelaktion wird in der Nähe von London ein Hacker festgesetzt, weil er das Sicherheitssystem des Pentagon geknackt hat. Doch schnell ist der amerikanischen Regierung klar, dass der junge Mann nicht nur eine Bedrohung ist – sondern ein tödliches Instrument im Kampf gegen die östliche Welt, wenn man seine Fähigkeiten richtig einsetzt. Denn er allein ist in der Lage, die internationale Vorherrschaft für immer aus dem Gleichgewicht zu bringen. Im Fadenkreuz der Großmächte beginnt für den jungen Hacker ein Wettlauf gegen die Zeit – und ohne Entkommen ... Frederick Forsyth, der Großmeister des Spionage-Thrillers, trifft mit »Der Fuchs« den Nerv unserer Zeit.",
+  "isbn13": "3641246962",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

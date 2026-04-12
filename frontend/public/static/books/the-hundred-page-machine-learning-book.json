@@ -1,0 +1,25 @@
+{
+  "slug": "the-hundred-page-machine-learning-book",
+  "title": "The Hundred-Page Machine Learning Book",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-43190851.jpg",
+  "read_at": "2023-03-31T00:00:00Z",
+  "publication_year": 2019,
+  "page_count": 160,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Andriy Burkov",
+      "slug": "andriy-burkov"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Machine learning",
+      "slug": "machine-learning"
+    }
+  ],
+  "description": "Endorsed by top AI authors, academics and industry leaders, The Hundred-Page Machine Learning Book is the number one bestseller on Amazon and the most recommended book for starters and experienced professionals alike.",
+  "isbn13": null,
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "nypd-red-6-nypd-red-6",
+  "title": "NYPD Red 6 (NYPD Red, #6)",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1787467570.jpg",
+  "read_at": "2022-07-19T00:00:00Z",
+  "publication_year": 2021,
+  "page_count": 368,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "James Patterson",
+      "slug": "james-patterson"
+    }
+  ],
+  "genres": [],
+  "description": null,
+  "isbn13": "1787467570",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

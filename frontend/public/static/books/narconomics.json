@@ -1,0 +1,25 @@
+{
+  "slug": "narconomics",
+  "title": "Narconomics",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1785030426.jpg",
+  "read_at": "2020-07-06T00:00:00Z",
+  "publication_year": 2017,
+  "page_count": 310,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Tom Wainwright",
+      "slug": "tom-wainwright"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Drug control",
+      "slug": "drug-control"
+    }
+  ],
+  "description": "\"How does a budding cartel boss succeed (and survive) in the $300 billion illegal drug business? By learning from the best, of course. From creating brand value to fine-tuning customer service, the folks running cartels have been attentive students of the strategy and tactics used by corporations such as Walmart, McDonald's, and Coca-Cola. And what can government learn to combat this scourge? By analyzing the cartels as companies, law enforcers might better understand how they work--and stop throwing away $100 billion a year in a futile effort to win the \"war\" against this global, highly organized business. Your intrepid guide to the most exotic and brutal industry on earth is Tom Wainwright. Picking his way through Andean cocaine fields, Central American prisons, Colorado pot shops, and the online drug dens of the Dark Web, Wainwright provides a fresh, innovative look into the drug trade and its 250 million customers. The cast of characters includes \"Bin Laden,\" the Bolivian coca guide; \"Old Lin,\" the Salvadoran gang leader; \"Starboy,\" the millionaire New Zealand pill maker; and a cozy Mexican grandmother who cooks blueberry pancakes while plotting murder. Along with presidents, cops, and teenage hitmen, they explain such matters as the business purpose for head-to-toe tattoos, how gangs decide whether to compete or collude, and why cartels care a surprising amount about corporate social responsibility. More than just an investigation of how drug cartels do business, Narconomics is also a blueprint for how to defeat them.\"--Publisher's description.",
+  "isbn13": "1785030426",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

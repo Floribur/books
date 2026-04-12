@@ -1,0 +1,25 @@
+{
+  "slug": "le-cri-de-la-mouette",
+  "title": "Le Cri de la mouette",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/2266128469.jpg",
+  "read_at": "2016-03-02T00:00:00Z",
+  "publication_year": 2003,
+  "page_count": 211,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Emmanuelle Laborit",
+      "slug": "emmanuelle-laborit"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Actors",
+      "slug": "actors"
+    }
+  ],
+  "description": "Emmanuelle est sourde de naissance. Elle ne connaît qu'une chose : le silence. Pour s'évader de cette prison, elle se met à crier. Des cris d'oiseau de mer, disent ses parents. Jusqu'au jour où, à sept ans, \" la mouette \" découvre le langage des signes. La petite fille se transforme : le monde s'ouvre à elle... Elle sera comédienne puisque c'est son rêve le plus cher. Adolescente révoltée, Emmanuelle va lutter, souffrir et finalement gagner son combat : être actrice mais aussi plaider la cause de millions de malentendants. Pour que le monde des sourds ne soit plus le monde du silence.",
+  "isbn13": "2266128469",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

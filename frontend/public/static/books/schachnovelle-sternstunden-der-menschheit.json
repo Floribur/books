@@ -1,0 +1,25 @@
+{
+  "slug": "schachnovelle-sternstunden-der-menschheit",
+  "title": "Schachnovelle / Sternstunden der Menschheit",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-19313027.jpg",
+  "read_at": "2016-05-02T00:00:00Z",
+  "publication_year": 2013,
+  "page_count": 73,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Stefan Zweig",
+      "slug": "stefan-zweig"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Fiction",
+      "slug": "fiction"
+    }
+  ],
+  "description": "Die Novelle des Autors Stefan Zweig aus der Reihe Edition Anaconda über den Schachmeister Dr. B ist ein Klassiker der deutschsprachigen Literatur.Für den kultivierten Großmeister Dr. B. ist das Schachspiel mehr als eine geistige Beschäftigung: Es wurde ihm einst zum Überlebensmittel, denn in der zermürbenden Einsamkeit seiner Gestapohaft hatte er aus dem strengen Regelwerk des Schachs seine Widerstandskraft gezogen. Nun trifft er auf den Weltmeister Czentovic, einen stumpfen Charakter, der mit mechanischer Präzision vorgeht. Zwei Spielhaltungen prallen aufeinander und mit ihnen zwei Lebenswelten. Die »Schachnovelle« ist das eindrucksvolle Vermächtnis des schließlich selbst am Leben verzweifelten Stefan Zweig.Die Geschenk-Reihe Edition Anaconda ist mit Schutzumschlag und Lesebändchen ausgestattet.",
+  "isbn13": null,
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

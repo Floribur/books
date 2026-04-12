@@ -1,0 +1,25 @@
+{
+  "slug": "jakob-der-lugner",
+  "title": "Jakob der Lügner.",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3766604317.jpg",
+  "read_at": "2016-05-09T00:00:00Z",
+  "publication_year": 2002,
+  "page_count": 77,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Georg Wieghaus",
+      "slug": "georg-wieghaus"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Holocaust, Jewish (1939-1945)",
+      "slug": "holocaust-jewish-1939-1945"
+    }
+  ],
+  "description": "Mit erfundenen Meldungen vom Vormarsch der Roten Armee gibt ein Jude seinen Mitgefangenen in einem polnischen Getto neue Hoffnung und Überlebenswillen. Ab 8.",
+  "isbn13": "3766604317",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

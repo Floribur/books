@@ -1,0 +1,25 @@
+{
+  "slug": "frozen-heat-nikki-heat-4",
+  "title": "Frozen Heat (Nikki Heat, #4)",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1401324444.jpg",
+  "read_at": "2023-08-12T00:00:00Z",
+  "publication_year": 2012,
+  "page_count": 625,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Richard Castle",
+      "slug": "richard-castle"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Heat, Nikki (Fictitious character)",
+      "slug": "heat-nikki-fictitious-character"
+    }
+  ],
+  "description": "NYPD Homicide Detective Nikki Heat arrives at her latest crime scene to find an unidentified woman stabbed to death and stuffed inside a suitcase left on a Manhattan street. Nikki is in for a big shock when this new homicide connects to the unsolved murder of her own mother.",
+  "isbn13": "1401324444",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

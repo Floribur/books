@@ -1,0 +1,20 @@
+{
+  "slug": "nypd-red-3-nypd-red-3",
+  "title": "NYPD Red 3 (NYPD Red, #3)",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1478927941.jpg",
+  "read_at": "2019-09-22T00:00:00Z",
+  "publication_year": 2015,
+  "page_count": 384,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "James Patterson",
+      "slug": "james-patterson"
+    }
+  ],
+  "genres": [],
+  "description": "Businessman Hunter Alden, Jr thinks he has it all: a beautiful wife, a wonderful teenage son and billions in the bank. However his life is turned upside-down one night when he finds the severed head of his chauffeur, stuffed into a bag painted with his son's initials, in blood. But the price to get him back might be too high - even for one of the world's richest men.",
+  "isbn13": "1478927941",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

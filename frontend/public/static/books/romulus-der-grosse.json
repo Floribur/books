@@ -1,0 +1,25 @@
+{
+  "slug": "romulus-der-grosse",
+  "title": "Romulus der Große",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3257230427.jpg",
+  "read_at": "2015-02-01T00:00:00Z",
+  "publication_year": 1998,
+  "page_count": 167,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Friedrich Dürrenmatt",
+      "slug": "friedrich-durrenmatt"
+    }
+  ],
+  "genres": [
+    {
+      "name": "German drama",
+      "slug": "german-drama"
+    }
+  ],
+  "description": null,
+  "isbn13": "3257230427",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

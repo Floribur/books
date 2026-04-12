@@ -1,0 +1,25 @@
+{
+  "slug": "billion-dollar-spy",
+  "title": "Billion Dollar Spy",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1785783521.jpg",
+  "read_at": "2023-02-06T00:00:00Z",
+  "publication_year": 2018,
+  "page_count": 400,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "David E. Hoffman",
+      "slug": "david-e-hoffman"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Aeronautics",
+      "slug": "aeronautics"
+    }
+  ],
+  "description": "'An astonishingly detailed picture of espionage in the 1980s, written with pacey journalistic verve and an eerily contemporary feel.' Ben Macintyre, The Times 'A gripping story of courage, professionalism, and betrayal in the secret world.' Rodric Braithwaite, British Ambassador in Moscow, 1988-1992 'One of the best spy stories to come out of the Cold War and all the more riveting for being true.' Washington Post January, 1977. While the chief of the CIA's Moscow station fills his gas tank, a stranger drops a note into the car. In the years that followed, that stranger, Adolf Tolkachev, became one of the West's most valuable spies. At enormous risk Tolkachev and his handlers conducted clandestine meetings across Moscow, using spy cameras, props, and private codes to elude the KGB in its own backyard - until a shocking betrayal put them all at risk. Drawing on previously classified CIA documents and interviews with first-hand participants, The Billion Dollar Spyis a brilliant feat of reporting and a riveting true story from the final years of the Cold War.",
+  "isbn13": "1785783521",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

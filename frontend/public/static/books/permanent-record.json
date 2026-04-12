@@ -1,0 +1,25 @@
+{
+  "slug": "permanent-record",
+  "title": "Permanent Record",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1250237238.jpg",
+  "read_at": "2020-10-28T00:00:00Z",
+  "publication_year": 2019,
+  "page_count": 352,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Edward Snowden",
+      "slug": "edward-snowden"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Biography \u0026 Autobiography",
+      "slug": "biography-and-autobiography"
+    }
+  ],
+  "description": "NEW YORK TIMES BESTSELLER Edward Snowden, the man who risked everything to expose the US government’s system of mass surveillance, reveals for the first time the story of his life, including how he helped to build that system and what motivated him to try to bring it down. In 2013, twenty-nine-year-old Edward Snowden shocked the world when he broke with the American intelligence establishment and revealed that the United States government was secretly pursuing the means to collect every single phone call, text message, and email. The result would be an unprecedented system of mass surveillance with the ability to pry into the private lives of every person on earth. Six years later, Snowden reveals for the very first time how he helped to build this system and why he was moved to expose it. Spanning the bucolic Beltway suburbs of his childhood and the clandestine CIA and NSA postings of his adulthood, Permanent Record is the extraordinary account of a bright young man who grew up online—a man who became a spy, a whistleblower, and, in exile, the Internet’s conscience. Written with wit, grace, passion, and an unflinching candor, Permanent Record is a crucial memoir of our digital age and destined to be a classic.",
+  "isbn13": "1250237238",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "le-grand-cahier",
+  "title": "Le grand cahier",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/2020239264.jpg",
+  "read_at": "2016-05-03T00:00:00Z",
+  "publication_year": null,
+  "page_count": null,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Ágota Kristóf",
+      "slug": "agota-kristof"
+    }
+  ],
+  "genres": [],
+  "description": null,
+  "isbn13": "2020239264",
+  "read_count": 1,
+  "metadata_source": "none"
+}

@@ -1,0 +1,33 @@
+{
+  "slug": "dinosaurs-a-concise-natural-history",
+  "title": "Dinosaurs: A Concise Natural History",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1108469299.jpg",
+  "read_at": null,
+  "publication_year": 2021,
+  "page_count": 492,
+  "shelf": "currently-reading",
+  "authors": [
+    {
+      "name": "John Sibbick",
+      "slug": "john-sibbick"
+    },
+    {
+      "name": "David E. Fastovsky",
+      "slug": "david-e-fastovsky"
+    },
+    {
+      "name": "David B. Weishampel",
+      "slug": "david-b-weishampel"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Science",
+      "slug": "science"
+    }
+  ],
+  "description": "The ideal textbook for non-science majors, this lively and engaging introduction encourages students to ask questions, assess data critically and think like a scientist. Building on the success of previous editions, Dinosaurs has been thoroughly updated to include new discoveries in the field, such as the toothed bird specimens found in China and recent discoveries of dinosaur soft anatomy. Illustrations by leading paleontological illustrator John Sibbick and new, carefully-chosen photographs, clearly show how dinosaurs looked, lived and their role in Earth history. Making science accessible and relevant through clear explanations and extensive illustrations, the text guides students through the dinosaur groups, emphasizing scientific concepts rather than presenting endless facts. Grounded in the common language of modern evolutionary biology - phylogenetic systematics - students learn to think about dinosaurs the way that professional paleontologists do.",
+  "isbn13": "1108469299",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

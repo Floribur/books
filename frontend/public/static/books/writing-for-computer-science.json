@@ -1,0 +1,25 @@
+{
+  "slug": "writing-for-computer-science",
+  "title": "Writing for Computer Science",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1852338024.jpg",
+  "read_at": "2022-12-12T00:00:00Z",
+  "publication_year": 2004,
+  "page_count": 292,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Justin Zobel",
+      "slug": "justin-zobel"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Computers",
+      "slug": "computers"
+    }
+  ],
+  "description": "A complete update to a classic, respected resource Invaluable reference, supplying a comprehensive overview on how to undertake and present research",
+  "isbn13": "1852338024",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

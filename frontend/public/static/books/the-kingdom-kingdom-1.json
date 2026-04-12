@@ -1,0 +1,20 @@
+{
+  "slug": "the-kingdom-kingdom-1",
+  "title": "The Kingdom (Kingdom, #1)",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1787300803.jpg",
+  "read_at": "2020-12-27T00:00:00Z",
+  "publication_year": 2020,
+  "page_count": 320,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Jo Nesbø",
+      "slug": "jo-nesbo"
+    }
+  ],
+  "genres": [],
+  "description": "In the far north of Norway a man lives a peaceful existence. However one day his younger brother, always the more successful and charming of the two, turns up to visit. He's accompanied by his new wife. A bond develops between the woman and her host, with violent consequences. It turns out that the little brother is not quite as angelic as he seems.",
+  "isbn13": "1787300803",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

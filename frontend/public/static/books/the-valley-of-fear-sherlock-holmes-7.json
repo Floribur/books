@@ -1,0 +1,29 @@
+{
+  "slug": "the-valley-of-fear-sherlock-holmes-7",
+  "title": "The Valley of Fear (Sherlock Holmes, #7)",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/048644533X.jpg",
+  "read_at": "2021-12-27T00:00:00Z",
+  "publication_year": 2005,
+  "page_count": null,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Arthur Conan Doyle",
+      "slug": "arthur-conan-doyle"
+    },
+    {
+      "name": "Sir Arthur Conan Doyle",
+      "slug": "sir-arthur-conan-doyle"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Private investigators",
+      "slug": "private-investigators"
+    }
+  ],
+  "description": "Sherlock Holmes and Dr. Watson are called to the country house of the reclusive American Jack Douglas, only to find they are too late to prevent a mysterious murder.",
+  "isbn13": "048644533X",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

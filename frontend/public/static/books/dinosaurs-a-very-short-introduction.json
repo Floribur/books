@@ -1,0 +1,25 @@
+{
+  "slug": "dinosaurs-a-very-short-introduction",
+  "title": "Dinosaurs: A Very Short Introduction",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0198795920.jpg",
+  "read_at": "2021-07-03T00:00:00Z",
+  "publication_year": 2017,
+  "page_count": 193,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "David Norman",
+      "slug": "david-norman"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Nature",
+      "slug": "nature"
+    }
+  ],
+  "description": "David Norman discusses some of the most fascinating and iconic creatures to walk our Earth. Introducing the different families of dinosaurs, he discusses how they were first discovered and interpreted, and looks at how scientific break-throughs have changed our understanding of dinosaurs over the years.",
+  "isbn13": "0198795920",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

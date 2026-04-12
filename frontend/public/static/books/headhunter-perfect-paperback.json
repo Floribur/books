@@ -1,0 +1,29 @@
+{
+  "slug": "headhunter-perfect-paperback",
+  "title": "Headhunter [Perfect Paperback]",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3548280455.jpg",
+  "read_at": "2021-02-19T00:00:00Z",
+  "publication_year": 2010,
+  "page_count": 301,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Jo Nesbø",
+      "slug": "jo-nesbo"
+    },
+    {
+      "name": "Günther Frauenlob",
+      "slug": "gunther-frauenlob"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Popular literature",
+      "slug": "popular-literature"
+    }
+  ],
+  "description": "Roger Brown, ein eher kleinwüchsiger Headhunter, geniesst inWirtschaftskreisen einen excellenten Ruf. Doch Roger betreibt ein doppeltes Spiel. Um die kostspielige Galerie seiner wunderschönen Frau Diana zu unterstützen, stiehlt er seinen Klienten wertvolle Gemälde. Als er es auf ein Bild von Rubens abgesehen hat, wird er plötzlich selbst zum Gejagten und hat alle Mühe seinen Kopf zu retten...",
+  "isbn13": "3548280455",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

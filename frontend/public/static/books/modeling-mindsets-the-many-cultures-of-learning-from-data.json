@@ -1,0 +1,20 @@
+{
+  "slug": "modeling-mindsets-the-many-cultures-of-learning-from-data",
+  "title": "Modeling Mindsets: The Many Cultures Of Learning From Data",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-60906526.jpg",
+  "read_at": "2022-11-22T00:00:00Z",
+  "publication_year": 2022,
+  "page_count": null,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Christoph Molnar",
+      "slug": "christoph-molnar"
+    }
+  ],
+  "genres": [],
+  "description": "In less than 100 pages, Modeling Mindsets elucidates the worldviews behind various statistical modeling and machine learning mindsets. \"It has taken me many years of fumbling around with ML and statistics to achieve a fraction of the intuition in the book. Save yourself the time!\" - Robert Martin About The Book Books on modeling often jump right into math and methods. Drowned in detail, it can take years to appreciate the assumptions and limitations of the various modeling mindsets. Written in a clear and concise style, Modeling Mindsets introduces approaches such as Bayesian inference, supervised learning, causal inference, and more. After reading this book, you will have a much better understanding of the different approaches to modeling and be able to choose the right one for your problem. Who This Book Is For This book is for everyone who builds models from data: data scientists, statisticians, machine learners, and quantitative researchers. To get the most out of this book: You should already have experience with modeling and working with data. You should feel comfortable with at least one of the mindsets in this book. Don't read this book if: You are completely new to working with data and models. You cling to the mindset you already know and aren't open to other mindsets. You will get the most out of Modeling Mindsets if you keep an open mind You have to challenge the rigid assumptions of the mindset that feels natural to you. Table of Contents Introduction Statistical Modeling - Reason Under Uncertainty Frequentism - Infer \"True\" Parameters Bayesianism - Update Parameter Distributions Likelihoodism - Likelihood As Evidence Causal Inference - Identify And Estimate Causes Machine Learning - Learn Algorithms From Data Supervised Learning - Predict New Data Unsupervised Learning - Find Hidden Patterns Reinforcement Learning - Learn To Interact Deep Learning - Learn End-To-End Networks The T-Shaped Modeler",
+  "isbn13": null,
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

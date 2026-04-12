@@ -1,0 +1,25 @@
+{
+  "slug": "heat-wave-nikki-heat-1",
+  "title": "Heat Wave (Nikki Heat, #1)",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1781166277.jpg",
+  "read_at": "2022-10-17T00:00:00Z",
+  "publication_year": 2012,
+  "page_count": 368,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Richard Castle",
+      "slug": "richard-castle"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Detective and mystery stories",
+      "slug": "detective-and-mystery-stories"
+    }
+  ],
+  "description": "A New York real estate tycoon plunges to his death on a Manhattan sidewalk. A trophy wife with a past survives a narrow escape from a brazen attack. Mobsters and moguls with no shortage of reasons to kill trot out their alibis.",
+  "isbn13": "1781166277",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "nypd-red-4",
+  "title": "NYPD Red 4",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0099594455.jpg",
+  "read_at": "2021-11-14T00:00:00Z",
+  "publication_year": 2016,
+  "page_count": 450,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "James Patterson",
+      "slug": "james-patterson"
+    },
+    {
+      "name": "Marshall Karp",
+      "slug": "marshall-karp"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Fiction",
+      "slug": "fiction"
+    }
+  ],
+  "description": "A jewel heist. A murdered actress. A killer case for NYPD Red. In a city where crime never sleeps, NYPD Red is the elite task force called in when a case involves the rich, famous and connected. Detectives Zach Jordan and Kylie MacDonald are the best of the best - brilliant and tireless investigators who will stop at nothing to catch a criminal, even if it means antagonising the same powerful people they're supposed to be helping. When a glitzy movie premiere is the scene of a shocking murder and high-stakes robbery, NYPD Red gets the call. In a hunt that takes Zach and Kylie from celebrity penthouses to the depths of Manhattan's criminal underworld, they have to find the cold-blooded killer - before he strikes again.",
+  "isbn13": "0099594455",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

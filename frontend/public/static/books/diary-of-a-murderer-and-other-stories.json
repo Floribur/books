@@ -1,0 +1,25 @@
+{
+  "slug": "diary-of-a-murderer-and-other-stories",
+  "title": "Diary of a Murderer and Other Stories",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1328545423.jpg",
+  "read_at": "2020-02-29T00:00:00Z",
+  "publication_year": 2019,
+  "page_count": 211,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Young-ha Kim",
+      "slug": "young-ha-kim"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Fiction",
+      "slug": "fiction"
+    }
+  ],
+  "description": "From \"one of South Korea's best and most worldly writers\" (NPR): An electric collection that captivates and provokes in equal measure, exploring what it means to be on the edge--between life and death, good and evil",
+  "isbn13": "1328545423",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}
