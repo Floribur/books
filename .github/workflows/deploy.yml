@@ -4,10 +4,7 @@ on:
   push:
     branches: [master]
   workflow_dispatch:
-  workflow_run:
-    workflows: ["Daily Sync"]
-    types: [completed]
-    branches: [master]
+
 
 permissions:
   contents: read

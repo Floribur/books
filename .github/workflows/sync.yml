@@ -16,6 +16,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0    # full history for clean commits
+          token: ${{ secrets.PAT }}
 
       - name: Set up Go
         uses: actions/setup-go@v5
