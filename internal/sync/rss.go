@@ -8,7 +8,6 @@ import (
 	"time"
 
 	"github.com/gosimple/slug"
-	"github.com/jackc/pgx/v5/pgtype"
 	"github.com/mmcdole/gofeed"
 
 	"flos-library/internal/db"
@@ -181,13 +180,15 @@ func SyncRSS(ctx context.Context, queries *db.Queries) error {
 			grIDToSlug[item.GoodreadsID] = bookSlug
 		}
 
-		var readAt pgtype.Timestamptz
+		var readAt *string
 		if !item.ReadAt.IsZero() {
-			readAt = pgtype.Timestamptz{Time: item.ReadAt, Valid: true}
+			s := item.ReadAt.UTC().Format(time.RFC3339)
+			readAt = &s
 		}
-		var dateAdded pgtype.Timestamptz
+		var dateAdded *string
 		if !item.DateAdded.IsZero() {
-			dateAdded = pgtype.Timestamptz{Time: item.DateAdded, Valid: true}
+			s := item.DateAdded.UTC().Format(time.RFC3339)
+			dateAdded = &s
 		}
 
 		params := db.UpsertBookParams{
@@ -197,7 +198,7 @@ func SyncRSS(ctx context.Context, queries *db.Queries) error {
 			MetadataSource: "none",
 			ReadAt:         readAt,
 			DateAdded:      dateAdded,
-			ReadCount:      int32(item.ReadCount),
+			ReadCount:      int64(item.ReadCount),
 			Shelf:          item.Shelf,
 		}
 		if item.ISBN != "" {
