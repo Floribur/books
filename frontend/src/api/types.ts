@@ -1,6 +1,5 @@
-// API response types — matches Go API contract from Phase 2
-// D-04: Book list shape (slug, title, cover_path, read_at, publication_year, authors[], genres[])
-// D-01: Paginated envelope shape (items, next_cursor, has_more)
+// Static JSON response types — matches generated JSON from cmd/generate CLI
+// All data is loaded once from /static/*.json; filtering and pagination are client-side.
 
 export interface Author {
   name: string;
@@ -12,57 +11,33 @@ export interface Genre {
   slug: string;
 }
 
+// Book — one item from /static/books.json
 export interface Book {
   slug: string;
   title: string;
-  cover_path: string;       // e.g. "/covers/9780385490818.jpg" — proxied in dev via Vite
-  read_at: string | null;   // ISO 8601 string or null
+  cover_path: string;       // jsDelivr CDN URL or empty string
+  read_at: string | null;   // ISO-8601 string or null
   publication_year: number | null;
   page_count: number | null;
+  shelf: string;            // 'read' | 'currently-reading' etc.
   authors: Author[];
   genres: Genre[];
 }
 
-export interface PaginatedBooks {
-  items: Book[];
-  next_cursor: string | null;  // opaque base64 token; null = no more pages
-  has_more: boolean;
-}
-
-// BookDetail — full detail shape from GET /api/books/:slug (Phase 2 D-05)
+// BookDetail — shape of /static/books/{slug}.json
 export interface BookDetail extends Book {
   description: string | null;
-  page_count: number | null;
   isbn13: string | null;
   read_count: number;
-  shelf: string;
   metadata_source: string;
 }
 
-// AuthorWithCount — author list item from GET /api/authors (Phase 2 D-06)
+// AuthorWithCount — one item from /static/authors.json
 export interface AuthorWithCount extends Author {
   book_count: number;
 }
 
-// AuthorDetail — author detail from GET /api/authors/:slug (Phase 2 D-07)
-// API returns { name, slug, books: { items, next_cursor, has_more } }
-export interface AuthorDetail extends Author {
-  books: PaginatedBooks;
-}
-
-// GenreWithCount — genre list item from GET /api/genres (Phase 2 D-06)
+// GenreWithCount — one item from /static/genres.json
 export interface GenreWithCount extends Genre {
-  book_count: number;
-}
-
-// GenreDetail — genre detail from GET /api/genres/:slug (Phase 2 D-07)
-// API returns { name, slug, books: { items, next_cursor, has_more } }
-export interface GenreDetail extends Genre {
-  books: PaginatedBooks;
-}
-
-// YearEntry — years list item from GET /api/years
-export interface YearEntry {
-  year: number;
   book_count: number;
 }
