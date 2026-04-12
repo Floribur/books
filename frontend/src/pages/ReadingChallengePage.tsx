@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { fetchYears, fetchBooksByYear, fetchAllBooksByYear } from '../api/books';
+import { fetchBooks } from '../api/books';
 import { BookGrid } from '../components/BookGrid';
 import { YearSelector } from '../components/YearSelector';
 import { StatsStrip } from '../components/StatsStrip';
@@ -10,54 +10,64 @@ import { usePageTitle } from '../hooks/usePageTitle';
 import './ReadingChallengePage.css';
 
 export function ReadingChallengePage() {
-  usePageTitle('Reading Challenge'); // "Flo's Library — Reading Challenge"
+  usePageTitle('Reading Challenge');
   const [searchParams, setSearchParams] = useSearchParams();
   const [showError, setShowError] = useState(false);
 
-  // Fetch years list — used to populate YearSelector and determine default year (D-08)
-  const { data: yearEntries, isPending: yearsLoading, isError: yearsError } = useQuery({
-    queryKey: ['years'],
-    queryFn: fetchYears,
+  const { data: allBooks, isPending, isError } = useQuery({
+    queryKey: ['books'],
+    queryFn: fetchBooks,
   });
 
   useEffect(() => {
-    if (yearsError) setShowError(true);
-  }, [yearsError]);
+    if (isError) setShowError(true);
+  }, [isError]);
 
-  // Extract sorted year numbers (descending — newest first)
-  const years = useMemo(
-    () => (yearEntries ?? []).map((e) => e.year).sort((a, b) => b - a),
-    [yearEntries]
-  );
+  // Derive years list from books.json: extract unique years with counts for 'read' shelf
+  const yearEntries = useMemo(() => {
+    if (!allBooks) return [];
+    const counts = new Map<number, number>();
+    for (const b of allBooks) {
+      if (b.shelf === 'read' && b.read_at) {
+        const year = new Date(b.read_at).getFullYear();
+        if (!isNaN(year)) counts.set(year, (counts.get(year) ?? 0) + 1);
+      }
+    }
+    return Array.from(counts.entries())
+      .map(([year, book_count]) => ({ year, book_count }))
+      .sort((a, b) => b.year - a.year);
+  }, [allBooks]);
 
-  // Resolve selected year:
-  // 1. If ?year= URL param is set and valid, use it
-  // 2. Otherwise default to most recent year with books (D-08)
+  const years = yearEntries.map((e) => e.year);
+
   const yearParam = searchParams.get('year');
   const parsedParam = yearParam ? parseInt(yearParam, 10) : NaN;
   const selectedYear = useMemo(() => {
     if (!isNaN(parsedParam) && years.includes(parsedParam)) return parsedParam;
-    return years[0] ?? new Date().getFullYear(); // fallback to current year if no data yet
+    return years[0] ?? new Date().getFullYear();
   }, [parsedParam, years]);
 
   function handleYearChange(newYear: number) {
     setSearchParams({ year: String(newYear) }, { replace: false });
   }
 
-  // Book count for selected year (from yearEntries — no extra fetch needed)
-  const yearEntry = yearEntries?.find((e) => e.year === selectedYear);
+  const yearEntry = yearEntries.find((e) => e.year === selectedYear);
   const bookCount = yearEntry?.book_count ?? 0;
 
-  // Fetch all books for the year (limit=200) to compute page stats
-  const { data: allYearBooks } = useQuery({
-    queryKey: ['books', 'year', String(selectedYear), 'all'],
-    queryFn: () => fetchAllBooksByYear(selectedYear),
-    enabled: !yearsLoading && years.length > 0,
-  });
+  // Filter books for selected year (used for both grid and stats)
+  const yearBooks = useMemo(
+    () =>
+      (allBooks ?? []).filter(
+        (b) =>
+          b.shelf === 'read' &&
+          b.read_at &&
+          new Date(b.read_at).getFullYear() === selectedYear
+      ),
+    [allBooks, selectedYear]
+  );
 
   const pageStats = useMemo(() => {
-    if (!allYearBooks) return { totalPages: null, longestBook: null };
-    const withPages = allYearBooks.filter((b) => b.page_count != null);
+    const withPages = yearBooks.filter((b) => b.page_count != null);
     if (withPages.length === 0) return { totalPages: null, longestBook: null };
     const totalPages = withPages.reduce((sum, b) => sum + b.page_count!, 0);
     const longest = withPages.reduce((a, b) => (b.page_count! > a.page_count! ? b : a));
@@ -65,29 +75,20 @@ export function ReadingChallengePage() {
       totalPages,
       longestBook: { title: longest.title, pageCount: longest.page_count! },
     };
-  }, [allYearBooks]);
-
-  // fetchFn for BookGrid — closure over selectedYear (CHAL-01)
-  // Must recreate when selectedYear changes — useMemo ensures stable reference per year
-  const fetchFn = useMemo(
-    () => (cursor: string | undefined) => fetchBooksByYear(selectedYear, cursor),
-    [selectedYear]
-  );
+  }, [yearBooks]);
 
   return (
     <main className="reading-challenge-page">
       {showError && (
         <Toast
-          message="Couldn't load years. Try refreshing the page."
+          message="Couldn't load books. Try refreshing the page."
           onDismiss={() => setShowError(false)}
         />
       )}
 
-      {/* Page heading */}
       <h1 className="reading-challenge-heading">Reading Challenge</h1>
 
-      {/* Year selector — D-11 (CHAL-02) */}
-      {!yearsLoading && years.length > 0 && (
+      {!isPending && years.length > 0 && (
         <YearSelector
           years={years}
           selectedYear={selectedYear}
@@ -95,7 +96,6 @@ export function ReadingChallengePage() {
         />
       )}
 
-      {/* Stats strip — D-09, D-10 (CHAL-03) */}
       <StatsStrip
         stats={{
           bookCount,
@@ -103,21 +103,20 @@ export function ReadingChallengePage() {
           longestBook: pageStats.longestBook,
         }}
         year={selectedYear}
-        isLoading={yearsLoading}
+        isLoading={isPending}
       />
 
-      {/* Empty year message — shown above BookGrid when bookCount is 0 and not loading */}
-      {!yearsLoading && bookCount === 0 && (
+      {!isPending && bookCount === 0 && (
         <p className="reading-challenge-empty">
           No books recorded for {selectedYear}.
         </p>
       )}
 
-      {/* Book grid filtered to selected year — CHAL-01 */}
-      {!yearsLoading && years.length > 0 && (
+      {!isPending && years.length > 0 && (
         <BookGrid
-          queryKey={['books', 'year', String(selectedYear)]}
-          fetchFn={fetchFn}
+          books={yearBooks}
+          isPending={isPending}
+          isError={isError}
           ariaLabel={`Books read in ${selectedYear}`}
         />
       )}
