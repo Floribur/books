@@ -17,7 +17,7 @@ export function Bio() {
       <div className="bio-layout">
         <div className="bio-photo-wrapper">
           <img
-            src="/florian.jpg"
+            src={`${import.meta.env.BASE_URL}florian.jpg`}
             alt="Florian"
             className="bio-photo"
           />

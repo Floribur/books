@@ -9,7 +9,7 @@ import (
 
 // cdnBase is the jsDelivr CDN URL prefix for cover images.
 // IMPORTANT: Replace "florianabel/flos-library" with the actual GitHub owner/repo.
-const cdnBase = "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/"
+const cdnBase = "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/"
 
 // Ref is the inline shape for author/genre references embedded in book JSON.
 type Ref struct {
