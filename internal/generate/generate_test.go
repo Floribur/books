@@ -146,7 +146,7 @@ func TestWriteBooks_Shape(t *testing.T) {
 		t.Errorf("shelf: got %q, want %q", b.Shelf, "read")
 	}
 	// CoverPath should be jsDelivr CDN URL
-	wantCover := "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/9780441013593.jpg"
+	wantCover := "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/9780441013593.jpg"
 	if b.CoverPath != wantCover {
 		t.Errorf("cover_path: got %q, want %q", b.CoverPath, wantCover)
 	}
