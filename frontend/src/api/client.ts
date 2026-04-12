@@ -11,7 +11,8 @@ export class ApiError extends Error {
 }
 
 export async function apiFetch<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(path, init);
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+  const response = await fetch(base + path, init);
 
   if (!response.ok) {
     let message = `API error ${response.status}`;
