@@ -6,3 +6,5 @@ flos-library
 *.exe
 .worktrees/
 docs/superpowers/
+.planning/
+.claude/
