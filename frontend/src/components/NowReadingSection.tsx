@@ -1,28 +1,28 @@
 import { useQuery } from '@tanstack/react-query';
 import { NowReadingCard } from './NowReadingCard';
 import { Toast } from './Toast';
-import { fetchCurrentlyReading } from '../api/books';
+import { fetchBooks } from '../api/books';
 import './NowReadingSection.css';
 
-const NOW_READING_CAP = 4; // D-05: cap at 4 books; resolved in UI-SPEC
+const NOW_READING_CAP = 4;
 
 export function NowReadingSection() {
   const { data: allBooks, isError } = useQuery({
-    queryKey: ['currently-reading'],
-    queryFn: fetchCurrentlyReading,
+    queryKey: ['books'],
+    queryFn: fetchBooks,
   });
 
-  // D-15: Show error toast on fetch failure (checked BEFORE empty-array guard)
   if (isError) {
     return <Toast message="Couldn't load currently reading. Try refreshing." onDismiss={() => {}} />;
   }
 
-  // D-04: Hide section entirely when API returns empty array
-  // Also hide while loading (data is undefined) — section is not critical path
-  if (!allBooks || allBooks.length === 0) return null;
+  if (!allBooks) return null;
 
-  // D-05: Cap at 4 books; silently omit extras
-  const books = allBooks.slice(0, NOW_READING_CAP);
+  const books = allBooks
+    .filter((b) => b.shelf === 'currently-reading')
+    .slice(0, NOW_READING_CAP);
+
+  if (books.length === 0) return null;
 
   return (
     <section className="now-reading-section" aria-label="Now Reading">
