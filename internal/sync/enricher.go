@@ -168,8 +168,8 @@ func EnrichBook(ctx context.Context, queries *db.Queries, book db.Book) {
 
 	var (
 		description     string
-		pageCount       *int32
-		publicationYear *int32
+		pageCount       *int64
+		publicationYear *int64
 		coverPath       *string
 		metadataSource  = "none"
 	)
@@ -252,11 +252,11 @@ func EnrichBook(ctx context.Context, queries *db.Queries, book db.Book) {
 		vi := vol.Items[0].VolumeInfo
 		description = vi.Description
 		if vi.PageCount > 0 {
-			pc := int32(vi.PageCount)
+			pc := int64(vi.PageCount)
 			pageCount = &pc
 		}
 		if len(vi.PublishedDate) >= 4 {
-			year := int32(0)
+			year := int64(0)
 			if _, err := fmt.Sscanf(vi.PublishedDate[:4], "%d", &year); err == nil && year > 0 {
 				publicationYear = &year
 			}

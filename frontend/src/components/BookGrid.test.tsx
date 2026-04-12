@@ -1,88 +1,70 @@
-import { render, screen } from '@testing-library/react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
-import { http, HttpResponse } from 'msw';
-import { server } from '../test/msw-server';
 import { BookGrid } from './BookGrid';
-import { fetchBooks } from '../api/books';
+import type { Book } from '../api/types';
 
-function renderGrid() {
-  const queryClient = new QueryClient({
-    defaultOptions: { queries: { retry: false } },
-  });
+function makeBook(overrides: Partial<Book> = {}): Book {
+  return {
+    slug: 'test-book',
+    title: 'Test Book',
+    cover_path: '/covers/test.jpg',
+    read_at: '2024-01-15T00:00:00Z',
+    publication_year: 2024,
+    page_count: 300,
+    shelf: 'read',
+    authors: [{ name: 'Test Author', slug: 'test-author' }],
+    genres: [],
+    ...overrides,
+  };
+}
+
+function renderGrid(props: Partial<Parameters<typeof BookGrid>[0]> = {}) {
   return render(
-    <QueryClientProvider client={queryClient}>
-      <MemoryRouter>
-        <BookGrid queryKey={['books']} fetchFn={fetchBooks} ariaLabel="Books Read" />
-      </MemoryRouter>
-    </QueryClientProvider>
+    <MemoryRouter>
+      <BookGrid books={[]} ariaLabel="Books Read" {...props} />
+    </MemoryRouter>
   );
 }
 
-const testBook = {
-  slug: 'test-book',
-  title: 'Test Book',
-  cover_path: '/covers/test.jpg',
-  read_at: '2024-01-15T00:00:00Z',
-  publication_year: 2024,
-  authors: [{ name: 'Test Author', slug: 'test-author' }],
-  genres: [],
-};
-
 describe('BookGrid', () => {
-  it('shows 12 skeleton cards while loading (isPending)', async () => {
-    server.use(
-      http.get('/api/books', () => new Promise(() => {})) // pending forever
-    );
-    renderGrid();
+  it('shows 12 skeleton cards while loading (isPending)', () => {
+    renderGrid({ isPending: true });
     const skeletons = document.querySelectorAll('[aria-hidden="true"]');
     expect(skeletons.length).toBe(12);
   });
 
-  it('renders book cards after data loads', async () => {
-    server.use(
-      http.get('/api/books', () =>
-        HttpResponse.json({ items: [testBook], next_cursor: null, has_more: false })
-      )
-    );
-    renderGrid();
-    expect(await screen.findByText('Test Book')).toBeInTheDocument();
+  it('renders book cards after data loads', () => {
+    renderGrid({ books: [makeBook()] });
+    expect(screen.getByText('Test Book')).toBeInTheDocument();
   });
 
-  it('shows Load More button when hasNextPage is true', async () => {
-    server.use(
-      http.get('/api/books', () =>
-        HttpResponse.json({
-          items: [testBook],
-          next_cursor: 'abc123',
-          has_more: true,
-        })
-      )
+  it('shows Load More button when there are more than 24 books', () => {
+    const books = Array.from({ length: 25 }, (_, i) =>
+      makeBook({ slug: `book-${i}`, title: `Book ${i}` })
     );
-    renderGrid();
-    expect(await screen.findByText('Load More Books')).toBeInTheDocument();
+    renderGrid({ books });
+    expect(screen.getByText('Load More Books')).toBeInTheDocument();
   });
 
-  it("does not show end message when all books fit on one page", async () => {
-    server.use(
-      http.get('/api/books', () =>
-        HttpResponse.json({ items: [testBook], next_cursor: null, has_more: false })
-      )
-    );
-    renderGrid();
-    await screen.findByText('Test Book');
-    expect(screen.queryByText("You've reached the end.")).toBeNull();
+  it('does not show Load More button when all books fit on one page', () => {
+    renderGrid({ books: [makeBook()] });
     expect(screen.queryByText('Load More Books')).toBeNull();
   });
 
-  it('shows error toast when API fails', async () => {
-    server.use(
-      http.get('/api/books', () => new HttpResponse(null, { status: 500 }))
+  it('shows end message after loading all books beyond one page', () => {
+    const books = Array.from({ length: 25 }, (_, i) =>
+      makeBook({ slug: `book-${i}`, title: `Book ${i}` })
     );
-    renderGrid();
+    renderGrid({ books });
+    fireEvent.click(screen.getByText('Load More Books'));
+    expect(screen.getByText("You've reached the end.")).toBeInTheDocument();
+  });
+
+  it('shows error toast when isError is true', () => {
+    renderGrid({ isError: true });
     expect(
-      await screen.findByText("Couldn't load books. Try refreshing the page.")
+      screen.getByText("Couldn't load books. Try refreshing the page.")
     ).toBeInTheDocument();
   });
 });
