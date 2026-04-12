@@ -6,10 +6,5 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-  server: {
-    proxy: {
-      '/api': 'http://localhost:8081',
-      '/covers': 'http://localhost:8081',
-    },
-  },
+  // No server.proxy — static files served from frontend/public/ (default publicDir)
 });
