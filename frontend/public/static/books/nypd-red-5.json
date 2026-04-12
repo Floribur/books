@@ -1,7 +1,7 @@
 {
   "slug": "nypd-red-5",
   "title": "NYPD Red 5",
-  "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1784753769.jpg",
+  "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/1784753769.jpg",
   "read_at": "2021-12-25T00:00:00Z",
   "publication_year": 2018,
   "page_count": 384,
