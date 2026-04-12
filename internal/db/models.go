@@ -4,36 +4,31 @@
 
 package db
 
-import (
-	"github.com/jackc/pgx/v5/pgtype"
-)
-
 type Author struct {
-	ID        int64              `json:"id"`
-	Name      string             `json:"name"`
-	Slug      string             `json:"slug"`
-	CreatedAt pgtype.Timestamptz `json:"created_at"`
-	UpdatedAt pgtype.Timestamptz `json:"updated_at"`
+	ID        int64  `json:"id"`
+	Name      string `json:"name"`
+	Slug      string `json:"slug"`
+	CreatedAt string `json:"created_at"`
+	UpdatedAt string `json:"updated_at"`
 }
 
 type Book struct {
-	ID              int64              `json:"id"`
-	GoodreadsID     string             `json:"goodreads_id"`
-	Slug            string             `json:"slug"`
-	Title           string             `json:"title"`
-	Description     *string            `json:"description"`
-	CoverPath       *string            `json:"cover_path"`
-	PageCount       *int32             `json:"page_count"`
-	PublicationYear *int32             `json:"publication_year"`
-	Isbn13          *string            `json:"isbn13"`
-	MetadataSource  string             `json:"metadata_source"`
-	ReadAt          pgtype.Timestamptz `json:"read_at"`
-	DateAdded       pgtype.Timestamptz `json:"date_added"`
-	ReadCount       int32              `json:"read_count"`
-	Shelf           string             `json:"shelf"`
-	SearchVector    interface{}        `json:"search_vector"`
-	CreatedAt       pgtype.Timestamptz `json:"created_at"`
-	UpdatedAt       pgtype.Timestamptz `json:"updated_at"`
+	ID              int64   `json:"id"`
+	GoodreadsID     string  `json:"goodreads_id"`
+	Slug            string  `json:"slug"`
+	Title           string  `json:"title"`
+	Description     *string `json:"description"`
+	CoverPath       *string `json:"cover_path"`
+	PageCount       *int64  `json:"page_count"`
+	PublicationYear *int64  `json:"publication_year"`
+	Isbn13          *string `json:"isbn13"`
+	MetadataSource  string  `json:"metadata_source"`
+	ReadAt          *string `json:"read_at"`
+	DateAdded       *string `json:"date_added"`
+	ReadCount       int64   `json:"read_count"`
+	Shelf           string  `json:"shelf"`
+	CreatedAt       string  `json:"created_at"`
+	UpdatedAt       string  `json:"updated_at"`
 }
 
 type BookAuthor struct {
@@ -47,9 +42,9 @@ type BookGenre struct {
 }
 
 type Genre struct {
-	ID        int64              `json:"id"`
-	Name      string             `json:"name"`
-	Slug      string             `json:"slug"`
-	CreatedAt pgtype.Timestamptz `json:"created_at"`
-	UpdatedAt pgtype.Timestamptz `json:"updated_at"`
+	ID        int64  `json:"id"`
+	Name      string `json:"name"`
+	Slug      string `json:"slug"`
+	CreatedAt string `json:"created_at"`
+	UpdatedAt string `json:"updated_at"`
 }
