@@ -1,5 +1,4 @@
-data/covers/*
-!data/covers/.gitkeep
+
 .env
 *.env.local
 flos-library
