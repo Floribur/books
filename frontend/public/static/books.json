@@ -2,7 +2,7 @@
   {
     "slug": "the-11-59-bomber-nypd-red-8",
     "title": "The 11:59 Bomber (NYPD Red, #8)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-231429390.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-231429390.jpg",
     "read_at": "2026-04-02T00:00:00Z",
     "publication_year": 2025,
     "page_count": 396,
@@ -23,7 +23,7 @@
   {
     "slug": "onyx-storm-the-empyrean-3",
     "title": "Onyx Storm (The Empyrean, #3)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1649374186.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1649374186.jpg",
     "read_at": "2026-02-07T00:00:00Z",
     "publication_year": 2025,
     "page_count": null,
@@ -44,7 +44,7 @@
   {
     "slug": "the-strength-of-the-few-hierarchy-2",
     "title": "The Strength of the Few (Hierarchy, #2)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-169485073.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-169485073.jpg",
     "read_at": "2026-01-04T00:00:00Z",
     "publication_year": 2026,
     "page_count": null,
@@ -65,7 +65,7 @@
   {
     "slug": "the-will-of-the-many-hierarchy-1",
     "title": "The Will of the Many (Hierarchy, #1)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1982141190.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1982141190.jpg",
     "read_at": "2025-12-21T00:00:00Z",
     "publication_year": 2023,
     "page_count": 720,
@@ -86,14 +86,14 @@
   {
     "slug": "blood-over-bright-haven",
     "title": "Blood Over Bright Haven",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0593873351.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0593873351.jpg",
     "read_at": "2025-09-05T00:00:00Z",
     "publication_year": 2024,
     "page_count": 449,
     "shelf": "read",
     "authors": [
       {
-        "name": "M. L. Wang",
+        "name": "M.L. Wang",
         "slug": "m-l-wang"
       }
     ],
@@ -107,7 +107,7 @@
   {
     "slug": "driving-heat-nikki-heat-7",
     "title": "Driving Heat (Nikki Heat, #7)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1401324827.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1401324827.jpg",
     "read_at": "2025-09-01T00:00:00Z",
     "publication_year": 2015,
     "page_count": null,
@@ -128,7 +128,7 @@
   {
     "slug": "crooked-kingdom-six-of-crows-2",
     "title": "Crooked Kingdom (Six of Crows, #2)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-22299763.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-22299763.jpg",
     "read_at": "2025-08-10T00:00:00Z",
     "publication_year": 2016,
     "page_count": 68,
@@ -165,7 +165,7 @@
   {
     "slug": "sunrise-on-the-reaping-the-hunger-games-0-5",
     "title": "Sunrise on the Reaping (The Hunger Games, #0.5)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1546171460.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1546171460.jpg",
     "read_at": "2025-06-22T00:00:00Z",
     "publication_year": 2025,
     "page_count": null,
@@ -186,7 +186,7 @@
   {
     "slug": "friends-lovers-and-the-big-terrible-thing",
     "title": "Friends, Lovers, and the Big Terrible Thing",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1472295978.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1472295978.jpg",
     "read_at": "2024-10-23T00:00:00Z",
     "publication_year": 2024,
     "page_count": null,
@@ -207,7 +207,7 @@
   {
     "slug": "raging-heat-nikki-heat-6",
     "title": "Raging Heat (Nikki Heat, #6)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1401324819.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1401324819.jpg",
     "read_at": "2024-09-23T00:00:00Z",
     "publication_year": 2014,
     "page_count": 304,
@@ -228,7 +228,7 @@
   {
     "slug": "deadly-heat-nikki-heat-5",
     "title": "Deadly Heat (Nikki Heat, #5)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1401324800.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1401324800.jpg",
     "read_at": "2024-08-21T00:00:00Z",
     "publication_year": 2013,
     "page_count": null,
@@ -249,7 +249,7 @@
   {
     "slug": "iron-flame-the-empyrean-2",
     "title": "Iron Flame (The Empyrean, #2)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0349437033.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0349437033.jpg",
     "read_at": "2024-08-05T00:00:00Z",
     "publication_year": 2023,
     "page_count": null,
@@ -270,7 +270,7 @@
   {
     "slug": "fourth-wing-the-empyrean-1-yarros",
     "title": "Fourth Wing (The Empyrean, #1)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0349437017.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0349437017.jpg",
     "read_at": "2024-07-14T00:00:00Z",
     "publication_year": 2024,
     "page_count": null,
@@ -291,7 +291,7 @@
   {
     "slug": "chip-war-the-fight-for-the-worlds-most-critical-technology-international-edition",
     "title": "Chip War: The Fight for the World's Most Critical Technology (International Edition)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1398504106.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1398504106.jpg",
     "read_at": "2024-07-14T00:00:00Z",
     "publication_year": 2022,
     "page_count": 352,
@@ -307,7 +307,7 @@
   {
     "slug": "the-last-days-of-the-dinosaurs-an-asteroid-extinction-and-the-beginning-of-our-world",
     "title": "The Last Days of the Dinosaurs: An Asteroid, Extinction, and the Beginning of Our World",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1250271045.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1250271045.jpg",
     "read_at": "2024-07-03T00:00:00Z",
     "publication_year": 2022,
     "page_count": null,
@@ -328,7 +328,7 @@
   {
     "slug": "the-code-breaker-jennifer-doudna-gene-editing-and-the-future-of-the-human-race",
     "title": "The Code Breaker: Jennifer Doudna, Gene Editing, and the Future of the Human Race",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1982115858.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1982115858.jpg",
     "read_at": "2024-06-23T00:00:00Z",
     "publication_year": 2021,
     "page_count": 560,
@@ -349,7 +349,7 @@
   {
     "slug": "six-of-crows-six-of-crows-1",
     "title": "Six of Crows (Six of Crows, #1)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0606399445.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0606399445.jpg",
     "read_at": "2024-04-29T00:00:00Z",
     "publication_year": 2018,
     "page_count": null,
@@ -370,7 +370,7 @@
   {
     "slug": "what-if-serious-scientific-answers-to-absurd-hypothetical-questions",
     "title": "What If?: Serious Scientific Answers to Absurd Hypothetical Questions",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0544272641.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0544272641.jpg",
     "read_at": "2024-04-10T00:00:00Z",
     "publication_year": 2024,
     "page_count": 321,
@@ -391,7 +391,7 @@
   {
     "slug": "how-to-solve-your-own-murder-castle-knoll-files-1",
     "title": "How to Solve Your Own Murder (Castle Knoll Files, #1)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0593474015.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0593474015.jpg",
     "read_at": "2024-03-28T00:00:00Z",
     "publication_year": 2024,
     "page_count": 369,
@@ -412,7 +412,7 @@
   {
     "slug": "frozen-heat-nikki-heat-4",
     "title": "Frozen Heat (Nikki Heat, #4)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1401324444.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1401324444.jpg",
     "read_at": "2023-08-12T00:00:00Z",
     "publication_year": 2012,
     "page_count": 625,
@@ -433,7 +433,7 @@
   {
     "slug": "spaceflight-a-concise-history-the-mit-press-essential-knowledge-series",
     "title": "Spaceflight: A Concise History (The MIT Press Essential Knowledge series)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0262536331.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0262536331.jpg",
     "read_at": "2023-08-07T00:00:00Z",
     "publication_year": 2018,
     "page_count": 250,
@@ -454,7 +454,7 @@
   {
     "slug": "auris-auris-1",
     "title": "Auris (Auris, #1)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3426307189.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3426307189.jpg",
     "read_at": "2023-08-07T00:00:00Z",
     "publication_year": 2019,
     "page_count": null,
@@ -475,7 +475,7 @@
   {
     "slug": "murder-on-the-orient-express-hercule-poirot-10",
     "title": "Murder on the Orient Express (Hercule Poirot, #10)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-54083354.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-54083354.jpg",
     "read_at": "2023-08-06T00:00:00Z",
     "publication_year": 2011,
     "page_count": 340,
@@ -496,7 +496,7 @@
   {
     "slug": "heat-rises-nikki-heat-3",
     "title": "Heat Rises (Nikki Heat, #3)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1781166315.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1781166315.jpg",
     "read_at": "2023-07-29T00:00:00Z",
     "publication_year": 2012,
     "page_count": null,
@@ -517,7 +517,7 @@
   {
     "slug": "this-is-how-they-tell-me-the-world-ends-the-cyberweapons-arms-race",
     "title": "This Is How They Tell Me the World Ends: The Cyberweapons Arms Race",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-57476180.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-57476180.jpg",
     "read_at": "2023-07-23T00:00:00Z",
     "publication_year": 2022,
     "page_count": 529,
@@ -538,7 +538,7 @@
   {
     "slug": "the-future-of-geography",
     "title": "The Future of Geography",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1783966882.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1783966882.jpg",
     "read_at": "2023-07-18T00:00:00Z",
     "publication_year": 2023,
     "page_count": null,
@@ -554,7 +554,7 @@
   {
     "slug": "nypd-red-7-the-murder-sorority-nypd-red-7",
     "title": "NYPD Red 7: The Murder Sorority (NYPD Red, #7)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-61064629.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-61064629.jpg",
     "read_at": "2023-07-10T00:00:00Z",
     "publication_year": 2022,
     "page_count": 308,
@@ -575,7 +575,7 @@
   {
     "slug": "probabilistic-machine-learning-an-introduction-adaptive-computation-and-machine-learning-series",
     "title": "Probabilistic Machine Learning: An Introduction (Adaptive Computation and Machine Learning series)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0262046822.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0262046822.jpg",
     "read_at": "2023-05-20T00:00:00Z",
     "publication_year": 2022,
     "page_count": 858,
@@ -612,7 +612,7 @@
   {
     "slug": "the-hundred-page-machine-learning-book",
     "title": "The Hundred-Page Machine Learning Book",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-43190851.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-43190851.jpg",
     "read_at": "2023-03-31T00:00:00Z",
     "publication_year": 2019,
     "page_count": 160,
@@ -633,7 +633,7 @@
   {
     "slug": "the-coldest-winter-atomic-blonde-prequel-edition",
     "title": "The Coldest Winter: Atomic Blonde Prequel Edition",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1620104008.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1620104008.jpg",
     "read_at": "2023-02-09T00:00:00Z",
     "publication_year": 2017,
     "page_count": null,
@@ -654,7 +654,7 @@
   {
     "slug": "naked-heat-nikki-heat-2",
     "title": "Naked Heat (Nikki Heat, #2)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1781166293.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1781166293.jpg",
     "read_at": "2023-02-09T00:00:00Z",
     "publication_year": 2012,
     "page_count": 409,
@@ -675,7 +675,7 @@
   {
     "slug": "billion-dollar-spy",
     "title": "Billion Dollar Spy",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1785783521.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1785783521.jpg",
     "read_at": "2023-02-06T00:00:00Z",
     "publication_year": 2018,
     "page_count": 400,
@@ -696,7 +696,7 @@
   {
     "slug": "writing-for-computer-science",
     "title": "Writing for Computer Science",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1852338024.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1852338024.jpg",
     "read_at": "2022-12-12T00:00:00Z",
     "publication_year": 2004,
     "page_count": 292,
@@ -717,7 +717,7 @@
   {
     "slug": "biological-sequence-analysis-probabilistic-models-of-proteins-and-nucleic-acids",
     "title": "Biological Sequence Analysis: Probabilistic Models of Proteins and Nucleic Acids",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0521629713.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0521629713.jpg",
     "read_at": "2022-12-05T00:00:00Z",
     "publication_year": 1998,
     "page_count": 372,
@@ -738,7 +738,7 @@
   {
     "slug": "modeling-mindsets-the-many-cultures-of-learning-from-data",
     "title": "Modeling Mindsets: The Many Cultures Of Learning From Data",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-60906526.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-60906526.jpg",
     "read_at": "2022-11-22T00:00:00Z",
     "publication_year": 2022,
     "page_count": null,
@@ -754,7 +754,7 @@
   {
     "slug": "algorithms-illuminated-part-1-the-basics",
     "title": "Algorithms Illuminated (Part 1): The Basics",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0999282913.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0999282913.jpg",
     "read_at": "2022-10-19T00:00:00Z",
     "publication_year": 2022,
     "page_count": null,
@@ -775,7 +775,7 @@
   {
     "slug": "heat-wave-nikki-heat-1",
     "title": "Heat Wave (Nikki Heat, #1)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1781166277.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1781166277.jpg",
     "read_at": "2022-10-17T00:00:00Z",
     "publication_year": 2012,
     "page_count": 368,
@@ -796,7 +796,7 @@
   {
     "slug": "44-tage-und-deutschland-wird-nie-mehr-sein-wie-es-war-thriller-german-edition",
     "title": "44 TAGE - Und Deutschland wird nie mehr sein, wie es war: Thriller (German Edition)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/364124997X.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/364124997X.jpg",
     "read_at": "2022-09-25T00:00:00Z",
     "publication_year": 2021,
     "page_count": 395,
@@ -817,7 +817,7 @@
   {
     "slug": "the-every",
     "title": "The Every",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0241993644.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0241993644.jpg",
     "read_at": "2022-09-15T00:00:00Z",
     "publication_year": 2022,
     "page_count": null,
@@ -838,7 +838,7 @@
   {
     "slug": "nemesis-oslo-sequence-2",
     "title": "Nemesis (Oslo Sequence, #2)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-19569783.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-19569783.jpg",
     "read_at": "2022-08-31T00:00:00Z",
     "publication_year": 2010,
     "page_count": 482,
@@ -859,7 +859,7 @@
   {
     "slug": "brandherd-kay-scarpetta-9",
     "title": "Brandherd (Kay Scarpetta, #9)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3442477379.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3442477379.jpg",
     "read_at": "2022-08-27T00:00:00Z",
     "publication_year": 2012,
     "page_count": 475,
@@ -895,7 +895,7 @@
   {
     "slug": "verderben-kay-scarpetta-8",
     "title": "Verderben (Kay Scarpetta, #8)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3442477360.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3442477360.jpg",
     "read_at": "2022-08-20T00:00:00Z",
     "publication_year": 2012,
     "page_count": 381,
@@ -915,7 +915,7 @@
   {
     "slug": "a-study-in-scarlet",
     "title": "A Study in Scarlet",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0241959861.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0241959861.jpg",
     "read_at": "2022-08-15T00:00:00Z",
     "publication_year": 2011,
     "page_count": 126,
@@ -936,7 +936,7 @@
   {
     "slug": "the-rise-and-fall-of-the-dinosaurs-the-untold-story-of-a-lost-world",
     "title": "The Rise and Fall of the Dinosaurs: The Untold Story of a Lost World",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/150983009X.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/150983009X.jpg",
     "read_at": "2022-08-06T00:00:00Z",
     "publication_year": 2019,
     "page_count": null,
@@ -957,7 +957,7 @@
   {
     "slug": "no-rules-rules-netflix-and-the-culture-of-reinvention",
     "title": "No Rules Rules: Netflix and the Culture of Reinvention",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0593152387.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0593152387.jpg",
     "read_at": "2022-08-02T00:00:00Z",
     "publication_year": 2020,
     "page_count": null,
@@ -982,7 +982,7 @@
   {
     "slug": "the-ballad-of-songbirds-and-snakes-the-hunger-games-0",
     "title": "The Ballad of Songbirds and Snakes (The Hunger Games, #0)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0702309516.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0702309516.jpg",
     "read_at": "2022-07-31T00:00:00Z",
     "publication_year": 2021,
     "page_count": null,
@@ -1003,7 +1003,7 @@
   {
     "slug": "mockingjay-the-hunger-games-3",
     "title": "Mockingjay (The Hunger Games, #3)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-13364111.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-13364111.jpg",
     "read_at": "2022-07-24T00:00:00Z",
     "publication_year": 2011,
     "page_count": 312,
@@ -1024,7 +1024,7 @@
   {
     "slug": "catching-fire-hunger-games-2",
     "title": "Catching Fire (Hunger Games, #2)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-16118339.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-16118339.jpg",
     "read_at": "2022-07-22T00:00:00Z",
     "publication_year": 2011,
     "page_count": 311,
@@ -1045,7 +1045,7 @@
   {
     "slug": "nypd-red-6-nypd-red-6",
     "title": "NYPD Red 6 (NYPD Red, #6)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1787467570.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1787467570.jpg",
     "read_at": "2022-07-19T00:00:00Z",
     "publication_year": 2021,
     "page_count": 368,
@@ -1061,7 +1061,7 @@
   {
     "slug": "shadow-and-bone-the-grisha-1",
     "title": "Shadow and Bone (The Grisha, #1)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1510109064.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1510109064.jpg",
     "read_at": "2022-07-17T00:00:00Z",
     "publication_year": 2021,
     "page_count": null,
@@ -1082,7 +1082,7 @@
   {
     "slug": "the-greatest-cases-of-sherlock-holmes",
     "title": "The Greatest Cases of Sherlock Holmes",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0241256658.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0241256658.jpg",
     "read_at": "2022-07-16T00:00:00Z",
     "publication_year": 2017,
     "page_count": null,
@@ -1103,7 +1103,7 @@
   {
     "slug": "the-hunger-games-hunger-games-1",
     "title": "The Hunger Games (Hunger Games, #1)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-18902815.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-18902815.jpg",
     "read_at": "2022-07-10T00:00:00Z",
     "publication_year": 2009,
     "page_count": 387,
@@ -1140,7 +1140,7 @@
   {
     "slug": "american-kingpin-the-epic-hunt-for-the-criminal-mastermind-behind-the-silk-road",
     "title": "American Kingpin: The Epic Hunt for the Criminal Mastermind Behind the Silk Road",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0143129023.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0143129023.jpg",
     "read_at": "2022-06-17T00:00:00Z",
     "publication_year": 2018,
     "page_count": 377,
@@ -1161,7 +1161,7 @@
   {
     "slug": "girls-of-paper-and-fire-girls-of-paper-and-fire-1",
     "title": "Girls of Paper and Fire (Girls of Paper and Fire, #1)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1473692202.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1473692202.jpg",
     "read_at": "2022-06-02T00:00:00Z",
     "publication_year": 2019,
     "page_count": null,
@@ -1182,7 +1182,7 @@
   {
     "slug": "sword-of-destiny-the-witcher-0-7",
     "title": "Sword of Destiny (The Witcher #0.7)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1473231086.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1473231086.jpg",
     "read_at": "2022-01-16T00:00:00Z",
     "publication_year": 2020,
     "page_count": 384,
@@ -1198,7 +1198,7 @@
   {
     "slug": "basiswissen-softwaretest-aus-und-weiterbildung-zum-certified-tester-foundation-level-nach-istqb-r-standard",
     "title": "Basiswissen Softwaretest: Aus- und Weiterbildung zum Certified Tester - Foundation Level nach ISTQB®-Standard",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3864905834.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3864905834.jpg",
     "read_at": "2022-01-06T00:00:00Z",
     "publication_year": 2019,
     "page_count": 312,
@@ -1218,7 +1218,7 @@
   {
     "slug": "no-filter-the-inside-story-of-instagram",
     "title": "No Filter: The Inside Story of Instagram",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1982126817.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1982126817.jpg",
     "read_at": "2021-12-31T00:00:00Z",
     "publication_year": 2021,
     "page_count": 368,
@@ -1239,7 +1239,7 @@
   {
     "slug": "the-last-wish-the-witcher-0-5",
     "title": "The Last Wish (The Witcher, #0.5)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1473226406.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1473226406.jpg",
     "read_at": "2021-12-29T00:00:00Z",
     "publication_year": 2019,
     "page_count": null,
@@ -1260,7 +1260,7 @@
   {
     "slug": "the-valley-of-fear-sherlock-holmes-7",
     "title": "The Valley of Fear (Sherlock Holmes, #7)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/048644533X.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/048644533X.jpg",
     "read_at": "2021-12-27T00:00:00Z",
     "publication_year": 2005,
     "page_count": null,
@@ -1285,7 +1285,7 @@
   {
     "slug": "nypd-red-5",
     "title": "NYPD Red 5",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1784753769.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1784753769.jpg",
     "read_at": "2021-12-25T00:00:00Z",
     "publication_year": 2018,
     "page_count": 384,
@@ -1306,7 +1306,7 @@
   {
     "slug": "nypd-red-4",
     "title": "NYPD Red 4",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0099594455.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0099594455.jpg",
     "read_at": "2021-11-14T00:00:00Z",
     "publication_year": 2016,
     "page_count": 450,
@@ -1352,7 +1352,7 @@
   {
     "slug": "red-bones-shetland-island-3",
     "title": "Red Bones (Shetland Island, #3)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1447274466.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1447274466.jpg",
     "read_at": "2021-10-25T00:00:00Z",
     "publication_year": 2015,
     "page_count": 417,
@@ -1394,7 +1394,7 @@
   {
     "slug": "cosa-nostra-das-jahrhundert-des-organisierten-verbrechens-in-new-york-1-die-anfange",
     "title": "Cosa Nostra : das Jahrhundert des organisierten Verbrechens in New York / 1 Die Anfänge.",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3941239007.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3941239007.jpg",
     "read_at": "2021-09-23T00:00:00Z",
     "publication_year": 2008,
     "page_count": 126,
@@ -1415,7 +1415,7 @@
   {
     "slug": "bad-blood-secrets-and-lies-in-a-silicon-valley-startup",
     "title": "Bad Blood: Secrets and Lies in a Silicon Valley Startup",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0593081641.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0593081641.jpg",
     "read_at": "2021-09-12T00:00:00Z",
     "publication_year": 2020,
     "page_count": null,
@@ -1452,7 +1452,7 @@
   {
     "slug": "to-kill-the-president-maggie-costello-3",
     "title": "To Kill the President (Maggie Costello, #3)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0007413734.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0007413734.jpg",
     "read_at": "2021-08-28T00:00:00Z",
     "publication_year": 2017,
     "page_count": 576,
@@ -1468,7 +1468,7 @@
   {
     "slug": "2",
     "title": "2",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3037921498.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3037921498.jpg",
     "read_at": "2021-08-14T00:00:00Z",
     "publication_year": 2019,
     "page_count": 137,
@@ -1489,7 +1489,7 @@
   {
     "slug": "schuld-kay-scarpetta-7",
     "title": "Schuld (Kay Scarpetta, #7)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3442476593.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3442476593.jpg",
     "read_at": "2021-08-03T00:00:00Z",
     "publication_year": 2012,
     "page_count": 379,
@@ -1509,7 +1509,7 @@
   {
     "slug": "dinosaurs-a-very-short-introduction",
     "title": "Dinosaurs: A Very Short Introduction",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0198795920.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0198795920.jpg",
     "read_at": "2021-07-03T00:00:00Z",
     "publication_year": 2017,
     "page_count": 193,
@@ -1530,7 +1530,7 @@
   {
     "slug": "die-tote-ohne-namen-kay-scarpetta-6",
     "title": "Die Tote ohne Namen (Kay Scarpetta, #6)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3442476607.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3442476607.jpg",
     "read_at": "2021-05-08T00:00:00Z",
     "publication_year": 2011,
     "page_count": 411,
@@ -1550,7 +1550,7 @@
   {
     "slug": "we-are-bellingcat-an-intelligence-agency-for-the-people",
     "title": "We Are Bellingcat: An Intelligence Agency for the People",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1526615754.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1526615754.jpg",
     "read_at": "2021-04-10T00:00:00Z",
     "publication_year": 2021,
     "page_count": 352,
@@ -1566,7 +1566,7 @@
   {
     "slug": "the-circle",
     "title": "The Circle",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0241146496.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0241146496.jpg",
     "read_at": "2021-03-04T00:00:00Z",
     "publication_year": 2013,
     "page_count": 491,
@@ -1608,7 +1608,7 @@
   {
     "slug": "sapiens-a-brief-history-of-humankind",
     "title": "Sapiens: A Brief History of Humankind",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-23692271.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-23692271.jpg",
     "read_at": "2021-02-24T00:00:00Z",
     "publication_year": 2019,
     "page_count": null,
@@ -1629,7 +1629,7 @@
   {
     "slug": "headhunter-perfect-paperback",
     "title": "Headhunter [Perfect Paperback]",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3548280455.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3548280455.jpg",
     "read_at": "2021-02-19T00:00:00Z",
     "publication_year": 2010,
     "page_count": 301,
@@ -1686,7 +1686,7 @@
   {
     "slug": "the-kingdom-kingdom-1",
     "title": "The Kingdom (Kingdom, #1)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1787300803.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1787300803.jpg",
     "read_at": "2020-12-27T00:00:00Z",
     "publication_year": 2020,
     "page_count": 320,
@@ -1702,7 +1702,7 @@
   {
     "slug": "this-is-going-to-hurt",
     "title": "This Is Going to Hurt",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-43562724.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-43562724.jpg",
     "read_at": "2020-11-29T00:00:00Z",
     "publication_year": 2022,
     "page_count": 304,
@@ -1723,7 +1723,7 @@
   {
     "slug": "permanent-record",
     "title": "Permanent Record",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1250237238.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1250237238.jpg",
     "read_at": "2020-10-28T00:00:00Z",
     "publication_year": 2019,
     "page_count": 352,
@@ -1802,7 +1802,7 @@
   {
     "slug": "narconomics",
     "title": "Narconomics",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1785030426.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1785030426.jpg",
     "read_at": "2020-07-06T00:00:00Z",
     "publication_year": 2017,
     "page_count": 310,
@@ -1844,7 +1844,7 @@
   {
     "slug": "diary-of-a-murderer-and-other-stories",
     "title": "Diary of a Murderer and Other Stories",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1328545423.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1328545423.jpg",
     "read_at": "2020-02-29T00:00:00Z",
     "publication_year": 2019,
     "page_count": 211,
@@ -1865,7 +1865,7 @@
   {
     "slug": "body-farm-kay-scarpetta-5",
     "title": "Body Farm (Kay Scarpetta, #5)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3442473853.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3442473853.jpg",
     "read_at": "2020-01-26T00:00:00Z",
     "publication_year": 2011,
     "page_count": 413,
@@ -1892,7 +1892,7 @@
     "shelf": "read",
     "authors": [
       {
-        "name": "René Stauffer",
+        "name": "Rene Stauffer",
         "slug": "rene-stauffer"
       }
     ],
@@ -1906,7 +1906,7 @@
   {
     "slug": "der-fuchs-thriller-german-edition",
     "title": "Der Fuchs: Thriller (German Edition)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3641246962.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3641246962.jpg",
     "read_at": "2020-01-05T00:00:00Z",
     "publication_year": 2019,
     "page_count": 232,
@@ -1927,7 +1927,7 @@
   {
     "slug": "weapons-of-math-destruction",
     "title": "Weapons Of Math Destruction",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0141985410.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0141985410.jpg",
     "read_at": "2019-12-30T00:00:00Z",
     "publication_year": 2017,
     "page_count": 272,
@@ -1943,7 +1943,7 @@
   {
     "slug": "halt-die-klappe-kopf-ein-selfcare-buch-fur-tage-an-denen-schokokuchen-nicht-reicht",
     "title": "Halt die Klappe, Kopf! Ein Selfcare-Buch für Tage, an denen Schokokuchen nicht reicht",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3733505751.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3733505751.jpg",
     "read_at": "2019-12-17T00:00:00Z",
     "publication_year": 2019,
     "page_count": 192,
@@ -1979,7 +1979,7 @@
   {
     "slug": "nypd-red-3-nypd-red-3",
     "title": "NYPD Red 3 (NYPD Red, #3)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1478927941.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1478927941.jpg",
     "read_at": "2019-09-22T00:00:00Z",
     "publication_year": 2015,
     "page_count": 384,
@@ -1995,7 +1995,7 @@
   {
     "slug": "nypd-red-2-nypd-red-2",
     "title": "NYPD Red 2 (NYPD Red, #2)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0316211265.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0316211265.jpg",
     "read_at": "2019-08-04T00:00:00Z",
     "publication_year": 2014,
     "page_count": 512,
@@ -2020,14 +2020,14 @@
   {
     "slug": "the-life-changing-magic-of-tidying-up-the-japanese-art-of-decluttering-and-organizing",
     "title": "The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1607747308.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1607747308.jpg",
     "read_at": "2019-07-28T00:00:00Z",
     "publication_year": 2014,
     "page_count": 226,
     "shelf": "read",
     "authors": [
       {
-        "name": "Marie Kondo",
+        "name": "Marie Kondō",
         "slug": "marie-kondo"
       }
     ],
@@ -2041,7 +2041,7 @@
   {
     "slug": "an-assassins-creed-series-last-descendants-aufstand-in-new-york-german-edition",
     "title": "An Assassin's Creed Series. Last Descendants. Aufstand in New York (German Edition)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3733649834.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3733649834.jpg",
     "read_at": "2019-07-23T00:00:00Z",
     "publication_year": 2016,
     "page_count": 282,
@@ -2062,7 +2062,7 @@
   {
     "slug": "skulduggery-pleasant-skulduggery-pleasant-1",
     "title": "Skulduggery Pleasant (Skulduggery Pleasant, #1)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0061231150.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0061231150.jpg",
     "read_at": "2019-07-20T00:00:00Z",
     "publication_year": 2007,
     "page_count": 400,
@@ -2090,7 +2090,7 @@
     "shelf": "read",
     "authors": [
       {
-        "name": "Manichi Yoshimura",
+        "name": "Man'ichi Yoshimura",
         "slug": "manichi-yoshimura"
       }
     ],
@@ -2115,7 +2115,7 @@
   {
     "slug": "the-beautiful-dead",
     "title": "The Beautiful Dead",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0593075528.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0593075528.jpg",
     "read_at": "2019-07-15T00:00:00Z",
     "publication_year": 2016,
     "page_count": 354,
@@ -2136,7 +2136,7 @@
   {
     "slug": "how-a-gunman-says-goodbye-the-glasgow-trilogy-2",
     "title": "How a Gunman Says Goodbye (The Glasgow Trilogy, 2)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0316337331.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0316337331.jpg",
     "read_at": "2019-04-22T00:00:00Z",
     "publication_year": 2015,
     "page_count": null,
@@ -2181,7 +2181,7 @@
   {
     "slug": "der-sonnenschirm-des-terroristen",
     "title": "Der Sonnenschirm des Terroristen",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3944751159.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3944751159.jpg",
     "read_at": "2018-08-26T00:00:00Z",
     "publication_year": 2017,
     "page_count": 352,
@@ -2197,7 +2197,7 @@
   {
     "slug": "central-park",
     "title": "Central Park",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/2845636768.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/2845636768.jpg",
     "read_at": "2018-08-25T00:00:00Z",
     "publication_year": 2014,
     "page_count": null,
@@ -2218,7 +2218,7 @@
   {
     "slug": "im-wald-bodenstein-and-kirchhoff-8",
     "title": "Im Wald (Bodenstein \u0026 Kirchhoff, #8)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3550080557.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3550080557.jpg",
     "read_at": "2018-08-20T00:00:00Z",
     "publication_year": 2008,
     "page_count": 14,
@@ -2234,7 +2234,7 @@
   {
     "slug": "the-price-you-pay",
     "title": "The Price You Pay",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1524733377.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1524733377.jpg",
     "read_at": "2018-07-13T00:00:00Z",
     "publication_year": 2019,
     "page_count": 290,
@@ -2255,7 +2255,7 @@
   {
     "slug": "un-appartement-a-paris",
     "title": "Un appartement à Paris",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/2845639619.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/2845639619.jpg",
     "read_at": "2018-07-07T00:00:00Z",
     "publication_year": 2017,
     "page_count": null,
@@ -2271,7 +2271,7 @@
   {
     "slug": "the-girl-on-the-train",
     "title": "The Girl on the Train",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1594633665.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1594633665.jpg",
     "read_at": "2018-03-28T00:00:00Z",
     "publication_year": 2015,
     "page_count": null,
@@ -2292,7 +2292,7 @@
   {
     "slug": "born-a-crime-stories-from-a-south-african-childhood",
     "title": "Born a Crime: Stories from a South African Childhood",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0385689225.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0385689225.jpg",
     "read_at": "2018-03-20T00:00:00Z",
     "publication_year": 2016,
     "page_count": null,
@@ -2313,7 +2313,7 @@
   {
     "slug": "noah",
     "title": "Noah",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3785724829.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3785724829.jpg",
     "read_at": "2018-03-19T00:00:00Z",
     "publication_year": 2013,
     "page_count": 560,
@@ -2334,7 +2334,7 @@
   {
     "slug": "the-caller-robert-hunter-8",
     "title": "The Caller (Robert Hunter, #8)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-28875687.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-28875687.jpg",
     "read_at": "2018-03-07T00:00:00Z",
     "publication_year": 2017,
     "page_count": 439,
@@ -2355,7 +2355,7 @@
   {
     "slug": "nypd-red-nypd-red-1",
     "title": "NYPD Red (NYPD Red, #1)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0316224138.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0316224138.jpg",
     "read_at": "2018-01-11T00:00:00Z",
     "publication_year": 2012,
     "page_count": 512,
@@ -2396,7 +2396,7 @@
   {
     "slug": "jakob-der-lugner",
     "title": "Jakob der Lügner.",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3766604317.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3766604317.jpg",
     "read_at": "2016-05-09T00:00:00Z",
     "publication_year": 2002,
     "page_count": 77,
@@ -2417,7 +2417,7 @@
   {
     "slug": "the-big-sleep-philip-marlowe-1",
     "title": "The Big Sleep (Philip Marlowe, #1)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-2052.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-2052.jpg",
     "read_at": "2016-05-08T00:00:00Z",
     "publication_year": 2022,
     "page_count": 241,
@@ -2438,7 +2438,7 @@
   {
     "slug": "the-hound-of-the-baskervilles-sherlock-holmes-5",
     "title": "The Hound of the Baskervilles (Sherlock Holmes, #5)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-8921.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-8921.jpg",
     "read_at": "2016-05-07T00:00:00Z",
     "publication_year": 2016,
     "page_count": 65,
@@ -2459,7 +2459,7 @@
   {
     "slug": "friedrich-durrenmatt-der-besuch-der-alten-dame",
     "title": "Friedrich Dürrenmatt: Der Besuch der alten Dame",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3140224176.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3140224176.jpg",
     "read_at": "2016-05-05T00:00:00Z",
     "publication_year": 2006,
     "page_count": 124,
@@ -2479,7 +2479,7 @@
   {
     "slug": "le-grand-cahier",
     "title": "Le grand cahier",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/2020239264.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/2020239264.jpg",
     "read_at": "2016-05-03T00:00:00Z",
     "publication_year": null,
     "page_count": null,
@@ -2495,7 +2495,7 @@
   {
     "slug": "schachnovelle-sternstunden-der-menschheit",
     "title": "Schachnovelle / Sternstunden der Menschheit",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-19313027.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/gr-19313027.jpg",
     "read_at": "2016-05-02T00:00:00Z",
     "publication_year": 2013,
     "page_count": 73,
@@ -2516,7 +2516,7 @@
   {
     "slug": "le-cri-de-la-mouette",
     "title": "Le Cri de la mouette",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/2266128469.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/2266128469.jpg",
     "read_at": "2016-03-02T00:00:00Z",
     "publication_year": 2003,
     "page_count": 211,
@@ -2537,7 +2537,7 @@
   {
     "slug": "romulus-der-grosse",
     "title": "Romulus der Große",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3257230427.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/3257230427.jpg",
     "read_at": "2015-02-01T00:00:00Z",
     "publication_year": 1998,
     "page_count": 167,
@@ -2558,7 +2558,7 @@
   {
     "slug": "dinosaurs-a-concise-natural-history",
     "title": "Dinosaurs: A Concise Natural History",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1108469299.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1108469299.jpg",
     "read_at": null,
     "publication_year": 2021,
     "page_count": 492,
@@ -2587,7 +2587,7 @@
   {
     "slug": "fourth-wing-the-empyrean-1",
     "title": "Fourth Wing (The Empyrean, #1)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1649374046.jpg",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/1649374046.jpg",
     "read_at": null,
     "publication_year": 2023,
     "page_count": null,

@@ -1,14 +1,14 @@
 {
   "slug": "blood-over-bright-haven",
   "title": "Blood Over Bright Haven",
-  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0593873351.jpg",
+  "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@main/data/covers/0593873351.jpg",
   "read_at": "2025-09-05T00:00:00Z",
   "publication_year": 2024,
   "page_count": 449,
   "shelf": "read",
   "authors": [
     {
-      "name": "M. L. Wang",
+      "name": "M.L. Wang",
       "slug": "m-l-wang"
     }
   ],
