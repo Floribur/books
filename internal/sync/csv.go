@@ -11,7 +11,6 @@ import (
 	"time"
 
 	"github.com/gosimple/slug"
-	"github.com/jackc/pgx/v5/pgtype"
 
 	"flos-library/internal/db"
 )
@@ -89,10 +88,11 @@ func ImportCSV(ctx context.Context, queries *db.Queries, r io.Reader) (int, erro
 		}
 
 		// Parse read date
-		var readAt pgtype.Timestamptz
+		var readAt *string
 		if raw := get("Date Read"); raw != "" {
 			if t, err := time.Parse("2006/01/02", raw); err == nil {
-				readAt = pgtype.Timestamptz{Time: t, Valid: true}
+				s := t.UTC().Format(time.RFC3339)
+				readAt = &s
 			}
 		}
 
@@ -123,7 +123,7 @@ func ImportCSV(ctx context.Context, queries *db.Queries, r io.Reader) (int, erro
 			Title:          title,
 			MetadataSource: "none",
 			ReadAt:         readAt,
-			ReadCount:      int32(rc),
+			ReadCount:      int64(rc),
 			Shelf:          shelf,
 		}
 		if isbn13 != "" {
