@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { fetchGenreBySlug, fetchBooksByGenre } from '../api/books';
+import { fetchGenres, fetchBooks } from '../api/books';
 import { BookGrid } from '../components/BookGrid';
 import { Toast } from '../components/Toast';
 import { useState, useEffect } from 'react';
@@ -11,19 +11,26 @@ export function GenreDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const [showError, setShowError] = useState(false);
 
-  const { data: genre, isPending, isError } = useQuery({
-    queryKey: ['genre', slug],
-    queryFn: () => fetchGenreBySlug(slug!),
-    enabled: !!slug,
+  const { data: allGenres, isError: genresError } = useQuery({
+    queryKey: ['genres'],
+    queryFn: fetchGenres,
+  });
+  const { data: allBooks, isPending: booksPending, isError: booksError } = useQuery({
+    queryKey: ['books'],
+    queryFn: fetchBooks,
   });
 
-  usePageTitle(genre?.name); // "Flo's Library — Science Fiction" once loaded
-
+  const isError = genresError || booksError;
   useEffect(() => {
     if (isError) setShowError(true);
   }, [isError]);
 
-  const fetchFn = (cursor: string | undefined) => fetchBooksByGenre(slug!, cursor);
+  const genre = allGenres?.find((g) => g.slug === slug);
+  usePageTitle(genre?.name);
+
+  const genreBooks = allBooks?.filter((b) =>
+    b.genres.some((g) => g.slug === slug)
+  ) ?? [];
 
   return (
     <main className="genre-detail-page">
@@ -34,7 +41,7 @@ export function GenreDetailPage() {
         />
       )}
 
-      {isPending ? (
+      {booksPending ? (
         <div className="genre-detail-heading-skeleton" aria-hidden="true" />
       ) : genre ? (
         <div className="genre-detail-heading">
@@ -42,13 +49,12 @@ export function GenreDetailPage() {
         </div>
       ) : null}
 
-      {slug && (
-        <BookGrid
-          queryKey={['books', 'genre', slug]}
-          fetchFn={fetchFn}
-          ariaLabel={`Books in ${genre?.name ?? 'this genre'}`}
-        />
-      )}
+      <BookGrid
+        books={genreBooks}
+        isPending={booksPending}
+        isError={booksError}
+        ariaLabel={`Books in ${genre?.name ?? 'this genre'}`}
+      />
     </main>
   );
 }
