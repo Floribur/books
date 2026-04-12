@@ -1,0 +1,25 @@
+{
+  "slug": "2",
+  "title": "2",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3037921498.jpg",
+  "read_at": "2021-08-14T00:00:00Z",
+  "publication_year": 2019,
+  "page_count": 137,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Hideo Yokoyama",
+      "slug": "hideo-yokoyama"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Fiction",
+      "slug": "fiction"
+    }
+  ],
+  "description": "Zwei Fälle, zwei Ermittler, ein Schauplatz: Japan, Polizeipräsidium Präfektur D. Fall 1: Inspektor Futawatari wird mit der personellen Umstrukturierung der Präfektur beauftragt, doch Kriminalpolizei-Legende Michio Osakabe weigert sich überraschend, in Ruhestand zu gehen. Osakabe wird zu einem Sandkorn im Getriebe der Polizeibürokratie – bis Futawatari darauf stößt, dass Osakabe nicht aufgehört hat, in einem grausamen Fall zu ermitteln, der nie gelöst wurde ... Fall 2: Abteilungsleiterin Tomoko Nanao wird benachrichtigt, als eine junge Polizistin plötzlich nicht mehr zur Arbeit erscheint. Nanao ist für alle weiblichen Polizeikräfte der Präfektur verantwortlich und hat einen dunklen Verdacht. Als Nanao im Polizistinnen-Wohnheim erfährt, dass die vermisste Frau von einem mysteriösen jungen Mann umworben wurde, beginnt ein Wettlauf gegen die Zeit.",
+  "isbn13": "3037921498",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

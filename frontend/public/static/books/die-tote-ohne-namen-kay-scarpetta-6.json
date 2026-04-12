@@ -1,0 +1,24 @@
+{
+  "slug": "die-tote-ohne-namen-kay-scarpetta-6",
+  "title": "Die Tote ohne Namen (Kay Scarpetta, #6)",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3442476607.jpg",
+  "read_at": "2021-05-08T00:00:00Z",
+  "publication_year": 2011,
+  "page_count": 411,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Patricia Cornwell",
+      "slug": "patricia-cornwell"
+    },
+    {
+      "name": "Patricia Daniels Cornwell",
+      "slug": "patricia-daniels-cornwell"
+    }
+  ],
+  "genres": [],
+  "description": null,
+  "isbn13": "3442476607",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

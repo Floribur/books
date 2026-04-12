@@ -1,0 +1,25 @@
+{
+  "slug": "nypd-red-5",
+  "title": "NYPD Red 5",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1784753769.jpg",
+  "read_at": "2021-12-25T00:00:00Z",
+  "publication_year": 2018,
+  "page_count": 384,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "James Patterson",
+      "slug": "james-patterson"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Murder",
+      "slug": "murder"
+    }
+  ],
+  "description": "From the writer of Sunday Times no. 1 bestseller, The President is Missing. The one who knows the secrets is the one who holds the power. The richest of New York's rich gather at The Pierre's Cotillion Room to raise money for those less fortunate. The mayor is present, along with Detectives Zach Jordan and Kylie MacDonald of the elite NYPD Red task force providing security. The night is shattered as a fatal blast rocks the room, stirring up horrifying memories of 9/11. Is the explosion an act of terrorism - or a homicide? A big-name female filmmaker is the next to die, in a desolate corner of New York City. The crimes keep escalating, and the perpetrators may be among the A-list New Yorkers NYPD Red was formed to protect. Zach and Kylie track a shadowy killer as he masterfully plays out his vendetta - and threatens to take down NYPD Red in the bargain.",
+  "isbn13": "1784753769",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

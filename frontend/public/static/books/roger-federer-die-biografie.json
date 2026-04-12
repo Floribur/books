@@ -1,0 +1,25 @@
+{
+  "slug": "roger-federer-die-biografie",
+  "title": "Roger Federer: Die Biografie",
+  "cover_path": "",
+  "read_at": "2020-01-19T00:00:00Z",
+  "publication_year": 2019,
+  "page_count": 352,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "René Stauffer",
+      "slug": "rene-stauffer"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Biography \u0026 Autobiography",
+      "slug": "biography-and-autobiography"
+    }
+  ],
+  "description": null,
+  "isbn13": "3492057632",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

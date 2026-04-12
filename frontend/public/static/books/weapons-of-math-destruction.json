@@ -1,0 +1,20 @@
+{
+  "slug": "weapons-of-math-destruction",
+  "title": "Weapons Of Math Destruction",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0141985410.jpg",
+  "read_at": "2019-12-30T00:00:00Z",
+  "publication_year": 2017,
+  "page_count": 272,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Cathy O'Neil",
+      "slug": "cathy-oneil"
+    }
+  ],
+  "genres": [],
+  "description": "We live in the age of the algorithm. Increasingly, the decisions that affect our lives - whether we get a job or a loan, how much we pay for insurance - are being made by mathematical models. In theory, this should lead to greater fairness- everyone is judged according to the same rules, and bias is eliminated. But as Cathy O'Neil reveals in this urgent and necessary book, the opposite is true. The models being used today are opaque, unregulated, and incontestable, even when they're wrong. Most troubling, they reinforce discrimination, creating a toxic cocktail for democracy. Tracing the arc of a person's life, Cathy O'Neil exposes the black box models that shape our future as individuals and as a society. These \"weapons of math destruction\" score teachers and students, sort CVs, grant or deny loans, evaluate workers, target voters and monitor our health. O'Neilcalls on modellers to take more responsibility for their algorithms and on policy makers to regulate their use. But in the end, it's up to us to become more savvy about the models that govern our lives.",
+  "isbn13": "0141985410",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "artemis-1-artemis-1",
+  "title": "Artemis 1 (Artemis, #1)",
+  "cover_path": "",
+  "read_at": "2020-05-02T00:00:00Z",
+  "publication_year": 2022,
+  "page_count": null,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Lindsey Stirling",
+      "slug": "lindsey-stirling"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Good and evil",
+      "slug": "good-and-evil"
+    }
+  ],
+  "description": "A young women learns about her heritage and sets out to battle the forces controlling the dystopian world.",
+  "isbn13": null,
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "the-every",
+  "title": "The Every",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0241993644.jpg",
+  "read_at": "2022-09-15T00:00:00Z",
+  "publication_year": 2022,
+  "page_count": null,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Dave Eggers",
+      "slug": "dave-eggers"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Fiction",
+      "slug": "fiction"
+    }
+  ],
+  "description": "When the world's largest search engine / social media company merges with the planet's dominant e-commerce site, it creates the richest and most dangerous-and, oddly enough, most beloved-monopoly ever known- The Every. Delaney Wells is an unlikely new hire. A former forest ranger and unwavering tech skeptic, she charms her way into an entry-level job with one goal in mind- to take down the company from within. With her compatriot, the not-at-all-ambitious Wes Kavakian, they look for the company's weaknesses, hoping to free humanity from all-encompassing surveillance and the emoji-driven infantilization of the species. But does anyone want what Delaney is fighting to save? Does humanity truly want to be free? Studded with unforgettable characters and lacerating set-pieces, The Every blends satire and terror, while keeping the reader in breathless suspense about the fate of the company - and the human animal.",
+  "isbn13": "0241993644",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

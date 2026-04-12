@@ -1,0 +1,25 @@
+{
+  "slug": "red-bones-shetland-island-3",
+  "title": "Red Bones (Shetland Island, #3)",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1447274466.jpg",
+  "read_at": "2021-10-25T00:00:00Z",
+  "publication_year": 2015,
+  "page_count": 417,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Ann Cleeves",
+      "slug": "ann-cleeves"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Fiction",
+      "slug": "fiction"
+    }
+  ],
+  "description": "When an elderly woman is shot in what appears to be a tragic accident, Shetland detective Jimmy Perez is called to investigate the mystery. As Jimmy looks to the islanders for answers, he finds instead two feuding families whose envy, greed and bitterness have lasted generations. Then there's another murder",
+  "isbn13": "1447274466",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

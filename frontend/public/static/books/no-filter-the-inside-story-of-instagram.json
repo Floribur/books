@@ -1,0 +1,25 @@
+{
+  "slug": "no-filter-the-inside-story-of-instagram",
+  "title": "No Filter: The Inside Story of Instagram",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1982126817.jpg",
+  "read_at": "2021-12-31T00:00:00Z",
+  "publication_year": 2021,
+  "page_count": 368,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Sarah Frier",
+      "slug": "sarah-frier"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Business \u0026 Economics",
+      "slug": "business-and-economics"
+    }
+  ],
+  "description": "\"Award-winning reporter Sarah Frier reveals an inside, never-before-told, behind-the-scenes look at how Instagram defied the odds to become one of the most culturally defining apps of the decade\"--",
+  "isbn13": "1982126817",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

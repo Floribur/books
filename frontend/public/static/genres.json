@@ -1,0 +1,167 @@
+[
+  {
+    "name": "Fiction",
+    "slug": "fiction",
+    "book_count": 36
+  },
+  {
+    "name": "Biography \u0026 Autobiography",
+    "slug": "biography-and-autobiography",
+    "book_count": 8
+  },
+  {
+    "name": "Good and evil",
+    "slug": "good-and-evil",
+    "book_count": 6
+  },
+  {
+    "name": "Computers",
+    "slug": "computers",
+    "book_count": 4
+  },
+  {
+    "name": "Juvenile Fiction",
+    "slug": "juvenile-fiction",
+    "book_count": 4
+  },
+  {
+    "name": "Young Adult Fiction",
+    "slug": "young-adult-fiction",
+    "book_count": 4
+  },
+  {
+    "name": "Business \u0026 Economics",
+    "slug": "business-and-economics",
+    "book_count": 3
+  },
+  {
+    "name": "Detective and mystery stories",
+    "slug": "detective-and-mystery-stories",
+    "book_count": 3
+  },
+  {
+    "name": "Nature",
+    "slug": "nature",
+    "book_count": 2
+  },
+  {
+    "name": "Actors",
+    "slug": "actors",
+    "book_count": 1
+  },
+  {
+    "name": "Aeronautics",
+    "slug": "aeronautics",
+    "book_count": 1
+  },
+  {
+    "name": "Amnesia",
+    "slug": "amnesia",
+    "book_count": 1
+  },
+  {
+    "name": "Amnesiacs",
+    "slug": "amnesiacs",
+    "book_count": 1
+  },
+  {
+    "name": "Artists' books",
+    "slug": "artists-books",
+    "book_count": 1
+  },
+  {
+    "name": "Brigands and robbers",
+    "slug": "brigands-and-robbers",
+    "book_count": 1
+  },
+  {
+    "name": "Comics \u0026 Graphic Novels",
+    "slug": "comics-and-graphic-novels",
+    "book_count": 1
+  },
+  {
+    "name": "Criminal investigation",
+    "slug": "criminal-investigation",
+    "book_count": 1
+  },
+  {
+    "name": "Drug control",
+    "slug": "drug-control",
+    "book_count": 1
+  },
+  {
+    "name": "Gangsters",
+    "slug": "gangsters",
+    "book_count": 1
+  },
+  {
+    "name": "German drama",
+    "slug": "german-drama",
+    "book_count": 1
+  },
+  {
+    "name": "Heat, Nikki (Fictitious character)",
+    "slug": "heat-nikki-fictitious-character",
+    "book_count": 1
+  },
+  {
+    "name": "History",
+    "slug": "history",
+    "book_count": 1
+  },
+  {
+    "name": "Holocaust, Jewish (1939-1945)",
+    "slug": "holocaust-jewish-1939-1945",
+    "book_count": 1
+  },
+  {
+    "name": "House \u0026 Home",
+    "slug": "house-and-home",
+    "book_count": 1
+  },
+  {
+    "name": "Humor",
+    "slug": "humor",
+    "book_count": 1
+  },
+  {
+    "name": "Machine learning",
+    "slug": "machine-learning",
+    "book_count": 1
+  },
+  {
+    "name": "Medical",
+    "slug": "medical",
+    "book_count": 1
+  },
+  {
+    "name": "Murder",
+    "slug": "murder",
+    "book_count": 1
+  },
+  {
+    "name": "Popular literature",
+    "slug": "popular-literature",
+    "book_count": 1
+  },
+  {
+    "name": "Private investigators",
+    "slug": "private-investigators",
+    "book_count": 1
+  },
+  {
+    "name": "Science",
+    "slug": "science",
+    "book_count": 1
+  },
+  {
+    "name": "Technology \u0026 Engineering",
+    "slug": "technology-and-engineering",
+    "book_count": 1
+  },
+  {
+    "name": "True Crime",
+    "slug": "true-crime",
+    "book_count": 1
+  }
+]

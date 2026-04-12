@@ -1,0 +1,25 @@
+{
+  "slug": "the-beautiful-dead",
+  "title": "The Beautiful Dead",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0593075528.jpg",
+  "read_at": "2019-07-15T00:00:00Z",
+  "publication_year": 2016,
+  "page_count": 354,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Belinda Bauer",
+      "slug": "belinda-bauer"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Fiction",
+      "slug": "fiction"
+    }
+  ],
+  "description": "There's no safety in numbers . . . Eve Singer needs death. With her career as a TV crime reporter flagging, she'll do anything to satisfy her ghoulish audience. The killer needs death too. He even advertises his macabre public performances, where he hopes to show the whole world the beauty of dying. When he contacts Eve, she welcomes the chance to be first with the news from every gory scene. Until she realizes that the killer has two obsessions. One is public murder. And the other one is her . . .",
+  "isbn13": "0593075528",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

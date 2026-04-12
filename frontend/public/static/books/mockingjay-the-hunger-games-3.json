@@ -1,0 +1,25 @@
+{
+  "slug": "mockingjay-the-hunger-games-3",
+  "title": "Mockingjay (The Hunger Games, #3)",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-13364111.jpg",
+  "read_at": "2022-07-24T00:00:00Z",
+  "publication_year": 2011,
+  "page_count": 312,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Suzanne Collins",
+      "slug": "suzanne-collins"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Fiction",
+      "slug": "fiction"
+    }
+  ],
+  "description": "The final book in the ground-breaking HUNGER GAMES trilogy. Katniss Everdeen has survived the Hunger Games twice. The Capitol is angry and wants revenge. Who do they think should pay for the unrest? Katniss. And President Snow has made it clear that no one else is safe either. Not Katniss's family, not her friends, not the people of District 12.",
+  "isbn13": null,
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

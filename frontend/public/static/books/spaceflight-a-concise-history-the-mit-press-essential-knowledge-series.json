@@ -1,0 +1,25 @@
+{
+  "slug": "spaceflight-a-concise-history-the-mit-press-essential-knowledge-series",
+  "title": "Spaceflight: A Concise History (The MIT Press Essential Knowledge series)",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0262536331.jpg",
+  "read_at": "2023-08-07T00:00:00Z",
+  "publication_year": 2018,
+  "page_count": 250,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Michael J. Neufeld",
+      "slug": "michael-j-neufeld"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Technology \u0026 Engineering",
+      "slug": "technology-and-engineering"
+    }
+  ],
+  "description": "A concise history of spaceflight, from military rocketry through Sputnik, Apollo, robots in space, space culture, and human spaceflight today. Spaceflight is one of the greatest human achievements of the twentieth century. The Soviets launched Sputnik, the first satellite, in 1957; less than twelve years later, the American Apollo astronauts landed on the Moon. In this volume of the MIT Press Essential Knowledge series, Michael Neufeld offers a concise history of spaceflight, mapping the full spectrum of activities that humans have developed in space. Neufeld explains that “the space program” should not be equated only with human spaceflight. Since the 1960s, unmanned military and commercial spacecraft have been orbiting near the Earth, and robotic deep-space explorers have sent back stunning images of faraway planets. Neufeld begins with the origins of space ideas and the discovery that rocketry could be used for spaceflight. He then discusses the Soviet-U.S. Cold War space race and reminds us that NASA resisted adding female astronauts even after the Soviets sent the first female cosmonaut into orbit. He analyzes the two rationales for the Apollo program: prestige and scientific discovery (this last something of an afterthought). He describes the internationalization and privatization of human spaceflight after the Cold War, the cultural influence of space science fiction, including Star Trek and Star Wars, space tourism for the ultra-rich, and the popular desire to go into space. Whether we become a multiplanet species, as some predict, or continue to call Earth home, this book offers a useful primer.",
+  "isbn13": "0262536331",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

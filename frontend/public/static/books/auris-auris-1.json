@@ -1,0 +1,25 @@
+{
+  "slug": "auris-auris-1",
+  "title": "Auris (Auris, #1)",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3426307189.jpg",
+  "read_at": "2023-08-07T00:00:00Z",
+  "publication_year": 2019,
+  "page_count": null,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Vincent Kliesch",
+      "slug": "vincent-kliesch"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Criminal investigation",
+      "slug": "criminal-investigation"
+    }
+  ],
+  "description": "\"Atemlose Spannung aus der Zusammenarbeit zweier Bestseller-Autoren!\" - Einband.",
+  "isbn13": "3426307189",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

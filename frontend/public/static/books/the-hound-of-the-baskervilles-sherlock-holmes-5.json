@@ -1,0 +1,25 @@
+{
+  "slug": "the-hound-of-the-baskervilles-sherlock-holmes-5",
+  "title": "The Hound of the Baskervilles (Sherlock Holmes, #5)",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-8921.jpg",
+  "read_at": "2016-05-07T00:00:00Z",
+  "publication_year": 2016,
+  "page_count": 65,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Arthur Conan Doyle",
+      "slug": "arthur-conan-doyle"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Young Adult Fiction",
+      "slug": "young-adult-fiction"
+    }
+  ],
+  "description": "‘The Hound of the Baskervilles’ is the detective work of ‘Sir Arthur Conan Doyle’. He has maintained suspense from the beginning of the story till the end of it. The introduction of the main characters in the story is so remarkable that they do not bore the readers throughout the story. Sherlock Holmes is a detective and Dr. Watson is a person who assists him in the detective adventures. In the story, Sir Charles’ death creates suspense for everyone. Nobody knows how Sir Charles, the head of the Baskerville estate had died. Holmes takes responsibility to look for the real culprit. He does so and gets success to find out the culprit of Charles’ death.",
+  "isbn13": null,
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

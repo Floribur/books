@@ -1,0 +1,25 @@
+{
+  "slug": "the-price-you-pay",
+  "title": "The Price You Pay",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/1524733377.jpg",
+  "read_at": "2018-07-13T00:00:00Z",
+  "publication_year": 2019,
+  "page_count": 290,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Aidan Truhen",
+      "slug": "aidan-truhen"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Fiction",
+      "slug": "fiction"
+    }
+  ],
+  "description": "In this audacious, lightning-paced thriller, a smart-mouthed, white-collar drug dealer--a hilariously irreverent antihero--seeks revenge when an unknown enemy takes out a contract on him. Jack Price is having a bad day. What he absolutely did not need was for someone to execute his grouchy old neighbor as if she was a drug mule. Questions will be asked, and Jack is a small businessman in a competitive sector hobbled by red tape and, you know: laws. Just because the product Jack trades in is cocaine, people assume it’s all guns and murders, but that is the old cocaine business and Jack is all about the new one: high-tech, high-end and on-demand. But when Jack begins making some inquiries with a view to calming the whole thing down, someone hires the Seven Demons to kill him. You bring those people in to kill generals and presidents and take down countries, not to mess with a guy who’s just trying to get along. The thing is that the Seven Demons and their client have misunderstood the situation. Jack is not upset. In fact, he’s grateful for the clarification. Jack is the kind of guy who adapts well to new business models. He has a unique approach to executive problem solving. In fact, Jack is batshit crazy. And when you mess with Jack, there is a Price to be paid.",
+  "isbn13": "1524733377",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

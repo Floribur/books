@@ -1,0 +1,25 @@
+{
+  "slug": "noah",
+  "title": "Noah",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/3785724829.jpg",
+  "read_at": "2018-03-19T00:00:00Z",
+  "publication_year": 2013,
+  "page_count": 560,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Sebastian Fitzek",
+      "slug": "sebastian-fitzek"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Amnesiacs",
+      "slug": "amnesiacs"
+    }
+  ],
+  "description": "Er weiss nicht, wie er heisst. Er hat keine Ahnung, wo er herkommt. Er kann sich nicht erinnern, wie er nach Berlin kam, und seit wann er hier auf der Strasse lebt. Die Obdachlosen, mit denen er umherzieht, nennen ihn Noah, weil dieser Name tätowiert auf der Innenseite seiner Handfläche steht. Die Suche nach seiner Identität wird zu einem Alptraum, für Noah und die gesamte Menschheit. Ist er das wesentliche Element in einer Verschwörung, die das Leben aller Menschen auf dem Planeten gefährdet und schon zehntausende Opfer gefunden hat? Der grosse, kontroverse und apokalyptische Thriller von Bestsellerautor Sebastian Fitzek, inklusive Interview mit dem Autor.",
+  "isbn13": "3785724829",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

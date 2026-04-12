@@ -1,0 +1,25 @@
+{
+  "slug": "sapiens-a-brief-history-of-humankind",
+  "title": "Sapiens: A Brief History of Humankind",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/gr-23692271.jpg",
+  "read_at": "2021-02-24T00:00:00Z",
+  "publication_year": 2019,
+  "page_count": null,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Yuval Noah Harari",
+      "slug": "yuval-noah-harari"
+    }
+  ],
+  "genres": [
+    {
+      "name": "History",
+      "slug": "history"
+    }
+  ],
+  "description": "Planet Earth is 4.5 billion years old. In just a fraction of that time, one species among countless others has conquered it. Us. We are the most advanced and most destructive animals ever to have lived. What makes us brilliant? What makes us deadly? What makes us Sapiens?",
+  "isbn13": null,
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

@@ -1,0 +1,502 @@
+[
+  {
+    "name": "Adam Kay",
+    "slug": "adam-kay",
+    "book_count": 1
+  },
+  {
+    "name": "Agatha Christie",
+    "slug": "agatha-christie",
+    "book_count": 1
+  },
+  {
+    "name": "Aidan Truhen",
+    "slug": "aidan-truhen",
+    "book_count": 1
+  },
+  {
+    "name": "Andreas Spillner",
+    "slug": "andreas-spillner",
+    "book_count": 1
+  },
+  {
+    "name": "Andriy Burkov",
+    "slug": "andriy-burkov",
+    "book_count": 2
+  },
+  {
+    "name": "Andrzej Sapkowski",
+    "slug": "andrzej-sapkowski",
+    "book_count": 2
+  },
+  {
+    "name": "Ann Cleeves",
+    "slug": "ann-cleeves",
+    "book_count": 1
+  },
+  {
+    "name": "Anna Wiener",
+    "slug": "anna-wiener",
+    "book_count": 1
+  },
+  {
+    "name": "Antony Johnston",
+    "slug": "antony-johnston",
+    "book_count": 1
+  },
+  {
+    "name": "Arthur Conan Doyle",
+    "slug": "arthur-conan-doyle",
+    "book_count": 4
+  },
+  {
+    "name": "Arthur Rutishauser",
+    "slug": "arthur-rutishauser",
+    "book_count": 1
+  },
+  {
+    "name": "Belinda Bauer",
+    "slug": "belinda-bauer",
+    "book_count": 1
+  },
+  {
+    "name": "Brooke S. Passey",
+    "slug": "brooke-s-passey",
+    "book_count": 1
+  },
+  {
+    "name": "Cathy O'Neil",
+    "slug": "cathy-oneil",
+    "book_count": 1
+  },
+  {
+    "name": "Chris Carter",
+    "slug": "chris-carter",
+    "book_count": 1
+  },
+  {
+    "name": "Chris Miller",
+    "slug": "chris-miller",
+    "book_count": 1
+  },
+  {
+    "name": "Christoph Molnar",
+    "slug": "christoph-molnar",
+    "book_count": 1
+  },
+  {
+    "name": "Dave Eggers",
+    "slug": "dave-eggers",
+    "book_count": 2
+  },
+  {
+    "name": "David B. Weishampel",
+    "slug": "david-b-weishampel",
+    "book_count": 1
+  },
+  {
+    "name": "David Chauvel",
+    "slug": "david-chauvel",
+    "book_count": 1
+  },
+  {
+    "name": "David E. Fastovsky",
+    "slug": "david-e-fastovsky",
+    "book_count": 1
+  },
+  {
+    "name": "David E. Hoffman",
+    "slug": "david-e-hoffman",
+    "book_count": 1
+  },
+  {
+    "name": "David Matusiewicz",
+    "slug": "david-matusiewicz",
+    "book_count": 1
+  },
+  {
+    "name": "David Norman",
+    "slug": "david-norman",
+    "book_count": 1
+  },
+  {
+    "name": "Derek Landy",
+    "slug": "derek-landy",
+    "book_count": 1
+  },
+  {
+    "name": "Edward Snowden",
+    "slug": "edward-snowden",
+    "book_count": 1
+  },
+  {
+    "name": "Eliot Higgins",
+    "slug": "eliot-higgins",
+    "book_count": 1
+  },
+  {
+    "name": "Emmanuelle Laborit",
+    "slug": "emmanuelle-laborit",
+    "book_count": 1
+  },
+  {
+    "name": "Erin Meyer",
+    "slug": "erin-meyer",
+    "book_count": 1
+  },
+  {
+    "name": "Frederick Forsyth",
+    "slug": "frederick-forsyth",
+    "book_count": 1
+  },
+  {
+    "name": "Friedrich Dürrenmatt",
+    "slug": "friedrich-durrenmatt",
+    "book_count": 1
+  },
+  {
+    "name": "Georg Wieghaus",
+    "slug": "georg-wieghaus",
+    "book_count": 1
+  },
+  {
+    "name": "Guillaume Musso",
+    "slug": "guillaume-musso",
+    "book_count": 2
+  },
+  {
+    "name": "Günther Frauenlob",
+    "slug": "gunther-frauenlob",
+    "book_count": 1
+  },
+  {
+    "name": "Herfried Münkler",
+    "slug": "herfried-munkler",
+    "book_count": 1
+  },
+  {
+    "name": "Hideo Yokoyama",
+    "slug": "hideo-yokoyama",
+    "book_count": 1
+  },
+  {
+    "name": "Iori Fujiwara",
+    "slug": "iori-fujiwara",
+    "book_count": 1
+  },
+  {
+    "name": "James Islington",
+    "slug": "james-islington",
+    "book_count": 2
+  },
+  {
+    "name": "James Patterson",
+    "slug": "james-patterson",
+    "book_count": 6
+  },
+  {
+    "name": "Jo Nesbø",
+    "slug": "jo-nesbo",
+    "book_count": 3
+  },
+  {
+    "name": "John Carreyrou",
+    "slug": "john-carreyrou",
+    "book_count": 1
+  },
+  {
+    "name": "John Sibbick",
+    "slug": "john-sibbick",
+    "book_count": 1
+  },
+  {
+    "name": "Jung-hyuk Kim",
+    "slug": "jung-hyuk-kim",
+    "book_count": 1
+  },
+  {
+    "name": "Justin Zobel",
+    "slug": "justin-zobel",
+    "book_count": 1
+  },
+  {
+    "name": "Kelsey Miller",
+    "slug": "kelsey-miller",
+    "book_count": 1
+  },
+  {
+    "name": "Kevin P. Murphy",
+    "slug": "kevin-p-murphy",
+    "book_count": 1
+  },
+  {
+    "name": "Kim Junghyuk",
+    "slug": "kim-junghyuk",
+    "book_count": 1
+  },
+  {
+    "name": "Kirsten Köster",
+    "slug": "kirsten-koster",
+    "book_count": 1
+  },
+  {
+    "name": "Kristen Perrin",
+    "slug": "kristen-perrin",
+    "book_count": 1
+  },
+  {
+    "name": "Leigh Bardugo",
+    "slug": "leigh-bardugo",
+    "book_count": 3
+  },
+  {
+    "name": "Lindsey Stirling",
+    "slug": "lindsey-stirling",
+    "book_count": 7
+  },
+  {
+    "name": "Lisa Sophie Laurent",
+    "slug": "lisa-sophie-laurent",
+    "book_count": 1
+  },
+  {
+    "name": "M. L. Wang",
+    "slug": "m-l-wang",
+    "book_count": 1
+  },
+  {
+    "name": "Malcolm Mackay",
+    "slug": "malcolm-mackay",
+    "book_count": 1
+  },
+  {
+    "name": "Malcom Mackay",
+    "slug": "malcom-mackay",
+    "book_count": 1
+  },
+  {
+    "name": "Manichi Yoshimura",
+    "slug": "manichi-yoshimura",
+    "book_count": 1
+  },
+  {
+    "name": "Marie Kondo",
+    "slug": "marie-kondo",
+    "book_count": 1
+  },
+  {
+    "name": "Marshall Karp",
+    "slug": "marshall-karp",
+    "book_count": 5
+  },
+  {
+    "name": "Mathias Frey",
+    "slug": "mathias-frey",
+    "book_count": 1
+  },
+  {
+    "name": "Matthew J. Kirby",
+    "slug": "matthew-j-kirby",
+    "book_count": 1
+  },
+  {
+    "name": "Matthew Perry",
+    "slug": "matthew-perry",
+    "book_count": 1
+  },
+  {
+    "name": "Michael J. Neufeld",
+    "slug": "michael-j-neufeld",
+    "book_count": 1
+  },
+  {
+    "name": "Nanae Aoyama",
+    "slug": "nanae-aoyama",
+    "book_count": 1
+  },
+  {
+    "name": "Natasha Ngan",
+    "slug": "natasha-ngan",
+    "book_count": 1
+  },
+  {
+    "name": "Nele Neuhaus",
+    "slug": "nele-neuhaus",
+    "book_count": 1
+  },
+  {
+    "name": "Nick Bilton",
+    "slug": "nick-bilton",
+    "book_count": 1
+  },
+  {
+    "name": "Nicole Perlroth",
+    "slug": "nicole-perlroth",
+    "book_count": 1
+  },
+  {
+    "name": "Patricia Cornwell",
+    "slug": "patricia-cornwell",
+    "book_count": 5
+  },
+  {
+    "name": "Patricia Daniels Cornwell",
+    "slug": "patricia-daniels-cornwell",
+    "book_count": 5
+  },
+  {
+    "name": "Paula Hawkins",
+    "slug": "paula-hawkins",
+    "book_count": 1
+  },
+  {
+    "name": "Pete Buttigieg",
+    "slug": "pete-buttigieg",
+    "book_count": 1
+  },
+  {
+    "name": "Randall Munroe",
+    "slug": "randall-munroe",
+    "book_count": 1
+  },
+  {
+    "name": "Raymond Chandler",
+    "slug": "raymond-chandler",
+    "book_count": 1
+  },
+  {
+    "name": "Rebecca Yarros",
+    "slug": "rebecca-yarros",
+    "book_count": 4
+  },
+  {
+    "name": "Reed Hastings",
+    "slug": "reed-hastings",
+    "book_count": 1
+  },
+  {
+    "name": "René Stauffer",
+    "slug": "rene-stauffer",
+    "book_count": 1
+  },
+  {
+    "name": "Richard Castle",
+    "slug": "richard-castle",
+    "book_count": 7
+  },
+  {
+    "name": "Richard Durbin",
+    "slug": "richard-durbin",
+    "book_count": 1
+  },
+  {
+    "name": "Riley Black",
+    "slug": "riley-black",
+    "book_count": 1
+  },
+  {
+    "name": "Rob Hart",
+    "slug": "rob-hart",
+    "book_count": 1
+  },
+  {
+    "name": "Sam Bourne",
+    "slug": "sam-bourne",
+    "book_count": 1
+  },
+  {
+    "name": "Sarah Frier",
+    "slug": "sarah-frier",
+    "book_count": 1
+  },
+  {
+    "name": "Sebastian Fitzek",
+    "slug": "sebastian-fitzek",
+    "book_count": 1
+  },
+  {
+    "name": "Sir Arthur Conan Doyle",
+    "slug": "sir-arthur-conan-doyle",
+    "book_count": 1
+  },
+  {
+    "name": "Stefan Zweig",
+    "slug": "stefan-zweig",
+    "book_count": 1
+  },
+  {
+    "name": "Stephan R. Meier",
+    "slug": "stephan-r-meier",
+    "book_count": 1
+  },
+  {
+    "name": "Steve Brusatte",
+    "slug": "steve-brusatte",
+    "book_count": 1
+  },
+  {
+    "name": "Suzanne Collins",
+    "slug": "suzanne-collins",
+    "book_count": 5
+  },
+  {
+    "name": "Tilo Linz",
+    "slug": "tilo-linz",
+    "book_count": 1
+  },
+  {
+    "name": "Tim Marshall",
+    "slug": "tim-marshall",
+    "book_count": 1
+  },
+  {
+    "name": "Tim Roughgarden",
+    "slug": "tim-roughgarden",
+    "book_count": 1
+  },
+  {
+    "name": "Tom Wainwright",
+    "slug": "tom-wainwright",
+    "book_count": 1
+  },
+  {
+    "name": "Trevor Noah",
+    "slug": "trevor-noah",
+    "book_count": 1
+  },
+  {
+    "name": "Verena Löcke",
+    "slug": "verena-locke",
+    "book_count": 1
+  },
+  {
+    "name": "Vincent Kliesch",
+    "slug": "vincent-kliesch",
+    "book_count": 1
+  },
+  {
+    "name": "Walter Isaacson",
+    "slug": "walter-isaacson",
+    "book_count": 1
+  },
+  {
+    "name": "Xavier Müller",
+    "slug": "xavier-muller",
+    "book_count": 1
+  },
+  {
+    "name": "Young-ha Kim",
+    "slug": "young-ha-kim",
+    "book_count": 1
+  },
+  {
+    "name": "Yuval Noah Harari",
+    "slug": "yuval-noah-harari",
+    "book_count": 1
+  },
+  {
+    "name": "Ágota Kristóf",
+    "slug": "agota-kristof",
+    "book_count": 1
+  }
+]

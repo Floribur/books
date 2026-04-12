@@ -1,0 +1,25 @@
+{
+  "slug": "algorithms-illuminated-part-1-the-basics",
+  "title": "Algorithms Illuminated (Part 1): The Basics",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0999282913.jpg",
+  "read_at": "2022-10-19T00:00:00Z",
+  "publication_year": 2022,
+  "page_count": null,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Tim Roughgarden",
+      "slug": "tim-roughgarden"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Computers",
+      "slug": "computers"
+    }
+  ],
+  "description": "In Algorithms Illuminated, Tim Roughgarden teaches the basics of algorithms in the most accessible way imaginable. This Omnibus Edition contains the complete text of Parts 1-4, with thorough coverage of asymptotic analysis, graph search and shortest paths, data structures, divide-and-conquer algorithms, greedy algorithms, dynamic programming, and NP-hard problems. Hundreds of worked examples, quizzes, and exercises, plus comprehensive online videos, help readers become better programmers; sharpen their analytical skills; learn to think algorithmically; acquire literacy with computer science's greatest hits; and ace their technical interviews.",
+  "isbn13": "0999282913",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

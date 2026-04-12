@@ -1,0 +1,25 @@
+{
+  "slug": "biological-sequence-analysis-probabilistic-models-of-proteins-and-nucleic-acids",
+  "title": "Biological Sequence Analysis: Probabilistic Models of Proteins and Nucleic Acids",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0521629713.jpg",
+  "read_at": "2022-12-05T00:00:00Z",
+  "publication_year": 1998,
+  "page_count": 372,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Richard Durbin",
+      "slug": "richard-durbin"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Medical",
+      "slug": "medical"
+    }
+  ],
+  "description": "Presents up-to-date computer methods for analysing DNA, RNA and protein sequences.",
+  "isbn13": "0521629713",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

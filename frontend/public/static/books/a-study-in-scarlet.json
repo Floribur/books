@@ -1,0 +1,25 @@
+{
+  "slug": "a-study-in-scarlet",
+  "title": "A Study in Scarlet",
+  "cover_path": "https://cdn.jsdelivr.net/gh/florianabel/flos-library@main/data/covers/0241959861.jpg",
+  "read_at": "2022-08-15T00:00:00Z",
+  "publication_year": 2011,
+  "page_count": 126,
+  "shelf": "read",
+  "authors": [
+    {
+      "name": "Arthur Conan Doyle",
+      "slug": "arthur-conan-doyle"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Fiction",
+      "slug": "fiction"
+    }
+  ],
+  "description": "'There's a scarlet thread of murder running through the colourless skein of life, and our duty is to unravel it, and isolate it, and expose every inch of it.' From the moment Dr John Watson takes lodgings in Baker Street with the consulting detective Sherlock Holmes, he becomes intimately acquainted with the bloody violence and frightening ingenuity of the criminal mind. In A Study in Scarlet , Holmes and Watson's first mystery, the pair are summoned to a south London house where they find a dead man whose contorted face is a twisted mask of horror. The body is unmarked by violence but on the wall a mysterious word has been written in blood. The police are baffled by the crime and its circumstances. But when Sherlock Holmes applies his brilliantly logical mind to the problem he uncovers a tragic tale of love and deadly revenge . . .",
+  "isbn13": "0241959861",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}
