@@ -2556,6 +2556,27 @@
     ]
   },
   {
+    "slug": "bride",
+    "title": "Bride",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/0593550404.jpg",
+    "read_at": null,
+    "publication_year": 2024,
+    "page_count": 417,
+    "shelf": "currently-reading",
+    "authors": [
+      {
+        "name": "Ali Hazelwood",
+        "slug": "ali-hazelwood"
+      }
+    ],
+    "genres": [
+      {
+        "name": "Fiction",
+        "slug": "fiction"
+      }
+    ]
+  },
+  {
     "slug": "dinosaurs-a-concise-natural-history",
     "title": "Dinosaurs: A Concise Natural History",
     "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/1108469299.jpg",
