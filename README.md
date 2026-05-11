@@ -2,7 +2,7 @@
 
 Personal book tracking site. Syncs from Goodreads RSS, enriches via Google Books, and publishes as a static site on GitHub Pages.
 
-**Live site:** https://florianabel.github.io/flos-library/
+**Live site:** https://floribur.github.io/books/
 
 ## How it works
 
