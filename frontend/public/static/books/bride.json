@@ -2,10 +2,10 @@
   "slug": "bride",
   "title": "Bride",
   "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/0593550404.jpg",
-  "read_at": null,
+  "read_at": "2026-05-11T00:00:00Z",
   "publication_year": 2024,
   "page_count": 417,
-  "shelf": "currently-reading",
+  "shelf": "read",
   "authors": [
     {
       "name": "Ali Hazelwood",

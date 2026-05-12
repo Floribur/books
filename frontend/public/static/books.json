@@ -1,5 +1,26 @@
 [
   {
+    "slug": "bride",
+    "title": "Bride",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/0593550404.jpg",
+    "read_at": "2026-05-11T00:00:00Z",
+    "publication_year": 2024,
+    "page_count": 417,
+    "shelf": "read",
+    "authors": [
+      {
+        "name": "Ali Hazelwood",
+        "slug": "ali-hazelwood"
+      }
+    ],
+    "genres": [
+      {
+        "name": "Fiction",
+        "slug": "fiction"
+      }
+    ]
+  },
+  {
     "slug": "the-11-59-bomber-nypd-red-8",
     "title": "The 11:59 Bomber (NYPD Red, #8)",
     "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/gr-231429390.jpg",
@@ -2552,27 +2573,6 @@
       {
         "name": "German drama",
         "slug": "german-drama"
-      }
-    ]
-  },
-  {
-    "slug": "bride",
-    "title": "Bride",
-    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/0593550404.jpg",
-    "read_at": null,
-    "publication_year": 2024,
-    "page_count": 417,
-    "shelf": "currently-reading",
-    "authors": [
-      {
-        "name": "Ali Hazelwood",
-        "slug": "ali-hazelwood"
-      }
-    ],
-    "genres": [
-      {
-        "name": "Fiction",
-        "slug": "fiction"
       }
     ]
   },
