@@ -2577,6 +2577,27 @@
     ]
   },
   {
+    "slug": "red-rising-red-rising-saga-1",
+    "title": "Red Rising (Red Rising Saga, #1)",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/0345539788.jpg",
+    "read_at": null,
+    "publication_year": 2014,
+    "page_count": null,
+    "shelf": "currently-reading",
+    "authors": [
+      {
+        "name": "Pierce Brown",
+        "slug": "pierce-brown"
+      }
+    ],
+    "genres": [
+      {
+        "name": "Fiction",
+        "slug": "fiction"
+      }
+    ]
+  },
+  {
     "slug": "deep-end",
     "title": "Deep End",
     "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/gr-212808709.jpg",

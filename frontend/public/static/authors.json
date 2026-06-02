@@ -360,6 +360,11 @@
     "book_count": 1
   },
   {
+    "name": "Pierce Brown",
+    "slug": "pierce-brown",
+    "book_count": 1
+  },
+  {
     "name": "Randall Munroe",
     "slug": "randall-munroe",
     "book_count": 1
