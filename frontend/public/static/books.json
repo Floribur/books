@@ -2619,27 +2619,6 @@
     ]
   },
   {
-    "slug": "deep-end",
-    "title": "Deep End",
-    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/gr-212808709.jpg",
-    "read_at": null,
-    "publication_year": 2025,
-    "page_count": 465,
-    "shelf": "currently-reading",
-    "authors": [
-      {
-        "name": "Ali Hazelwood",
-        "slug": "ali-hazelwood"
-      }
-    ],
-    "genres": [
-      {
-        "name": "Fiction",
-        "slug": "fiction"
-      }
-    ]
-  },
-  {
     "slug": "dinosaurs-a-concise-natural-history",
     "title": "Dinosaurs: A Concise Natural History",
     "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/1108469299.jpg",
@@ -2688,21 +2667,5 @@
         "slug": "fiction"
       }
     ]
-  },
-  {
-    "slug": "welt-in-aufruhr",
-    "title": "Welt in Aufruhr",
-    "cover_path": "",
-    "read_at": null,
-    "publication_year": 2023,
-    "page_count": null,
-    "shelf": "currently-reading",
-    "authors": [
-      {
-        "name": "Herfried Münkler",
-        "slug": "herfried-munkler"
-      }
-    ],
-    "genres": []
   }
 ]
