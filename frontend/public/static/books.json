@@ -2598,6 +2598,27 @@
     ]
   },
   {
+    "slug": "golden-son-red-rising-saga-2",
+    "title": "Golden Son (Red Rising Saga, #2)",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/0345539826.jpg",
+    "read_at": null,
+    "publication_year": 2015,
+    "page_count": 508,
+    "shelf": "currently-reading",
+    "authors": [
+      {
+        "name": "Pierce Brown",
+        "slug": "pierce-brown"
+      }
+    ],
+    "genres": [
+      {
+        "name": "Fiction",
+        "slug": "fiction"
+      }
+    ]
+  },
+  {
     "slug": "deep-end",
     "title": "Deep End",
     "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/gr-212808709.jpg",
