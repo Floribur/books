@@ -1,5 +1,26 @@
 [
   {
+    "slug": "golden-son-red-rising-saga-2",
+    "title": "Golden Son (Red Rising Saga, #2)",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/0345539826.jpg",
+    "read_at": "2026-07-17T00:00:00Z",
+    "publication_year": 2015,
+    "page_count": 508,
+    "shelf": "read",
+    "authors": [
+      {
+        "name": "Pierce Brown",
+        "slug": "pierce-brown"
+      }
+    ],
+    "genres": [
+      {
+        "name": "Fiction",
+        "slug": "fiction"
+      }
+    ]
+  },
+  {
     "slug": "red-rising-red-rising-saga-1",
     "title": "Red Rising (Red Rising Saga, #1)",
     "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/0345539788.jpg",
@@ -2598,12 +2619,12 @@
     ]
   },
   {
-    "slug": "golden-son-red-rising-saga-2",
-    "title": "Golden Son (Red Rising Saga, #2)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/0345539826.jpg",
+    "slug": "morning-star-red-rising-saga-3",
+    "title": "Morning Star (Red Rising Saga, #3)",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/0345539842.jpg",
     "read_at": null,
-    "publication_year": 2015,
-    "page_count": 508,
+    "publication_year": 2016,
+    "page_count": 545,
     "shelf": "currently-reading",
     "authors": [
       {
