@@ -1,5 +1,26 @@
 [
   {
+    "slug": "morning-star-red-rising-saga-3",
+    "title": "Morning Star (Red Rising Saga, #3)",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/0345539842.jpg",
+    "read_at": "2026-08-31T00:00:00Z",
+    "publication_year": 2016,
+    "page_count": 545,
+    "shelf": "read",
+    "authors": [
+      {
+        "name": "Pierce Brown",
+        "slug": "pierce-brown"
+      }
+    ],
+    "genres": [
+      {
+        "name": "Fiction",
+        "slug": "fiction"
+      }
+    ]
+  },
+  {
     "slug": "golden-son-red-rising-saga-2",
     "title": "Golden Son (Red Rising Saga, #2)",
     "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/0345539826.jpg",
@@ -2619,17 +2640,17 @@
     ]
   },
   {
-    "slug": "morning-star-red-rising-saga-3",
-    "title": "Morning Star (Red Rising Saga, #3)",
-    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/0345539842.jpg",
+    "slug": "the-secret-history",
+    "title": "The Secret History",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/1400031702.jpg",
     "read_at": null,
-    "publication_year": 2016,
-    "page_count": 545,
+    "publication_year": 2004,
+    "page_count": 578,
     "shelf": "currently-reading",
     "authors": [
       {
-        "name": "Pierce Brown",
-        "slug": "pierce-brown"
+        "name": "Donna Tartt",
+        "slug": "donna-tartt"
       }
     ],
     "genres": [

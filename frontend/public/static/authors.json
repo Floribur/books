@@ -130,6 +130,11 @@
     "book_count": 1
   },
   {
+    "name": "Donna Tartt",
+    "slug": "donna-tartt",
+    "book_count": 1
+  },
+  {
     "name": "Edward Snowden",
     "slug": "edward-snowden",
     "book_count": 1
