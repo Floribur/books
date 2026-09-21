@@ -1,0 +1,25 @@
+{
+  "slug": "der-schrecksenmeister-zamonien-5",
+  "title": "Der Schrecksenmeister (Zamonien, #5)",
+  "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/3492049370.jpg",
+  "read_at": null,
+  "publication_year": 2007,
+  "page_count": 396,
+  "shelf": "currently-reading",
+  "authors": [
+    {
+      "name": "Walter Moers",
+      "slug": "walter-moers"
+    }
+  ],
+  "genres": [
+    {
+      "name": "Mythenmetz, Hildegunst von (Fictitious character)",
+      "slug": "mythenmetz-hildegunst-von-fictitious-character"
+    }
+  ],
+  "description": "Dank der grossartigen Übersetzerleistung von Walter Moers werden wir erstmals bekannt gemacht mit Sledwaya, einem der faszinierendsten Schauplätze Zamoniens, wo das Gesunde krank, das Richtige verkehrt und das Falsche richtig ist, und wo der Schrecksenmeister nicht nur für das.",
+  "isbn13": "3492049370",
+  "read_count": 1,
+  "metadata_source": "google_books"
+}

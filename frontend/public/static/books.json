@@ -2661,6 +2661,27 @@
     ]
   },
   {
+    "slug": "der-schrecksenmeister-zamonien-5",
+    "title": "Der Schrecksenmeister (Zamonien, #5)",
+    "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/3492049370.jpg",
+    "read_at": null,
+    "publication_year": 2007,
+    "page_count": 396,
+    "shelf": "currently-reading",
+    "authors": [
+      {
+        "name": "Walter Moers",
+        "slug": "walter-moers"
+      }
+    ],
+    "genres": [
+      {
+        "name": "Mythenmetz, Hildegunst von (Fictitious character)",
+        "slug": "mythenmetz-hildegunst-von-fictitious-character"
+      }
+    ]
+  },
+  {
     "slug": "dinosaurs-a-concise-natural-history",
     "title": "Dinosaurs: A Concise Natural History",
     "cover_path": "https://cdn.jsdelivr.net/gh/floribur/books@master/data/covers/1108469299.jpg",
